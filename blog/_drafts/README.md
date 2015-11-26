@@ -1,0 +1,1 @@
+Keep here your drafts that are not ready to be published yet.
