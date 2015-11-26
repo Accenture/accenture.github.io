@@ -1,10 +1,32 @@
+#
+# For each user, add the following:
+#
+# name: full name
+# picture: link to a small image with a user's picture
+# github: link to the user's github account
+# email: user's email address
+# twitter: user's twitter account
+# youtube: user's youtube link
+#
+# Not all these are necessary for all users
+
 - name: Oscar Renalias
+  picture: tbd
   github: oscarrenalias
   email: oscar.renalias@accenture.com
+  twitter: tbd
+  youtube: tbd
 
 - name: Ilkka Anttonen
+  picture: tbd
   github: sirile
   email: ilkka.anttonen@accenture.com
+  twitter: tbd
+  youtube: tbd
 
 - name: Dominik Wagenknecht
+  picture: tbd
   email: dominik.wagenknecht@accenture.com
+  github: tbd
+  twitter: tbd
+  youtube: tbd

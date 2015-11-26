@@ -5,3 +5,6 @@ TODO
 - Implement pagination - http://jekyllrb.com/docs/pagination/
 - Provide a proper About page, or remove if not needed
 - Add content
+- Add a 404 page
+- Define a license for the blog and public content
+- Enable Google analytics?

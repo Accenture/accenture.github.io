@@ -18,3 +18,9 @@ github_username:  accenture
 
 # Build settings
 markdown: kramdown
+
+# Exclude these files from the production _site
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - README.md
