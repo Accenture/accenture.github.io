@@ -4,8 +4,17 @@ This repository holds the content for the Accenture Lightweight Architecture Blo
 
 The site is a handful of static HTML files, compiled with [Jekyll](http://jekyllrb.com)
 
+Getting started
+===============
+1. Clone this repository
+2. Install Ruby and Jekyll
+3. Write some Markdown-formatted content in the ```blog/_drafts``` folder
+4. Run ```jekyll serve --drafts``` to have a live preview of the content
+
 Running Jekyll
 ==============
+Jekyll can be run locally so that we can easily preview how our content is going to look like before it is published.
+
 First, install Ruby if not present yet.
 
 Second, install the Jekyll gem:
