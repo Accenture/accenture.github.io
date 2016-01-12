@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "A look into kubernetes autoscaling"
+date:   2016-01-12 10:00:00 +0200
+categories: accenture kubernetes docker containers
+---
 # A look into kubernetes autoscaling
 
 ## about kubernetes
@@ -47,7 +53,7 @@ You will need
 
 #### kubernetes
 
-```
+{% highlight bash %}
 docker run \
   --name=etcd \
   --net=host \
@@ -55,9 +61,11 @@ docker run \
     --addr=127.0.0.1:2379 \
     --bind-addr=0.0.0.0:2379 \
     --data-dir=/var/etcd/data
-```
+{% endhighlight %}
+
 Hyperkube represents a single binary that can morph/manage into multiple servers. Here it runs the kubelet, which in turn runs a pod that contains the other master components (apiserver, controller-manager, scheduler). Note: Running the kubelet in docker is experimental
-```
+
+{% highlight bash %}
 docker run \
   --name=kubelet \
   --volume=/:/rootfs:ro \
@@ -78,9 +86,11 @@ docker run \
     --config=/etc/kubernetes/manifests/ \
     --cluster-dns=10.0.0.10 \
     --cluster-domain=cluster.local
-```
+{% endhighlight %}
+
 Start kube-proxy:
-```
+
+{% highlight bash %}
 docker run \
   --name=kube-proxy \
   -d \
@@ -90,24 +100,28 @@ docker run \
     /hyperkube proxy \
     --master=http://127.0.0.1:8080 \
     --v=2
-```
+{% endhighlight %}
 
 ### skydns
-```
+
+{% highlight bash %}
 --cluster-dns=
-```
+{% endhighlight %}
+
 ### heapster
 
 run heapster:
-```
+
+{% highlight bash %}
 $ kubectl create https://github.com/kubernetes/heapster/raw/master/deploy/kube-config/influxdb/heapster-service.yaml
 $ kubectl create https://github.com/kubernetes/heapster/raw/master/deploy/kube-config/influxdb/heapster-controller.yaml
-```
+{% endhighlight %}
+
 ### autoscaling
 
-Deploy a service:
-`kubectl create -f nginx.yaml`
-```
+Deploy a service: ```kubectl create -f nginx.yaml```
+
+{% highlight yaml %}
 ---
 kind: "Service"
 apiVersion: "v1"
@@ -164,8 +178,7 @@ spec:
   maxReplicas: 10
   cpuUtilization:
     targetPercentage: 40
-
-```
+{% endhighlight %}
 
 ## Summary
 Autoscaling provides
