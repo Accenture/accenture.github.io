@@ -24,3 +24,5 @@ exclude:
     - Gemfile
     - Gemfile.lock
     - README.md
+    - _posts/README.md
+    - _drafts/README.md
