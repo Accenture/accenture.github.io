@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+{% assign categories = site.data.categories %}
+{% assign authors = site.data.authors %}
+
+<div class="tier tier-bg-gray tier-white">
+		<div class="container">
+            <div class="col-sm-12 ">
+
+                <div class="post-meta post-meta-light">{{ page.date | date: "%-d %b %Y" }}</div>
+                <h2 class="hdg hdg_1"><span class="post-title post-title-light">{{page.title}}</span></h2>
+                <span class="categories categories-left categories-white">
+                    {% assign post_cats = page.categories %}
+                    {% assign count = 0 %}
+                    {% for category in categories %}
+                        {% if category %}
+                            {% for post_cat in post_cats %}
+                                {% if post_cat == category.slug %}
+                                    <a href="/blog/categories/?c={{category.slug}}" class="category category-0 index-{{count}}" style="color:#fff;">{{category.name}}</a>
+                                    {% assign count = count | plus: 1 %}
+                                {% endif %}
+                            {% endfor %}        
+                        {% endif %}
+                    {% endfor %}
+
+                </span>
+                <span class="hr hr_gray-lighter"></span>
+                
+
+                {% for author in authors %}
+                    {% if author.slug == page.author %}
+                        <div class="media">
+                            <div class="media-left">
+                                <div class="headshot">
+                                    <img alt="Elizabeth Reed" src="{{author.photo}}" />
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <a href="/contributors#{{author.slug}}" class="author-name author-name-light">{{author.name}}</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+
+            </div>
+
+		</div>
+	</div>
+
+    <div class="tier">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="post-content">
+                    {{ content }}
+                </div>
+                <div class="text-center">
+                    <div class="pagination">
+						{% capture prev-disabled %}{% if paginator.previous_page == null %}pagination-disabled{% endif %}{% endcapture %}
+                        {% capture next-disabled %}{% if paginator.next_page == null %}pagination-disabled{% endif %}{% endcapture %}
+                        <a class="pagination-prev {{prev-disabled}}" href="{{ page.previous.url }}"><i class="icn icn_arrowLeft">Previous</i></a>
+                        <a class="pagination-next {{next-disabled}}" href="{{ page.next.url }}"><i class="icn icn_arrowRight">Next</i></a>
+                    </div>
+                </div>
+                
+                {% if page.comments %}
+			        <div id="disqus_thread"></div>
+			        <script>
+			        /**
+			        * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+			        * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+			        */
+			        
+			        var disqus_config = function () {
+			        this.page.url = "{{site.url}}{{page.url}}"; // Replace PAGE_URL with your page's canonical URL variable
+			        this.page.identifier = "{{page.url}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			        };
+			        
+			        (function() { // DON'T EDIT BELOW THIS LINE
+			        var d = document, s = d.createElement('script');
+
+			        s.src = '//cchangeinctestsite.disqus.com/embed.js';
+
+			        s.setAttribute('data-timestamp', +new Date());
+			        (d.head || d.body).appendChild(s);
+			        })();
+			        </script>
+			        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			  	{% endif %}
+            </div> <!-- /col -->
+        </div> <!-- /container -->
+    </div> <!-- /tier -->

@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+
+<div class="tier tier-right tier-white tier1">
+    <img class="tier-img tier-img-sm" src="img/hero/hero-sitting-sm.jpg" alt="" />
+    <img class="tier-img tier-img-lg" src="img/hero/hero-sitting-lg.jpg" alt="" />
+	<div class="container">
+        <div class="col-sm-8">
+			<h1 class="hdg hdg_1">{{page.head_h}}</h1>
+			<p>{{page.head_p}}</p>
+            <a class="btn btn-tertiary btn-mobile" href="/blog" role="button">Read our blog</a>
+        </div>
+	</div>
+</div>
+<div class="tier">
+    <div class="container">
+        <div class="col-sm-8 col-sm-offset-2">
+            {{ content }}
+        </div>
+    </div>
+</div>
+
+<div class="tier tier-white">
+    <img class="tier-img tier-img-sm" src="img/hero/hero-shoes-sm.png" alt="" />
+    <img class="tier-img tier-img-lg" src="img/hero/hero-shoes-lg.jpg" alt="" />
+    <div class="container">
+        <div class="col-sm-6 col-sm-offset-6">
+            <h2 class="hdg hdg_1">{{page.tail_h}}</h2>
+            <p>{{page.tail_p}}</p>
+            <p><a class="btn btn-tertiary btn-mobile" href="{{page.tail_button_url}}" target="_blank">{{page.tail_button}}</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article> -->
