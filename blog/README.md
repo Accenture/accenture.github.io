@@ -73,7 +73,7 @@ In order to have code formatted, use the ```{% highlight %}``` macro:
 {% highlight bash %}
 echo "Hello, world!"
 {% endhighlight %}
-```
+``
 
 Code formatting support is provided by the Pygments library, which [supports over 100 languages](http://pygments.org/languages/). Please refer to the documentation for the list of language keys that can be provided to the hightlight macro.
 
@@ -131,7 +131,7 @@ New categories must be defined so that they're visible in the Categories page.
 
 In order to define a new category, add the following block to file ```_data/categories.yml```:
 
-```
+```yaml
   - slug: lightweightarchitectures
     name: Lightweight Architectures
 ```
