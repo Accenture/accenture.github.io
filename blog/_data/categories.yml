@@ -2,12 +2,6 @@
   - slug: lightweightarchitectures
     name: Lightweight Architectures
 
-  - slug: analytics
-    name: Analytics
-
-  - slug: portalcommerce
-    name: Portal/Commerce
-
   - slug: devops
     name: DevOps
 
@@ -17,12 +11,6 @@
   - slug: general
     name: General
 
-  - slug: contributions
-    name: Contributions
-
-  - slug: accenture
-    name: Accenture
-
   - slug: docker
     name: Docker
 
@@ -31,11 +19,6 @@
 
   - slug: containers
     name: Containers
-    
-    
 
-    
-
-    
-
-             
+  - slug: html5
+    name: HTML5
