@@ -20,7 +20,7 @@ First, install Ruby if not available in your system.
 
 Second, install the Ruby gems needed by Jekyll
 
-```
+```bash
 gem install jekyll jekyll-paginate
 ```
 
@@ -34,7 +34,7 @@ When ready, move it to the `_posts` folder and name it as follows: `YYYY-MM-DD-p
 
 Each must post contain some YAML metadata at the very top:
 
-```
+```yaml
 ---
 layout: post
 title:  "Some title"
@@ -47,13 +47,13 @@ categories: accenture opensource oss lightweight-architecture
 
 To start Jekyll and see your blog, se the following command:
 
-```
+```bash
 jekyll serve
 ```
 
 Use the following to serve the blog with draft posts:
 
-```
+```bash
 jekyll serve --drafts
 ```
 
@@ -73,7 +73,7 @@ In order to have code formatted, use the ```{% highlight %}``` macro:
 {% highlight bash %}
 echo "Hello, world!"
 {% endhighlight %}
-``
+```
 
 Code formatting support is provided by the Pygments library, which [supports over 100 languages](http://pygments.org/languages/). Please refer to the documentation for the list of language keys that can be provided to the hightlight macro.
 
@@ -85,7 +85,7 @@ There are no restrictions to the type and size of image files, but please be con
 
 Assets can be referenced from Markdown post content as follows:
 
-```
+```markdown
 ![Alt text](/img/posts/<post-slug>/image.jpg)
 ```
 
