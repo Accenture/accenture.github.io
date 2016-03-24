@@ -2,14 +2,14 @@
 - slug: elizabeth_reed
   name: Elizabeth Reed
   bio: >
-    Ei iisque fabulas suscipiantur vel. Usu libris feugait ei, cu vix fabellas tractatos, nec 
-    persius percipit periculis ne. Nihil dolorum ea pri, eu oporteat deterruisset ius, ad 
-    mea praesent patrioque consequat. Usu no lorem consulatu elaboraret. Eu detraxit 
-    explicari sea, adhuc malis falli usu et, ut duo mundi vocibus. Ad aliquid habemus vivendum 
-    eam, eum ei feugiat theophrastus. Civibus eloquentiam in eam. Quo veri salutandi ne. 
-    Et alia dolor interesset quo. His debet offendit no, has lorem malis nominati ne, 
+    Ei iisque fabulas suscipiantur vel. Usu libris feugait ei, cu vix fabellas tractatos, nec
+    persius percipit periculis ne. Nihil dolorum ea pri, eu oporteat deterruisset ius, ad
+    mea praesent patrioque consequat. Usu no lorem consulatu elaboraret. Eu detraxit
+    explicari sea, adhuc malis falli usu et, ut duo mundi vocibus. Ad aliquid habemus vivendum
+    eam, eum ei feugiat theophrastus. Civibus eloquentiam in eam. Quo veri salutandi ne.
+    Et alia dolor interesset quo. His debet offendit no, has lorem malis nominati ne,
     solum etiam viderer eos id. Eum ut dicunt legimus necessitatibus, in periculis assentior ius.
-  gravatar: 
+  gravatar:
   photo: /img/author/elizabeth-reed.jpg
   twitter: http://twitter.com/megarameno
   facebook: http://facebook.com/megarameno
@@ -18,14 +18,14 @@
 - slug: paul_pena
   name: Paul Pena
   bio: >
-    Ei iisque fabulas suscipiantur vel. Usu libris feugait ei, cu vix fabellas tractatos, nec 
-    persius percipit periculis ne. Nihil dolorum ea pri, eu oporteat deterruisset ius, ad 
-    mea praesent patrioque consequat. Usu no lorem consulatu elaboraret. Eu detraxit 
-    explicari sea, adhuc malis falli usu et, ut duo mundi vocibus. Ad aliquid habemus vivendum 
-    eam, eum ei feugiat theophrastus. Civibus eloquentiam in eam. Quo veri salutandi ne. 
-    Et alia dolor interesset quo. His debet offendit no, has lorem malis nominati ne, 
+    Ei iisque fabulas suscipiantur vel. Usu libris feugait ei, cu vix fabellas tractatos, nec
+    persius percipit periculis ne. Nihil dolorum ea pri, eu oporteat deterruisset ius, ad
+    mea praesent patrioque consequat. Usu no lorem consulatu elaboraret. Eu detraxit
+    explicari sea, adhuc malis falli usu et, ut duo mundi vocibus. Ad aliquid habemus vivendum
+    eam, eum ei feugiat theophrastus. Civibus eloquentiam in eam. Quo veri salutandi ne.
+    Et alia dolor interesset quo. His debet offendit no, has lorem malis nominati ne,
     solum etiam viderer eos id. Eum ut dicunt legimus necessitatibus, in periculis assentior ius.
-  gravatar: 
+  gravatar:
   photo: /img/author/paul-pena.jpg
   twitter: http://twitter.com/elizabeth_reed
   facebook: http://facebook.com/elizabeth_reed
@@ -34,14 +34,14 @@
 - slug: marian_stanley
   name: Marian Stanley
   bio: >
-    Ei iisque fabulas suscipiantur vel. Usu libris feugait ei, cu vix fabellas tractatos, nec 
-    persius percipit periculis ne. Nihil dolorum ea pri, eu oporteat deterruisset ius, ad 
-    mea praesent patrioque consequat. Usu no lorem consulatu elaboraret. Eu detraxit 
-    explicari sea, adhuc malis falli usu et, ut duo mundi vocibus. Ad aliquid habemus vivendum 
-    eam, eum ei feugiat theophrastus. Civibus eloquentiam in eam. Quo veri salutandi ne. 
-    Et alia dolor interesset quo. His debet offendit no, has lorem malis nominati ne, 
+    Ei iisque fabulas suscipiantur vel. Usu libris feugait ei, cu vix fabellas tractatos, nec
+    persius percipit periculis ne. Nihil dolorum ea pri, eu oporteat deterruisset ius, ad
+    mea praesent patrioque consequat. Usu no lorem consulatu elaboraret. Eu detraxit
+    explicari sea, adhuc malis falli usu et, ut duo mundi vocibus. Ad aliquid habemus vivendum
+    eam, eum ei feugiat theophrastus. Civibus eloquentiam in eam. Quo veri salutandi ne.
+    Et alia dolor interesset quo. His debet offendit no, has lorem malis nominati ne,
     solum etiam viderer eos id. Eum ut dicunt legimus necessitatibus, in periculis assentior ius.
-  gravatar: 
+  gravatar:
   photo: /img/author/marian-stanley.jpg
   twitter: http://twitter.com/elizabeth_reed
   facebook: http://facebook.com/elizabeth_reed
@@ -50,7 +50,7 @@
 - slug: oscar_renalias
   name: Oscar Renalias
   bio: >
-    Oscar Renalias is a Senior Technology Architect part of the Emerging Technology group and responsible 
+    Oscar Renalias is a Senior Technology Architect part of the Emerging Technology group and responsible
     globally for designing delivering modern and innovative architectures.
   gravatar:
   photo: /img/author/oscar-renalias.jpg
@@ -59,8 +59,18 @@
 
 - slug: jan_willies
   name: Jan Willies
-  bio: 
+  bio:
   gravatar:
   photo: /img/author/default-user.png
   twitter:
+  linkedin:
+
+- slug: martin_lofaj
+  name: Martin Lofaj
+  bio: >
+    Martin Lofaj is a frontend web developer part of the Accenture Open Web Platform (AOWP)
+    core team working on asset development for Lightweight Architectures.
+  gravatar:
+  photo: /img/author/martin-lofaj.jpg
+  twitter: https://twitter.com/martin_lofaj
   linkedin:
