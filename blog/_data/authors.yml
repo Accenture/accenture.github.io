@@ -57,6 +57,17 @@
   twitter: https://twitter.com/oscarrenalias
   linkedin: https://linkedin.com/oscarrenalias
 
+- slug: mario_macai
+  name: Mario Macai
+  bio: >
+    Mario Macai is a student and Junior Web Developer in Accenture Open Web Platform core team.
+    He is developing mostly modern front-end applications using Angular, Backbone & Marionette, React and
+    from time to time back-end using NodeJS.
+  gravatar:
+  photo: /img/author/mario-macai.png
+  twitter: https://twitter.com/m_macai
+  facebook: https://www.facebook.com/mario.macai
+
 - slug: jan_willies
   name: Jan Willies
   bio:
