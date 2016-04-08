@@ -46,19 +46,21 @@ layout: default
                         </div>
                         <span class="hr hr_gray-lighter"></span>
                         {% assign authors = site.data.authors %}
-                        {% for author in authors %}
-                            {% if author.slug == post.author %}
-                                <div class="media">
-                                    <div class="media-left">
-                                        <div class="headshot">
-                                            <img alt="{{author.name}}" src="{{author.photo}}" />
+                        {% for post_author in post.author %}
+                            {% for author in authors %}
+                                {% if author.slug == post_author %}
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="headshot">
+                                                <img alt="{{author.name}}" src="{{author.photo}}" />
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <a href="/contributors#{{author.slug}}" class="author-name" title="{{author.name}}">{{author.name}}</a>
                                         </div>
                                     </div>
-                                    <div class="media-body">
-                                        <a href="/contributors#{{author.slug}}" class="author-name" title="{{author.name}}">{{author.name}}</a>
-                                    </div>
-                                </div>
-                            {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         {% endfor %}
                     </li>
                     {% endfor %}
