@@ -29,28 +29,29 @@ layout: default
                 <span class="hr hr_gray-lighter"></span>
                 
 
-                {% for author in authors %}
-                    {% if author.slug == page.author %}
-                        <div class="media">
-                            <div class="media-left">
-                                <div class="headshot">
-                                    <img alt="Elizabeth Reed" src="{{author.photo}}" />
+                {% for post_author in page.author %}
+                    {% for author in authors %}
+                        {% if author.slug == post_author %}
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="headshot">
+                                        <img alt="{{author.name}}" src="{{author.photo}}" />
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <a href="/contributors#{{author.slug}}" class="author-name author-name-light">{{author.name}}</a>
                                 </div>
                             </div>
-                            <div class="media-body">
-                                <a href="/contributors#{{author.slug}}" class="author-name author-name-light">{{author.name}}</a>
-                            </div>
-                        </div>
-                    {% endif %}
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
-
-
+                
             </div>
 
 		</div>
 	</div>
 
-    <div class="tier">
+    <div class="tier post_tier">
         <div class="container">
             <div class="col-md-8 col-md-offset-2">
                 <div class="post-content">
@@ -81,7 +82,7 @@ layout: default
 			        (function() { // DON'T EDIT BELOW THIS LINE
 			        var d = document, s = d.createElement('script');
 
-			        s.src = '//cchangeinctestsite.disqus.com/embed.js';
+			        s.src = '//accenturegithub.disqus.com/embed.js';
 
 			        s.setAttribute('data-timestamp', +new Date());
 			        (d.head || d.body).appendChild(s);
