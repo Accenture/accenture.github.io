@@ -1,0 +1,23 @@
+.toc {
+  border: 1px dotted rgb(127, 127, 127);
+  padding: 4px 3px 0px 10px;
+  min-width: 100px ! important;
+  float: right ! important;
+  font-size: 80%;
+  margin-top: 1px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  visibility: visible;
+  max-width: 50%;
+  width: 35%;
+}
+
+.toc p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+/* override */
+.post_tier {
+  padding: 0px;
+}
