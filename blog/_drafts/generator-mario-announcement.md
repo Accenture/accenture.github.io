@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Introducing Generator Mario!"
-author: marian_stanley
+author: 
+  - martin_lofaj
+  - mario_macai
 categories: html5
 comments: true
 ---
