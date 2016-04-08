@@ -27,3 +27,5 @@ blog_intro: "Welcome to the Accenture blog series on GitHub. We will feature the
 
 # Build settings
 markdown: kramdown
+
+future: true
