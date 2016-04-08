@@ -1,0 +1,88 @@
+---
+layout: default
+---
+<div class="tier tier-right tier-white">
+        <img class="tier-img tier-img" src="/img/hero/hero-shoes-right.jpg" alt="" />
+		<div class="container">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+    			<h1 class="hdg hdg_hero hdg_spaced">{{ page.title }}</h1>
+            </div>
+		</div>
+	</div>
+
+    <div class="tier contributors">
+        <div class="container">
+            <div class="col-sm-10 col-sm-offset-1">
+
+                {% assign categories = site.data.categories %}
+                {% assign authors = site.data.authors %}
+                {% assign posts = site.posts %}
+
+                {% for author in authors %}
+                    {% if author %}
+                        <div class="media" id="box-{{author.slug}}">
+                            <a class="anchor" id="{{author.slug}}" style="display: block; position: relative; top: -106px; visibility: hidden;"></a>
+                            <div class="media-left">
+                                <div class="headshot headshot-large">
+                                    <img alt="Elizabeth Reed" src="{{author.photo}}" />
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <div class="author-name">{{author.name}}</div>
+                                <div class="social-list">
+                                    {% if author.facebook %}
+                                    <a class="social social-facebook" href="{{author.facebook}}"><i class="icn icn_facebook">Facebook</i></a>
+                                    {% endif %}
+
+                                    {% if author.linkedin %}
+                                    <a class="social social-linkedin" href="{{author.linkedin}}"><i class="icn icn_linkedin">Linkedin</i></a>
+                                    {% endif %}
+
+                                    {% if author.twitter %}
+                                    <a class="social social-twitter" href="{{author.twitter}}"><i class="icn icn_twitter">Twitter</i></a>
+                                    {% endif %}
+                                </div>
+
+                                <div class="author-bio">{{author.bio}}</div>
+
+                                <ol class="post-list post-list-small">
+                                    {% for post in posts %}
+                                        {% for post_author in post.author %}
+                                            {% if post and post_author == author.slug %}
+                                            <li>
+                                                <div class="post-meta">{{ post.date | date: "%-d %b %Y" }}</div>
+                                                <div class="hdg hdg_3"><a class="post-title" href="{{post.url}}">{{post.title}}</a></div>
+                                                <div class="categories categories-left">
+                                                    {% assign post_cats = post.categories %}
+                                                    {% assign count = 0 %}
+                                                    {% for category in categories %}
+                                                        {% if category %}
+                                                            {% for post_cat in post_cats %}
+                                                                {% if post_cat == category.slug %}
+                                                                    <a href="/blog/categories/?c={{category.slug}}" class="category category-0 index-{{count}}">{{category.name}}</a>
+                                                                    {% assign count = count | plus: 1 %}
+                                                                {% endif %}
+                                                            {% endfor %}        
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </div>
+                                            </li>
+
+                                        {% endif %}
+                                        {% endfor %}                                    
+                                    {% endfor %}
+
+                                </ol>
+                            </div>
+                        </div>
+                        {% if forloop.last == false %}
+                            <span class="hr hr_gray-lighter hr_spaced"></span>
+                        {% endif %}
+
+                    {% endif %}
+                {% endfor %}
+
+                
+            </div> <!-- /col -->
+        </div> <!-- /container -->
+    </div> <!-- /tier -->

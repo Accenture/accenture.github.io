@@ -1,0 +1,50 @@
+# Author details.
+- slug: oscar_renalias
+  name: Oscar Renalias
+  bio: >
+    Oscar Renalias is a Senior Technology Architect part of the Emerging Technology group and responsible
+    globally for designing delivering modern and innovative architectures.
+  gravatar:
+  photo: /img/author/oscar-renalias.jpg
+  twitter: https://twitter.com/oscarrenalias
+  linkedin: https://linkedin.com/oscarrenalias
+
+- slug: ilkka_anttonen
+  name: Ilkka Anttonen
+  bio: >
+    Ilkka Anttonen is a Senior Technology Architect and the lead for Accenture's Emerging Technology group in the
+    Nordics.
+  gravatar:
+  photo: /img/author/ilkka-anttonen.jpg
+  twitter: https://twitter.com/IlkkaAnttonen
+  linkedin:
+  facebook:
+
+- slug: mario_macai
+  name: Mario Macai
+  bio: >
+    Mario Macai is a student and Junior Web Developer in Accenture Open Web Platform core team.
+    He is developing mostly modern front-end applications using Angular, Backbone & Marionette, React and
+    from time to time back-end using NodeJS.
+  gravatar:
+  photo: /img/author/mario-macai.png
+  twitter: https://twitter.com/m_macai
+  facebook: https://www.facebook.com/mario.macai
+
+- slug: jan_willies
+  name: Jan Willies
+  bio:
+  gravatar:
+  photo: /img/author/default-user.png
+  twitter:
+  linkedin:
+
+- slug: martin_lofaj
+  name: Martin Lofaj
+  bio: >
+    Martin Lofaj is a frontend web developer part of the Accenture Open Web Platform (AOWP)
+    core team working on asset development for Lightweight Architectures.
+  gravatar:
+  photo: /img/author/martin-lofaj.jpg
+  twitter: https://twitter.com/martin_lofaj
+  linkedin:

@@ -1,0 +1,24 @@
+# Categories
+  - slug: lightweightarchitectures
+    name: Lightweight Architectures
+
+  - slug: devops
+    name: DevOps
+
+  - slug: microservices
+    name: Microservices
+
+  - slug: general
+    name: General
+
+  - slug: docker
+    name: Docker
+
+  - slug: kubernetes
+    name: Kubernetes
+
+  - slug: containers
+    name: Containers
+
+  - slug: html5
+    name: HTML5
