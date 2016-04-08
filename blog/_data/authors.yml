@@ -1,52 +1,4 @@
 # Author details.
-- slug: elizabeth_reed
-  name: Elizabeth Reed
-  bio: >
-    Ei iisque fabulas suscipiantur vel. Usu libris feugait ei, cu vix fabellas tractatos, nec
-    persius percipit periculis ne. Nihil dolorum ea pri, eu oporteat deterruisset ius, ad
-    mea praesent patrioque consequat. Usu no lorem consulatu elaboraret. Eu detraxit
-    explicari sea, adhuc malis falli usu et, ut duo mundi vocibus. Ad aliquid habemus vivendum
-    eam, eum ei feugiat theophrastus. Civibus eloquentiam in eam. Quo veri salutandi ne.
-    Et alia dolor interesset quo. His debet offendit no, has lorem malis nominati ne,
-    solum etiam viderer eos id. Eum ut dicunt legimus necessitatibus, in periculis assentior ius.
-  gravatar:
-  photo: /img/author/elizabeth-reed.jpg
-  twitter: http://twitter.com/megarameno
-  facebook: http://facebook.com/megarameno
-  linkedin: http://linkedin.com/megarameno
-
-- slug: paul_pena
-  name: Paul Pena
-  bio: >
-    Ei iisque fabulas suscipiantur vel. Usu libris feugait ei, cu vix fabellas tractatos, nec
-    persius percipit periculis ne. Nihil dolorum ea pri, eu oporteat deterruisset ius, ad
-    mea praesent patrioque consequat. Usu no lorem consulatu elaboraret. Eu detraxit
-    explicari sea, adhuc malis falli usu et, ut duo mundi vocibus. Ad aliquid habemus vivendum
-    eam, eum ei feugiat theophrastus. Civibus eloquentiam in eam. Quo veri salutandi ne.
-    Et alia dolor interesset quo. His debet offendit no, has lorem malis nominati ne,
-    solum etiam viderer eos id. Eum ut dicunt legimus necessitatibus, in periculis assentior ius.
-  gravatar:
-  photo: /img/author/paul-pena.jpg
-  twitter: http://twitter.com/elizabeth_reed
-  facebook: http://facebook.com/elizabeth_reed
-  linkedin: http://linkedin.com/elizabeth_reed
-
-- slug: marian_stanley
-  name: Marian Stanley
-  bio: >
-    Ei iisque fabulas suscipiantur vel. Usu libris feugait ei, cu vix fabellas tractatos, nec
-    persius percipit periculis ne. Nihil dolorum ea pri, eu oporteat deterruisset ius, ad
-    mea praesent patrioque consequat. Usu no lorem consulatu elaboraret. Eu detraxit
-    explicari sea, adhuc malis falli usu et, ut duo mundi vocibus. Ad aliquid habemus vivendum
-    eam, eum ei feugiat theophrastus. Civibus eloquentiam in eam. Quo veri salutandi ne.
-    Et alia dolor interesset quo. His debet offendit no, has lorem malis nominati ne,
-    solum etiam viderer eos id. Eum ut dicunt legimus necessitatibus, in periculis assentior ius.
-  gravatar:
-  photo: /img/author/marian-stanley.jpg
-  twitter: http://twitter.com/elizabeth_reed
-  facebook: http://facebook.com/elizabeth_reed
-  linkedin: http://linkedin.com/elizabeth_reed
-
 - slug: oscar_renalias
   name: Oscar Renalias
   bio: >
@@ -56,6 +8,17 @@
   photo: /img/author/oscar-renalias.jpg
   twitter: https://twitter.com/oscarrenalias
   linkedin: https://linkedin.com/oscarrenalias
+
+- slug: ilkka_anttonen
+  name: Ilkka Anttonen
+  bio: >
+    Ilkka Anttonen is a Senior Technology Architect and the lead for Accenture's Emerging Technology group in the
+    Nordics.
+  gravatar:
+  photo: /img/author/ilkka-anttonen.jpg
+  twitter: https://twitter.com/IlkkaAnttonen
+  linkedin:
+  facebook:
 
 - slug: mario_macai
   name: Mario Macai
