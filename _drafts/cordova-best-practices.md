@@ -6,7 +6,7 @@ author: badrinath_bahadur
 comments: true
 ---
 
-# Mobility – They way to go !!
+# Mobility – The way to go !!
 
 Mobility solutions have been in the forefront of digital transformation journey for the enterprises. Enterprises have been looking specifically at “Mobile-first” or “Mobile-only” strategy for superior customer engagement and experience management. Being the primary channel of customer interaction, mobile applications play a very integral role in this overall strategy.  
 
@@ -14,8 +14,9 @@ However as enterprises delve further for a sustainable mobile strategy, one of t
 
 Most of the device OS providers support a set of native SDKs which is the recommended way of developing applications to get the best user experience. However, in B2C multi-platform application scenarios, cost and time-to-market is a primary consideration. Keeping this in consideration, it is not always possible to develop/support application using native SDKs for each device OS/platform. Hence, wherever feasible, enterprises are beginning to adopt cross-platform Hybrid applications strategy, wherein the application UI is built using web technologies and deployed on devices using off-the shelf containers built over native device SDKs.  Apache Cordova is one such hybrid application container.
 
+Here at Accenture, we are committed towards open source contribution. Apache Cordova is one of our focus areas within Accenture Digital. In the past few quarters, we have been actively involved in the overall development of Cordova framework by participating in both code as well as documentation fixes (For example [CB-9753], [CB-8765], [CB-10822],[CB-10637]). 
+
 In this blog, I intend to briefly explain the Apache Cordova framework and focus more on the best practices and learnings that would be of help to other developers. This blog intentionally excludes some of the best practices already listed in Apache Cordova [website].
-Accenture is committed to active open source contribution and has been actively contributing to the Apache Cordova community by taking up defect fixes (For example CB-9753, CB-8765, CB-10822)
 
 ## What is Apache Cordova?
 
@@ -100,3 +101,7 @@ Let us now look at some of the key best practices and learnings on Apache Cordov
 
 [website]: <https://cordova.apache.org/docs/en/6.x/guide/next/index.html>
 [basewebsite]: <https://cordova.apache.org/>
+[CB-9753]:https://github.com/apache/cordova-plugin-file/pull/164
+[CB-8765]:https://issues.apache.org/jira/browse/CB-8765
+[CB-10822]:https://github.com/apache/cordova-plugin-media/pull/87
+[CB-10637]:https://github.com/Accenture/cordova-docs/pull/1
