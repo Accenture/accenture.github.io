@@ -8,7 +8,7 @@ categories: accenture opensource JavaME JavaSE Python MQTT RaspberryPi
 
 ## Introduction
 
-![Different scopes of Open Spaces]/images/scopes.png
+![Different scopes of Open Spaces]/img/posts/smart-open-spaces/scopes.png
 
 Open spaces management includes multiple scenarios with any kind of volume open to people activity. Manage people indoors or outdoors, and in spaces with nothing in common “business” needs, such as museums, department stores, or city downtowns.
 
@@ -22,7 +22,7 @@ We wish we could know what is exactly happening, in real-time and historic info 
 
 To face this problem we are going to define some “Presence Zones” within we can monitor people activity. In order to be as no intrusive as possible we track people activity through the radio signals of their personal devices: smart phones, wearables, laptops, tablets… We are taking “shots” of where each device is at this exact moment in time. The idea is to collect data that let us know how people are “moving” into our “Open Space”.
 
-![Customers evolutions into a Smart Open Space]/images/evolution.gif
+![Customers evolutions into a Smart Open Space]/img/posts/smart-open-spaces/evolution.gif
 
 Now we can use collected information in real time:
 
@@ -56,7 +56,7 @@ For technology selection we identify:
 	* Beaglebone Black
 	* Arduino
 
-![Technology selection schema]/images/technologySchema.png
+![Technology selection schema]/img/posts/smart-open-spaces/technologySchema.png
 	
 Here we can see a simple example of how sniffers and collector are working together.
 
@@ -67,7 +67,7 @@ Here we can see a simple example of how sniffers and collector are working toget
 	
 ## Working example
 
-![Working example]/images/workingExample.gif
+![Working example]/img/posts/smart-open-spaces/workingExample.gif
 
 This is an example of how we are detecting and using real-time information.
 We have three detected devices, Nexus 5, detected by Raspberry Pis 1 and 2. Pebble detected by Raspberry Pi number 2, and one iPhone 6 detected by Raspberry Pi 4. There is no devices detected by Raspberry Pi number 3. Each beacon send to collector information of all detected devices, because they don’t know if other beacon has detected the same device.
@@ -82,13 +82,13 @@ The answer is yes, and its name is MQTT.
 Ok, that’s good if we need to manage one open space, but going forward, what if we need to manage 2, 3 or 50 of them? Is there a good and easy way to scale out this solution?
 The answer is yes, and its name is MQTT.
 
-![One data collector MQTT]/images/dataCollectorMQTT.png
+![One data collector MQTT]/img/posts/smart-open-spaces/dataCollectorMQTT.png
 
 The idea is split data collector into a data collector itself and a data center for real time and aggregated data. Data collector receives sockets from beacons, and send information to data center using MQTT. Data center has to serve the requests of historic information, real time information and analytics.
 
 Now we have an easy-to-scale solution. As times as necessary and without location restrictions.
 
-![Scaled out solution]/images/scaledOutSolution.png
+![Scaled out solution]/img/posts/smart-open-spaces/scaledOutSolution.png
 
 Combining MQTT topics and wildcards we can also get just the information that we need. For example:
 
@@ -98,7 +98,7 @@ Combining MQTT topics and wildcards we can also get just the information that we
 * The activity in all electronic departments.
 * Or all the activity.
 
-![MQTT filtering data]/images/mqttFiltering.png
+![MQTT filtering data]/img/posts/smart-open-spaces/mqttFiltering.png
 
 ## Conclusions
 
