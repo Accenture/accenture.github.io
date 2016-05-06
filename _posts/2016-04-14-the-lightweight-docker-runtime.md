@@ -59,4 +59,4 @@ Even though we've done extensive testing on VirtualBox on Windows and OS X machi
 
 # Next steps
 
-This is all for now. In future articles we'll go into implementation details of some of the most interesting capabilities such as service registration and discovery!
+This is all for now. In future articles we'll go into implementation details of some of the most interesting capabilities such as service registration and discovery.
