@@ -110,4 +110,4 @@ Combining MQTT topics and wildcards we can also get just the information that we
 
 Raspberry Pi devices are cheap but powerful enough to take multiple roles simultaneously: we use as Bluetooth device detection and collector device correlating data and producing reports. There are much more devices, but none of them has the availability and flexibility of Raspberry Pi, we can use if from simple IoT devices to complex java applications container (even using Docker).
 
-In this solution we use different languages that requires different skills of your team: Python, Java EE, Java SE… Multiple roles and visions are involved in development. Also using open standards that facilitate integration and addition of new features in the future.
+In this solution we use different languages that requires different skills of your team: Python, Java ME, Java SE… Multiple roles and visions are involved in development. Also using open standards that facilitate integration and addition of new features in the future.
