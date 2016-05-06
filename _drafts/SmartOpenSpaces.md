@@ -70,11 +70,17 @@ Here we can see a simple example of how sniffers and collector are working toget
 ![Working example](/img/posts/smart-open-spaces/workingExample.gif)
 
 This is an example of how we are detecting and using real-time information.
+
 We have three detected devices, Nexus 5, detected by Raspberry Pis 1 and 2. Pebble detected by Raspberry Pi number 2, and one iPhone 6 detected by Raspberry Pi 4. There is no devices detected by Raspberry Pi number 3. Each beacon send to collector information of all detected devices, because they don’t know if other beacon has detected the same device.
+
 With information from each beacon collector match MAC addresses and timeframe trying to detect duplicated devices. That’s reason why beacons send 4 packets (two for Nexus 5, one for Pebble and other one for iPhone 6) but only three events are generated in the collector.
+
 We’re also we can see how we’re using aggregated data.
+
 First Nexus 5 is detected by rasberry pis number 1 and 2. After some time it’s detected only by raspberry pi number 2. And after some time it’s only detected by raspberry pi number 3. It seems that he’s looking for a coffee break…
+
 Ok, that’s good if we need to manage one open space, but what if we need to manage 2, 3 or 50 of them? Is there a good and easy way to scale out this solution?
+
 The answer is yes, and its name is MQTT.
 
 ## Scale out
@@ -103,4 +109,5 @@ Combining MQTT topics and wildcards we can also get just the information that we
 ## Conclusions
 
 Raspberry Pi devices are cheap but powerful enough to take multiple roles simultaneously: we use as Bluetooth device detection and collector device correlating data and producing reports. There are much more devices, but none of them has the availability and flexibility of Raspberry Pi, we can use if from simple IoT devices to complex java applications container (even using Docker).
+
 In this solution we use different languages that requires different skills of your team: Python, Java EE, Java SE… Multiple roles and visions are involved in development. Also using open standards that facilitate integration and addition of new features in the future.
