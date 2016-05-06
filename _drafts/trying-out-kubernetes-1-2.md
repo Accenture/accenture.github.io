@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Trying out Kubernetes 1.2
+title: Trying Out Kubernetes 1.2
 author: ilkka_anttonen
 comments: true
 categories: docker
@@ -16,30 +16,30 @@ Contents
 
 ## General
 
-In this post I'll go over setting up a simple application on the newly released Kubernetes 1.2 version. I am not that familiar with earlier Kubernetes versions as I haven't been a fan of all the necessary configuration to get simple things running, but with version 1.2 a lot of progress has been made to make k8s easier and simpler to use.
+In this post, we go over setting up a simple application on the newly released Kubernetes 1.2 version, which has simplified configuration and made k8s easier to use.
 
 ## Installation
 
-Installing Kubernetes on OS X is straightforward. You just run the two lines
+Installing Kubernetes on OS X is straightforward by running the two lines
 
 {% highlight bash %}
 export KUBERNETES_PROVIDER=vagrant
 curl -sS https://get.k8s.io | bash
 {% endhighlight %}
 
-and Kubernetes is downloaded. The package is large (over 425MB) and will take some time to download.
+The package is large (over 425MB) and will take some time to download.
 
-The script immediately starts up the Vagrant based local environment with two nodes, master and node-1. While starting up the virtual machines are automatically provisioned and updated which takes several minutes. The setup should be completed with a success message.
+The script immediately starts up the Vagrant-based local environment with two nodes: master and node-1. While starting up, the virtual machines are automatically provisioned and updated, which takes several minutes. The setup should complete with a success message.
 
 ## Controlling
 
-The downloaded package is automatically extracted to a subdirectory called kubernetes. The scripts used for controlling kubernetes are located in kubernetes/cluster. This directory can either be added to the path or most of the work can be done in that directory as then also Vagrant knows about the status of the VirtualBox environments without having to use global-status and machine ids.
+The downloaded package is automatically extracted to a subdirectory called kubernetes. The scripts used for controlling kubernetes are located in kubernetes/cluster. This directory can either be added to the path or most of the work can be done in that directory. With the second option, Vagrant also knows about the status of the VirtualBox environments without having to use global-status and machine ids.
 
-You can access the Kubernetes dashboard and Cockpit through the URLs that are listed after the setup has completed. I tried installing a simple service through Cockpit and the end result is different than what you get by installing using the new `kubectl.sh run` command, so I decided to stick with the commandline.
+Access to the Kubernetes dashboard and Cockpit is through the URLs that are listed after the setup has completed. We tried installing a simple service through Cockpit, and the end result was different than what we got by installing using the new `kubectl.sh run` command, so we decided to stick with the commandline.
 
 ### Suspending and resuming
 
-The status of the Vagrant controlled VMs can be checked either by running `vagrant global-status` or if you're in the kubernetes/cluster directory just by issuing `vagrant status`. With `vagrant suspend` the VMs are saved and they can later on be resumed with `vagrant up`. If you are not in the kubernetes/cluster folder, you need to provide the ids for the commands to work.
+The status of the Vagrant controlled VMs can be checked either by running `vagrant global-status` or if in the kubernetes/cluster directory just by issuing `vagrant status`. With `vagrant suspend` the VMs are saved and can be resumed later with `vagrant up`. If you are not in the kubernetes/cluster folder, you need to provide the ids for the commands to work.
 
 ### Accessing the nodes
 
@@ -47,7 +47,7 @@ Nodes can be accessed with `vagrant ssh nodename` if you are in the kubernetes/c
 
 ### Changing the number of nodes
 
-The number of installed nodes can be altered with an environment variable. It can be set after the initial set-up has finished and then the new node can be added by running the `kube-up.sh` script, but at least for me the validation script got stuck and I started over with `vagrant destroy` and then `./kube-up.sh`.
+The number of installed nodes can be altered with an environment variable. It can be set after the initial set-up has finished and then the new node can be added by running the `kube-up.sh` script; however, the validation script got stuck so we started over with `vagrant destroy` and then `./kube-up.sh`.
 
 {% highlight bash %}
 export NUM_NODES=2
@@ -56,7 +56,7 @@ export NUM_NODES=2
 
 ## Starting a simple service
 
-With version 1.2 Kubernetes has simplified the application definition so that the yaml-based configuration isn't  needed. With the run command a service can be started and the configuration can also be later edited so that the yaml-based configuration file is provided by Kubernetes for editing.
+With version 1.2, Kubernetes has simplified the application definition so that the yaml-based configuration isn't needed. With the run command, a service can be started and the configuration can be edited later so that the yaml-based configuration file is provided by Kubernetes for editing.
 
 ### Running a simple image
 
@@ -66,11 +66,11 @@ Creating and starting a service with the new run-command looks like
 ./kubectl.sh run iletest --image=sirile/go-image-test --replicas=2 --port=80 --expose
 {% endhighlight %}
 
-This starts the defined image on two pods and automatically creates the service which exposes the pods. It creates a *deployment* and corresponding *ReplicaSets* instead of *ReplicationControllers*. As most of the examples still use *ReplicationControllers* I was quite confused when I tried to get the service exposed.
+This starts the defined image on two pods and automatically creates the service that exposes the pods. It creates a *deployment* and corresponding *ReplicaSets* instead of *ReplicationControllers*. As most of the examples still use *ReplicationControllers*, it can be confusing when trying to expose the service.
 
 ### Exposing the image via LoadBalancer
 
-By default the started Deployment is of the type *ClusterIP* which means that it is visible inside the cluster, but not to outside world. For external visibility the service type needs to be changed into *LoadBalancer* or *NodePort*. As *NodePort* would mean that the service is only visible on that exact node it is running on, *LoadBalancer* makes more sense.
+By default, the started Deployment is of the type *ClusterIP*, which means that it is visible only inside the cluster. For external visibility, the service type needs to be changed into *LoadBalancer* or *NodePort*. Since *NodePort* would mean that the service is only visible on that exact node it is running on, *LoadBalancer* makes more sense.
 
 #### Editing a service
 
@@ -80,25 +80,25 @@ Editing a service can be done with
 ./kubectl.sh edit service/iletest
 {% endhighlight %}
 
-As I normally use Atom as the default editor I had to change the editor to wait mode which can be done with
+Since we normally use Atom as the default editor, we had to change the editor to wait mode, which can be done with
 
 {% highlight bash %}
 export EDITOR="atom --wait"
 {% endhighlight %}
 
-After using that for a while I found out that as Kubernetes checks the file for validity when it's saved, a better feedback loop was achieved when using joe as the editor, so I decided to go with
+After experimenting with this, we realized that Kubernetes checks the file for validity when it's saved. Since we could achieve a better feedback loop when using joe as the editor, we decided to go with
 
 {% highlight bash %}
 export EDITOR="joe"
 {% endhighlight %}
 
-When you save the file (in this case by pressing ctrl+k+x) if the syntax is incorrect, the header of the file tells you what are allowed values, where the error was and the file is only really saved and taken into use when everything is okay. That's excellent usability and should be the new norm in everything that needs configuring.
+If the syntax is incorrect when you attempt to save the file (in this case by pressing ctrl+k+x), the header of the file shows the allowed values and the location of the error. The file is only saved and taken into use when everything is correct. This is an excellent usability feature and should be the new norm in everything that needs configuring.
 
 #### Changing the service type
 
 {% highlight yaml %}
 # Please edit the object below. Lines beginning with a '#' will be ignored,
-# and an empty file will abort the edit. If an error occurs while saving this file will be
+# and an empty file will abort the edit. If an error occurs while saving, this file will be
 # reopened with the relevant failures.
 #
 apiVersion: v1
@@ -125,11 +125,11 @@ status:
   loadBalancer: {}
 {% endhighlight %}
 
-After saving the file it is immediately taken into use.
+After saving the file, it is immediately taken into use.
 
 ## Testing the service
 
-The documentation says that LoadBalancer implementation is provider specific and it looks like the Vagrant version exposes the LoadBalancer on all the nodes to the NodePort. When testing with curl it looks like services do get called from both nodes successfully.
+The documentation says that LoadBalancer implementation is provider-specific, and it looks like the Vagrant version exposes the LoadBalancer on all the nodes to the NodePort. When testing with curl, it looks like services do get called from both nodes successfully.
 
 ### Finding out the port
 
@@ -152,7 +152,7 @@ No events.
 
 ### Finding out the node IPs
 
-Vagrant based VMs always have the IPs so that node-1 is 10.245.1.3, node-2 is 10.245.1.4 and so on, but these IPs can also be found out with the query
+Vagrant-based VMs always have the IPs so that node-1 is 10.245.1.3, node-2 is 10.245.1.4 and so on, but these IPs can also be found out with the query
 
 {% highlight bash %}
 $ ./kubectl.sh get -o json nodes/kubernetes-node-1 | grep -A1 LegacyHostIP
@@ -171,7 +171,7 @@ $ curl 10.245.1.4:31948
 <!DOCTYPE html><html><head><title>Node scaling demo</title></head><body><h1>iletest-836207442-x82ho</h1><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><circle cx="50" cy="50" r="48" fill="#381808" stroke="#000"/><path d="M50,2a48,48 0 1 1 0,96a24 24 0 1 1 0-48a24 24 0 1 0 0-48" fill="#000"/><circle cx="50" cy="26" r="6" fill="#000"/><circle cx="50" cy="74" r="6" fill="#FFF"/></svg></body></html>
 {% endhighlight %}
 
-With browser there seems to be some affinity where refreshing the page gives the same instance, but for example trying with a few different browsers (and incognito mode) shows that the results do come from different instances.
+With browser, there seems to be some affinity where refreshing the page gives the same instance. However, trying with a few different browsers (and incognito mode) shows that the results do come from different instances.
 
 ### Listing Kubernetes services
 
@@ -191,10 +191,8 @@ The default username and password for the services are vagrant/vagrant.
 
 ## Conclusion
 
-Setting up a local Vagrant based multi-node Kubernetes set-up is now easy and straightforward.
+A lot of simplification has been achived with Kubernetes version 1.2, which makes it more straightforward to establish a local Vagrant-based multi-node Kubernetes set-up.
 
-For doing simple development using Kubernetes locally seems like quite a overkill as the installation takes a lot of time and the set-up takes up quite a lot of resources. For managing a production ready environment it looks like a good fit, although then controlling things on a more fine-grained level using yaml-based configuration will make more sense. A lot of simplification has been achieved with version 1.2, although many examples still refer to older terminology and the best practices will surely change.
+For doing simple development, using Kubernetes locally may be an overkill as the installation and set-up is time and resource intensive. For managing a production-ready environment, however, it looks like a good fit--although controlling things on a more fine-grained level using yaml-based configuration will make more sense. 
 
-It will be interesting to see if Kubernetes will take into use the simpler networking model that was introduced with Docker 1.9. The Docker version in Kubernetes 1.2 seems to be 1.9 series, but I'd guess that they will quite quickly move to the 1.10 series.
-
-For some reason the included Innoflux and Grafana don't seem to start if there is only one worker node running, but with two worker nodes they started successfully.
+It will be interesting to see if Kubernetes will use the simpler networking model that was introduced with Docker 1.9. The Docker version in Kubernetes 1.2 seems to be 1.9 series, but may move quickly to the 1.10 series.
