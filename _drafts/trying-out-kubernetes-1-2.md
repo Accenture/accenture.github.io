@@ -18,9 +18,10 @@ Contents
 
 In this post, we go over setting up a simple application on the newly released Kubernetes 1.2 version, which has simplified configuration and made k8s easier to use.
 
+
 ## Installation
 
-Installing Kubernetes on OS X is straightforward by running the two lines
+Installing Kubernetes on OS X is straightforward by running the two lines:
 
 {% highlight bash %}
 export KUBERNETES_PROVIDER=vagrant
@@ -30,6 +31,7 @@ curl -sS https://get.k8s.io | bash
 The package is large (over 425MB) and will take some time to download.
 
 The script immediately starts up the Vagrant-based local environment with two nodes: master and node-1. While starting up, the virtual machines are automatically provisioned and updated, which takes several minutes. The setup should complete with a success message.
+
 
 ## Controlling
 
@@ -54,13 +56,14 @@ export NUM_NODES=2
 ./kube-up.sh
 {% endhighlight %}
 
+
 ## Starting a simple service
 
 With version 1.2, Kubernetes has simplified the application definition so that the yaml-based configuration isn't needed. With the run command, a service can be started and the configuration can be edited later so that the yaml-based configuration file is provided by Kubernetes for editing.
 
 ### Running a simple image
 
-Creating and starting a service with the new run-command looks like
+Creating and starting a service with the new run-command looks like:
 
 {% highlight bash %}
 ./kubectl.sh run iletest --image=sirile/go-image-test --replicas=2 --port=80 --expose
@@ -74,19 +77,19 @@ By default, the started Deployment is of the type *ClusterIP*, which means that 
 
 #### Editing a service
 
-Editing a service can be done with
+Editing a service can be done with:
 
 {% highlight bash %}
 ./kubectl.sh edit service/iletest
 {% endhighlight %}
 
-Since we normally use Atom as the default editor, we had to change the editor to wait mode, which can be done with
+Since we normally use Atom as the default editor, we had to change the editor to wait mode, which can be done with:
 
 {% highlight bash %}
 export EDITOR="atom --wait"
 {% endhighlight %}
 
-After experimenting with this, we realized that Kubernetes checks the file for validity when it's saved. Since we could achieve a better feedback loop when using joe as the editor, we decided to go with
+After experimenting with this, we realized that Kubernetes checks the file for validity when it's saved. Since we could achieve a better feedback loop when using joe as the editor, we decided to go with:
 
 {% highlight bash %}
 export EDITOR="joe"
@@ -127,13 +130,14 @@ status:
 
 After saving the file, it is immediately taken into use.
 
+
 ## Testing the service
 
 The documentation says that LoadBalancer implementation is provider-specific, and it looks like the Vagrant version exposes the LoadBalancer on all the nodes to the NodePort. When testing with curl, it looks like services do get called from both nodes successfully.
 
 ### Finding out the port
 
-The port can be queried with
+The port can be queried with:
 
 {% highlight bash %}
 $ ./kubectl.sh describe service/iletest
@@ -152,7 +156,7 @@ No events.
 
 ### Finding out the node IPs
 
-Vagrant-based VMs always have the IPs so that node-1 is 10.245.1.3, node-2 is 10.245.1.4 and so on, but these IPs can also be found out with the query
+Vagrant-based VMs always have the IPs so that node-1 is 10.245.1.3, node-2 is 10.245.1.4 and so on, but these IPs can also be found out with the query:
 
 {% highlight bash %}
 $ ./kubectl.sh get -o json nodes/kubernetes-node-1 | grep -A1 LegacyHostIP
@@ -162,7 +166,7 @@ $ ./kubectl.sh get -o json nodes/kubernetes-node-1 | grep -A1 LegacyHostIP
 
 ### Testing the service using curl or browser
 
-The query with the IP and port looks like
+The query with the IP and port looks like:
 
 {% highlight bash %}
 $ curl 10.245.1.3:31948
@@ -175,7 +179,7 @@ With browser, there seems to be some affinity where refreshing the page gives th
 
 ### Listing Kubernetes services
 
-The Kubernetes services can be listed with
+The Kubernetes services can be listed with:
 
 {% highlight bash %}
 $ ./kubectl.sh cluster-info
@@ -188,6 +192,7 @@ InfluxDB is running at https://10.245.1.2/api/v1/proxy/namespaces/kube-system/se
 {% endhighlight %}
 
 The default username and password for the services are vagrant/vagrant.
+
 
 ## Conclusion
 
