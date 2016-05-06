@@ -8,7 +8,7 @@ categories: accenture opensource JavaME JavaSE Python MQTT RaspberryPi
 
 ## Introduction
 
-![Different scopes of Open Spaces](/img/posts/smart-open-spaces/scopes.png =510x360)
+![Different scopes of Open Spaces](/img/posts/smart-open-spaces/scopes.png)
 
 Open spaces management includes multiple scenarios with any kind of volume open to people activity. Manage people indoors or outdoors, and in spaces with nothing in common “business” needs, such as museums, department stores, or city downtowns.
 
