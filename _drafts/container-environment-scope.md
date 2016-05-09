@@ -5,7 +5,10 @@ categories: accenture opensource oss lightweight-architecture docker kubernetes
 ---
 # Managing containerized microservices environments
 ## on app catalogues
-Installation of software has never been easier than today. With the central dockerhub, quay.io, gcr registries and kitematic or box it's easy to run software locally, in a sandboxed environment. For larger deployments, there are app catalogues available which provide the ability to run clusterized installations of distributed apps (rabbitmq, elasticsearch, redis, etc): kubernetes/helm, elastickube, kpm, openshift, to name a few.
+Installation of software has never been easier than today. With the central dockerhub, quay.io, gcr registries and kitematic or box it's easy to run software locally, in a sandboxed environment. For larger deployments, there are app catalogues available which provide the ability to run clusterized installations of distributed apps (rabbitmq, elasticsearch, redis, etc).
+
+![elastickube app catalogues](/images/2016/05/container-environment-scope-1.png)
+
 
 It's easy to discover and run apps since the burden of dependency management is on the developer side, who provides the final artefacts (the container images and service description). It doesn't matter anymore which linux distribution is running underneath, be it CentOS, RedHat, CoreOS or something else
 
@@ -17,7 +20,7 @@ While containers provide isolated environments of resources, cluster application
 ## on tooling
 The state of tooling has greatly improved since the early days of docker. Kubernetes, Rancher, Deis and OpenShift help to manage the huge amount of containers, overlay networks like calico, flannel and weave dns provide the migration path to cloud-native applications and auto-provisioning of storage allows for flexible scheduling of containers. There are dashboards for managing containers (e.g. elastico, kube-dashboard, ..) and cluster deployments tools like helm, kpm and spread. With pipelines like spinnaker or gocd it's possible to manage deployments to kubernetes, bringing CD pipelines to the container world.
 
-![Weave Scope](/images/2016/05/container-environment-scope-1.png)
+![Weave Scope](/images/2016/05/container-environment-scope-2.png)
 
 A good example on how tooling improved is weave scope. It collects container and network information at a low level and allows for graphical access, specifically:
 * visualize microservice architecture
@@ -25,7 +28,7 @@ A good example on how tooling improved is weave scope. It collects container and
 * shell inside the container
 * watch cpu, memory consumption
 
-![Weave Scope](/images/2016/05/container-environment-scope-2.png)
+![Weave Scope](/images/2016/05/container-environment-scope-3.png)
 
 With the rise of environments it can be hard to keep the overview. Scope gives a boost in developer productivity, since it makes debugging easier and environments more approachable.
 
