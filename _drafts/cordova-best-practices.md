@@ -14,7 +14,7 @@ However, as enterprises delve into mobility solutions, one of the biggest challe
 
 Most of the device OS providers support a set of native software development kits (SDKs), which is the recommended way of developing applications to get the best user experience. However, in business-to-consumer, multi-platform application scenarios, cost and time-to-market are primary considerations. It is not always possible to develop and support an application using native SDKs for each device OS/platform. As a result, enterprises are beginning to adopt a cross-platform hybrid applications strategy, using web technologies to build the application user interface and off-the-shelf containers built on native device SDKs to deploy on devices.  Apache Cordova is one such hybrid application container.
 
-At Accenture, we are committed to open source contribution. Apache Cordova is one of our focus areas within Accenture Digital. In the past few quarters, we have been actively involved in the overall development of the Cordova framework by participating in both code as well as documentation fixes (For example [CB-9753], [CB-8765], [CB-10822],[CB-10637]). 
+At Accenture, we are committed to open source contribution. Apache Cordova is one of our focus areas within Accenture Digital. In the past few quarters, we have been actively involved in the overall development of the Cordova framework by participating in both code as well as documentation fixes. (For example, see [CB-9753], [CB-8765], [CB-10822],[CB-10637]). 
 
 This blog highlights the Apache Cordova framework and focuses on leading practices and learnings that would be of help to other developers. This blog intentionally excludes some of the best practices already listed in Apache Cordova [website].
 
