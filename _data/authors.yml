@@ -48,12 +48,34 @@
   photo: /img/author/martin-lofaj.jpg
   twitter: https://twitter.com/martin_lofaj
   linkedin:
-  
+
 - slug: badrinath_bahadur
   name: Badrinath Bahadur
   bio: >
-    Badrinath Bahadur is a Software Engineering Manager and SME for cross platform mobile applications having 15+ years of experience in design, development and deployment of mobile, web/middleware and Cloud based applications with expertise in mobility solutions, J2EE and Oracle technologies. He has carried out medium/large mobility consulting assignments for customers in Europe and Middle-east and also handled presales and multiple technology related presentations for CXO level audience and industry analysts.
+    Badrinath Bahadur is a Software Engineering Manager and SME for cross platform mobile applications having 15+ 
+    years of experience in design, development and deployment of mobile, web/middleware and Cloud based applications 
+    with expertise in mobility solutions, J2EE and Oracle technologies. He has carried out medium/large mobility 
+    consulting assignments for customers in Europe and Middle-east and also handled presales and multiple 
+    technology related presentations for CXO level audience and industry analysts.
   gravatar:
   photo: /img/author/badrinath-bahadur.jpg
+  twitter: 
+  linkedin:
+
+- slug: chandrasekaran_thillaiganesh
+  name: Chandrasekaran Thillaiganesh
+  bio: >
+    Chandrasekaran is a iOS mobile app developer, part of the Accenture India Delivery Center.
+  gravatar:
+  photo: /img/author/default-user.png
+  twitter: 
+  linkedin:
+
+- slug: dharmendra_g_sharma
+  name: Dharmendra Sharma
+  bio: >
+    Dharmendra Sharma is a mobility development and research expert, part of the Accenture India Delivery Center.
+  gravatar:
+  photo: /img/author/default-user.png
   twitter: 
   linkedin:

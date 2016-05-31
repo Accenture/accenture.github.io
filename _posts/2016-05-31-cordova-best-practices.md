@@ -2,7 +2,11 @@
 layout: post
 title:  "Apache Cordova–-Leading Practices and Learnings"
 categories: mobility
-author: badrinath_bahadur
+author: 
+    - badrinath_bahadur
+    - chandrasekaran_thillaiganesh
+    - dharmendra_g_sharma
+date: '2016-05-31 00:00'
 comments: true
 ---
 
@@ -102,10 +106,6 @@ Leading practices and learnings on Apache Cordova framework:
 
 ### References
 * Apache Cordova [website][basewebsite]
-
-### Content contribution/credits
-* Thillaiganesh C
-* Dharmendra Sharma G
 
 [website]: <https://cordova.apache.org/docs/en/6.x/guide/next/index.html>
 [basewebsite]: <https://cordova.apache.org/>
