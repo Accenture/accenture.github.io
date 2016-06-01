@@ -46,9 +46,9 @@ The framework supports the following device platforms:
 8.	Ubuntu
 
 ## How does it work?
-Apache Cordova uses the WebView mechanism supported by most of the current device platforms. Cordova core libraries provide a native WebView shell wherein the web applications can be loaded. Within the native Cordova application, the application’s user interface (UI) consists of a single screen that contains a single WebView that consumes the available screen space on the device. When the application launches, it loads the web application’s start-up HTML5 page into the WebView, then passes control to the WebView to allow the user to interact with the web application. 
+Apache Cordova is based on the webview mechanism supported by most of the popular device platforms. Cordova provides a native shell with a webview in which the developer provided web screens are loaded. Most of the Cordova applications are based on the user interface that are single page web applications and the dynamic aspects of the application is handled by appropriate Javascript frameworks along with CSS based styles/themes. Once the application launches, based on the configuration details provided to Cordova, it loads the start-up HTML5 page in the webview and then further interactions are handled within a single webview. 
 
-As the user interacts with the content, links or JavaScript code within the application can load other content from within the resource files packaged with the application, or can reach out to the network and pull content down from a web or application server. Most of the user interface and interaction is handled by the HTML5/CSS page (typically called the Single Page applications) supported by JavaScript for business logic. The Javascript can also invoke Cordova JavaScript APIs for any native APIs that are exposed by the Cordova core libraries and plug-ins.   
+As user interacts with the application UI, additional content can be loaded from the local device or pulled from the network. In addition to the ability to load a web application, Cordova also exposes multiple device specific events for the application developer that can be implemented to enhance the user experience (such as Application moving to background/foreground). The application developers can also invoke Cordova JavaScript APIs for any native APIs that are exposed by the Cordova core libraries and plug-ins. This enables developers use most of the features that are available to a purely native SDK based application. In case where a specific device feature is not available as a Cordova plugin, the framework also allows developers implement their custom plugins. Cordova has a central [repository] for developers to look for all the available plugins (including the community developed plugins).   
 
 The diagram below depicts the working mechanism.
 
@@ -113,3 +113,4 @@ Leading practices and learnings on Apache Cordova framework:
 [CB-8765]:https://issues.apache.org/jira/browse/CB-8765
 [CB-10822]:https://github.com/apache/cordova-plugin-media/pull/87
 [CB-10637]:https://github.com/Accenture/cordova-docs/pull/1
+[repository]:https://cordova.apache.org/plugins/
