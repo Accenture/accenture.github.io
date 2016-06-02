@@ -10,32 +10,32 @@ categories: accenture opensource JavaME JavaSE Python MQTT RaspberryPi
 
 ![Different scopes of Open Spaces](/img/posts/smart-open-spaces/scopes.png)
 
-Open spaces management includes multiple scenarios with any kind of volume of people activity.Manage people indoors or outdoors, and in spaces with nothing in common “business” needs, such as museums, department stores, or city downtowns.
+Open space management is an emerging concept useful in any scenario in which there is a large volume of people activity. Applying intelligence to open spaces makes it possible to understand what is happening indoors or outdoors--in areas such as museums, department stores, city downtowns or public venues--and in spaces with no common “business” needs among the people who are in the location. 
 
-We wish we could know what is exactly happening, in real-time and historic info in order to:
+Government agencies and businesses can gain valuable insights and make better decisions by knowing what is happening at a location, both through real-time data and historical information. Examples include:
 
-* Evaluate whether we are about to exceed the capacity of a closed space.
-* If we need to plan special shifts to meet unexpected demand (more nurses/doctors at a hospital emergency).
-* If there is a crowd on a street for some reason (accident, fire, traffic jam, …), we can send the appropriate public service (ambulance, firemen, police, ... ).
+* Assessing why a crowd is gathering on a street (e.g., accident, fire, traffic jam) and sending the appropriate public service (ambulance, fire fighters, police officers).
+* Evaluating whether the capacity of a closed space is about to be exceeded (sporting event, concert, convention center) and modifying crowd control plans.
+* Determining if special shifts are needed to meet unexpected demand (e.g., more nurses/doctors in a hospital emergency room or additional utilities workers for a power outage).
 
 ## Solution description
 
-To face this problem we are going to define some “Presence Zones” within we can monitor people activity. In order to be as no intrusive as possible we track people activity through the radio signals of their personal devices: smart phones, wearables, laptops, tablets… We are taking “shots” of where each device is at this exact moment in time. The idea is to collect data that let us know how people are “moving” into our “Open Space”.
+To explore the opportunity, we defined some “presence zones” within which we could monitor people activity. In an effort to be discreet, we tracked people activity through the radio signals of their personal devices: smart phones, wearables, laptops and tablets. This is similar to taking “snapshots” of where each device is at an exact moment in time. The idea was to collect data to better understand how people are moving around an open space.
 
 ![Customers evolutions into a Smart Open Space](/img/posts/smart-open-spaces/evolution.gif)
 
-Now we can use collected information in real time:
+With this information, an agency or business can use collected information in real time to answer questions such as:
 
-* Where are the customers located at this exact moment in time?
-* Which places are capturing the customer attention?
+* Where are people located at this exact moment in time?
+* Which places are capturing the people's attention?
 
-Or analyze aggregated data for insights on people habits:
+Or analyze aggregated data for insights on people's habits:
 
-* Which are the paths that customers follow more frequently inside the store?
-* A sale on selected items started yesterday at noon. How was the activity in the surrounding area compared to normal days?
+* Which paths do customers follow more frequently inside the store?
+* A sale on selected items started yesterday at noon. How has the activity in the surrounding area changed when compared to normal days?
 * What is the activity pattern during the day in the electronics department? This information would be helpful to plan working shifts better.
 
-Our approach has also one main objective: TCO should be as low as possible. To enable that objective:
+To enable the lowest possible total cost of ownership, we followed these principles:
 
 * Leverage open standards, minimizing the cost of software licenses.
 * Physical implementation with low-cost, easy to obtain devices.
@@ -43,14 +43,14 @@ Our approach has also one main objective: TCO should be as low as possible. To e
 
 ## Technology selection
 
-For technology selection we identify:
+We used the following technologies to develop the solution:
 
 * Java and Python as programming languages/runtimes
 	* Device sniffing through Java ME 8 midlet or Python script (for devices that cannot run ME... yet)
 	* Data collector through Java SE 8 server
 * Bluetooth LE
 	* More precise than WiFi
-	* Not as frequently used compared with WiFi, but usage is growing fast thanks to wearables
+	* Not as frequently used compared with WiFi, but usage is growing quickly thanks to wearables
 * Single board computers
 	* Raspberry Pi A+, B+, 2 B
 	* Beaglebone Black
@@ -58,12 +58,12 @@ For technology selection we identify:
 
 ![Technology selection schema](/img/posts/smart-open-spaces/technologySchema.png)
 	
-Here we can see a simple example of how sniffers and collector are working together.
+Here we can see a simple example of how sniffers and a collector work together.
 
 1. First we sniff the devices using Bluetooth to find them.
 2. When we have this information, we translate it to JSON and sent it to the collector.
-3. Collector has to correlate and store information from each beacon.
-4. And as last step it generates reports such as (daily, on demand reports, or the realtime view)
+3. The collector has to correlate and store information from each beacon.
+4. And as last step it generates reports such as daily, on-demand reports or the real-time view.
 	
 ## Working example
 
@@ -71,9 +71,9 @@ Here we can see a simple example of how sniffers and collector are working toget
 
 This is an example of how we are detecting and using real-time information.
 
-We have three detected devices, Nexus 5, detected by Raspberry Pis 1 and 2. Pebble detected by Raspberry Pi number 2, and one iPhone 6 detected by Raspberry Pi 4. There is no devices detected by Raspberry Pi number 3. Each beacon send to collector information of all detected devices, because they don’t know if other beacon has detected the same device.
+We have three detected devices: Nexus 5 detected by Raspberry Pis 1 and 2; Pebble detected by Raspberry Pi 2; iPhone 6 detected by Raspberry Pi 4. There are no devices detected by Raspberry Pi 3. Each beacon sends to the collector information of all detected devices because it does not know if another beacon has detected the same device.
 
-With information from each beacon collector match MAC addresses and timeframe trying to detect duplicated devices. That’s reason why beacons send 4 packets (two for Nexus 5, one for Pebble and other one for iPhone 6) but only three events are generated in the collector.
+With information from each beacon, collector matches MAC addresses and timeframe in an attempt to detect duplicated devices. This is the reason why the beacons send four packets (two for Nexus 5, one for Pebble and one for iPhone 6) but only three events are generated in the collector.
 
 We’re also we can see how we’re using aggregated data.
 
