@@ -10,7 +10,7 @@ categories: accenture opensource JavaME JavaSE Python MQTT RaspberryPi
 
 ![Different scopes of Open Spaces](/img/posts/smart-open-spaces/scopes.png)
 
-Open spaces management includes multiple scenarios with any kind of volume open to people activity. Manage people indoors or outdoors, and in spaces with nothing in common “business” needs, such as museums, department stores, or city downtowns.
+Open spaces management includes multiple scenarios with any kind of volume of people activity.Manage people indoors or outdoors, and in spaces with nothing in common “business” needs, such as museums, department stores, or city downtowns.
 
 We wish we could know what is exactly happening, in real-time and historic info in order to:
 
@@ -29,17 +29,17 @@ Now we can use collected information in real time:
 * Where are the customers located at this exact moment in time?
 * Which places are capturing the customer attention?
 
-Or analyse aggregated data for insights on people habits
+Or analyze aggregated data for insights on people habits:
 
 * Which are the paths that customers follow more frequently inside the store?
 * A sale on selected items started yesterday at noon. How was the activity in the surrounding area compared to normal days?
-* What is the activity pattern along the day in the electronics department? That information would be helpful to plan working shifts better
+* What is the activity pattern during the day in the electronics department? This information would be helpful to plan working shifts better.
 
 Our approach has also one main objective: TCO should be as low as possible. To enable that objective:
 
 * Leverage open standards, minimizing the cost of software licenses.
-* Phisical implementation with low-cost, easy to obtain devices.
-* Simple & lightweight, but easy to scale.
+* Physical implementation with low-cost, easy to obtain devices.
+* Simple and lightweight, but easy to scale.
 
 ## Technology selection
 
@@ -51,7 +51,7 @@ For technology selection we identify:
 * Bluetooth LE
 	* More precise than WiFi
 	* Not as frequently used compared with WiFi, but usage is growing fast thanks to wearables
-* Single Board Computers
+* Single board computers
 	* Raspberry Pi A+, B+, 2 B
 	* Beaglebone Black
 	* Arduino
@@ -61,7 +61,7 @@ For technology selection we identify:
 Here we can see a simple example of how sniffers and collector are working together.
 
 1. First we sniff the devices using Bluetooth to find them.
-2. When we have this information we translate it to JSON and send it to the collector.
+2. When we have this information, we translate it to JSON and sent it to the collector.
 3. Collector has to correlate and store information from each beacon.
 4. And as last step it generates reports such as (daily, on demand reports, or the realtime view)
 	
