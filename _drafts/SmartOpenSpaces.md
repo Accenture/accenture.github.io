@@ -20,7 +20,7 @@ Government agencies and businesses can gain valuable insights and make better de
 
 ## Solution description
 
-To explore the opportunity, we defined some “presence zones” within which we could monitor people activity. In an effort to be discreet, we tracked people activity through the radio signals of their personal devices: smart phones, wearables, laptops and tablets. This is similar to taking “snapshots” of where each device is at an exact moment in time. The idea was to collect data to better understand how people are moving around an open space.
+To explore the opportunity, we defined some “presence zones” within which we could monitor people activity. In an effort to be discreet, we tracked people activity into one of our offices, through the radio signals of their personal devices: smart phones, wearables, laptops and tablets. This is similar to taking “snapshots” of where each device is at an exact moment in time. The idea was to collect data to better understand how people are moving around an open space.
 
 ![Customers evolutions into a Smart Open Space](/img/posts/smart-open-spaces/evolution.gif)
 
