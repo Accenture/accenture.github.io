@@ -79,3 +79,30 @@
   photo: /img/author/default-user.png
   twitter: 
   linkedin:
+
+- slug: jorge_hidalgo
+  name: Jorge Hidalgo
+  bio: >
+    Jorge is the Global Java Community Co-Lead in Accenture, and the Custom Distributed, Java, Architecture and DevOps Capability Lead in the Accenture Delivery Center in Spain (SDC).
+    In these roles, he drives Java technology agenda in terms of professional community, delivery innovation, asset research and development, tools, methodology, architecture, training, certifications and alliances.
+  gravatar:
+  photo: /img/author/jorge-hidalgo.jpg
+  twitter: _deors
+  linkedin:
+
+- slug: julio_palma_vazquez
+  name: Julio Palma Vázquez
+  bio: >
+    Julio is a Team Lead with over 16 years of working experience and is based in Spain Delivery Center (SDC). Sci-Fi fan, MTB biker and father.
+  gravatar:
+  photo: /img/author/julio-palma-vazquez.jpg
+  twitter: restalion
+  linkedin:
+
+- slug: vicente_gonzalez
+  name: Vicente González
+  bio:    
+  gravatar:
+  photo: /img/author/vicente-gonzalez.jpg
+  twitter: 
+  linkedin:  

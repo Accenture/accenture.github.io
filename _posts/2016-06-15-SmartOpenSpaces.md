@@ -2,6 +2,12 @@
 layout: post
 title:  "Smart Open Spaces"
 categories: accenture opensource JavaME JavaSE Python MQTT RaspberryPi
+author: 
+    - julio_palma_vazquez
+    - jorge_hidalgo
+    - vicente_gonzalez
+date: '2016-06-15 00:00'
+comments: true
 ---
 
 # Smart Open Spaces
