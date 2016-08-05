@@ -7,19 +7,19 @@ The [DevOps Platform (aka ADOP)](http://accenture.github.io/adop-docker-compose/
 For evaluation purposes the whole platform can be run on one machine using this [quickstart script](http://accenture.github.io/adop-docker-compose/docs/quickstart/), or you can jump straight to running an instance in a multi-availabilty zone Docker Swarm using this [Cloud Formation script](https://github.com/Accenture/adop-docker-compose/tree/master/provision/aws/swarm).
 
 Within 30 minutes anyone using ADOP can:
-1. Stand up all of the tools
-2. Load-in an application and the associated pipelines, automated tests and environment creation automation
-3. Create environments
-4. Make code changes to the application
+1. Stand up all of the tools;
+2. Load-in an application and the associated pipelines, automated tests and environment creation automation;
+3. Create environments;
+4. Make code changes to the application;
 5. Watch those changes get deployed to the environments via a continuous delivery pipeline.
 
 >This allows you to perform continuous delivery-first development (as opposed to first writing code and then wondering about environments and release automation later).
 
 For example you might choose to:
-1. Stand up ADOP in AWS
-2. Load the [Spring Petclinic Java cartridge](https://github.com/accenture/adop-cartridge-java)
-3. Create a test and production environment
-4. Clone the Petclinic code from the ADOP instance, update the user interface in the Petclinic application and push it back to ADOP
+1. Stand up ADOP in AWS;
+2. Load the [Spring Petclinic Java cartridge](https://github.com/accenture/adop-cartridge-java);
+3. Create a test and production environment;
+4. Clone the Petclinic code from the ADOP instance, update the user interface in the Petclinic application and push it back to ADOP;
 5. Watch the continuous delivery pipeline compile the code; run the unit tests; perform static code analysis; perform a deployment; run functional, security, and performance tests; and deploy the code to half of production (as it waits for confirmation on whether to deploy to the other half).
 
 Not bad for 30 minutes!
@@ -38,8 +38,8 @@ These days we find ADOP extremely valuable for:
 ## What is in the box?
 By default (at the time of writing) ADOP comes with:
 - Gerrit (to manage Git repositories and peer review life cycles if required)
-- Jenkins (as the orchestrator of all automation within the platform including loading platform extensions and cartridges
--  Various things Jenkins is able to run such as:
+- Jenkins (as the orchestrator of all automation within the platform including loading platform extensions and cartridges)
+-  Various things that Jenkins is able to run such as:
 
     *  Maven, Ant, NODEJS (for automated build, etc.)
     *  Docker (for building or running containers; e.g., to perform tasks or form environments)
@@ -49,7 +49,7 @@ By default (at the time of writing) ADOP comes with:
     *  SonarQube (for static code analysis)
     *  Nexus (for storing binary artifacts)
     *  Selenium Grid (for browser testing)
-    *  Logstash [(the ELK stack (for log aggregation from both the platform and environments created using the platform)]
+    *  Logstash (aka the ELK stack...for log aggregation from both the platform and environments created using the platform)
     *  Sensu (for monitoring the platform and environments created using the platform)
     *  NGINX (as a reverse proxy)
     *  OpenLDAP and a browser (for a local user directory for authentication)
@@ -73,8 +73,8 @@ Naturally, we have tried to make getting started as simple as possible.  The ins
 ## Roadmap
 As we continue to find increased interest and users of the platform, we are driving improvements in the following ways:
 
-* Adding more cartridges with the intention that more and more technologies and sample applications can be bootstrapped on the tool (for continuous delivery-first development)
-* Adding more platform extensions; for example, a Puppet Server or Ansible Tower
+* Adding more cartridges with the intention that more and more technologies and sample applications can be bootstrapped on the tool (for continuous delivery-first development).
+* Adding more platform extensions; for example, a Puppet Server or Ansible Tower.
 * Extending the cartridge and platform extension loaders to make writing them easier and more efficient.  Note: We are committed to doing this in a backwards-compatible manner and do not expect to render existing cartridge and platform extensions unloadable.
 * Prove more hosting providers. Storage and compute resources permitting, theoretically ADOP will run out of the box anywhere Docker is installed, be that a single machine, a Docker Swarm, or a container PaaS that supports Docker-compose.  However, so far we have only used it on single instances in AWS, Azure, GCP and on premise, and in a Docker Swarm on AWS and Azure.
 *  Improving the operability of the platform.  While many people will choose to first experience ADOP by installing it on a single machine, we also have been enhancing the AWS Cloud Formation script to provide a more resilient architecture.
