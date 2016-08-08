@@ -99,6 +99,17 @@
   twitter: restalion
   linkedin:
 
+- slug: mark_rendell
+  name: Mark Rendell
+  bio: >
+    Accenture Certified DevOps Lead with experiences spanning Configuration Mgmt, Infrastructure as code, Continuous Delivery, Environment Mgmt, Build, Deployment and Testing tooling.PRINCE 2 practitioner, PMP, Agile Scrum Master, ITIL V3.0 certified (6 credits), Amazon Solutions Architect certified. 
+    Over 9 years experience at leading both support and development teams consisting of on and off-shore resources.
+    Interested in continuous delivery, test driven development and LEAN.
+  gravatar:
+  photo: /img/author/mark-rendell.jpg
+  twitter: restalion
+  linkedin:  
+
 - slug: vicente_gonzalez
   name: Vicente González
   bio:    

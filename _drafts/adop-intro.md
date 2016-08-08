@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "The DevOps Platform"
+author: 
+  - mark_rendell
+categories: devops
+comments: true
+date: '2016-08-08 00:00'
+---
 # The DevOps Platform
 
 The [DevOps Platform (aka ADOP)](http://accenture.github.io/adop-docker-compose/) is an integration of open source tools that is designed to provide the capability to perform continuous delivery. Out of the box, the platform contains tools to store, version, build, test and release application and infrastructure code via continuous delivery pipelines. The platform also supports two forms of extensibility:
@@ -7,6 +16,7 @@ The [DevOps Platform (aka ADOP)](http://accenture.github.io/adop-docker-compose/
 For evaluation purposes the whole platform can be run on one machine using this [quickstart script](http://accenture.github.io/adop-docker-compose/docs/quickstart/), or you can jump straight to running an instance in a multi-availabilty zone Docker Swarm using this [Cloud Formation script](https://github.com/Accenture/adop-docker-compose/tree/master/provision/aws/swarm).
 
 Within 30 minutes anyone using ADOP can:
+
 1. Stand up all of the tools;
 2. Load-in an application and the associated pipelines, automated tests and environment creation automation;
 3. Create environments;
@@ -16,6 +26,7 @@ Within 30 minutes anyone using ADOP can:
 >This allows you to perform continuous delivery-first development (as opposed to first writing code and then wondering about environments and release automation later).
 
 For example you might choose to:
+
 1. Stand up ADOP in AWS;
 2. Load the [Spring Petclinic Java cartridge](https://github.com/accenture/adop-cartridge-java);
 3. Create a test and production environment;
@@ -36,7 +47,9 @@ These days we find ADOP extremely valuable for:
 - Sharing automation such as the ability to create particular environments, build great continuous delivery pipelines or develop strong automated deployments and testing.
 
 ## What is in the box?
+
 By default (at the time of writing) ADOP comes with:
+
 - Gerrit (to manage Git repositories and peer review life cycles if required)
 - Jenkins (as the orchestrator of all automation within the platform including loading platform extensions and cartridges)
 -  Various things that Jenkins is able to run such as:
