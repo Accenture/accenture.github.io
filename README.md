@@ -30,8 +30,6 @@ For OS X and Linux users, you'll probably need to run the previous command with 
 
 Add your content to the `_drafts` folder for as long as it's not ready to be published. Save it as ```<file>.md```, do not specify any date while in draft state.
 
-When ready, move it to the `_posts` folder and name it as follows: `YYYY-MM-DD-post-slug.markdown`. Rebuild the site to see the content.
-
 Each must post contain some YAML metadata at the very top:
 
 ```yaml
@@ -91,9 +89,13 @@ Assets can be referenced from Markdown post content as follows:
 
 No need to restart Jekyll when adding new images, as it will automatically detect the new file and copy it accordingly to the right folder.
 
-# Working with drafts
+# Article workflow
 
-TODO
+All new articles must be handled as drafts by placing files in the ```_drafts``` folder. 
+
+After authors communicate that content is ready, it will be submitted for proof reading.
+
+Once proof read, the site owner (currently oscar.renalias@accenture.com) will publish the content by moving the draft content to the ```_posts``` folder, and update any missing metadata. Do NOT publish content before it is checked and approved.
 
 # Adding new contributors
 
