@@ -14,10 +14,10 @@ it's time to deploy in a corporate environment.
 
 ## Azure Active Directory
 
-Accenture Federal Services (and Accenture global) is a big user of Office365, and in order to make this work at scale
-for your entire user population, you must migrate your Microsoft Active Directory to Azure Active Directory. This
-means that now Azure is the authoritative provider for your user IDs and passwords, and validation takes place 
-"in the cloud."
+Microsoft provides a user authentication and authorization service via its Azure cloud services - 
+["Azure Active Directory"](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/).
+This is being adopted by a large number of organizations and can serve as a master repository of user IDs. This tool
+can take the place of your organization's internal Active Directory services.
 
 Back in the days when we hosted our web applications in-house (within our corporate perimeter) and ran a Windows Active
 Directory infrastructure, validating users against Active Directory was a simple matter of doing an LDAP lookup on the
@@ -80,13 +80,14 @@ soon the proud owner of an Azure AD user authentication service!
 
 ## Corporate Nirvana
 
-I then worked with our AFS IT team to get my web application added as an authorized client for our Azure AD service.
-They were happy to help me get set up, and we first validated the approach against a test Azure AD instance that they
-maintained. We then scheduled implementation on the production Azure AD service, and I worked with my user community
-to educate them on the new sign-in process.
+Using this new capability, I was able to validate users against an Azure Active Directory instance. Using off-the-shelf
+tools that interact with the Azure AD, my Business owners
+now have direct control over access to the web application. Since the users also were using their existing Azure IDs
+for sign-in, this eliminated the need for any application-specific user ID maintenance tasks. While I was previously
+dealing with frequent requests for new users and password resets, now I hear nothing - and processes that already exist
+to manage and reset users are taking over for me.
 
-With the aid of tools provided by the AFS IT team, the business owners now had direct control over access to the web
-application. Since the users also were using their AFS Enterprise IDs for sign-in, this eliminated the need for any
-application-specific user ID maintenance tasks. While I was previously dealing with frequent requests for new users and
-password resets, now I hear nothing - and the existing Enterprise passsword tools are serving us well.
+## Just show me the code!
 
+The code that provides this capability is in the 
+[Accenture github repository](https://github.com/Accenture/grails-spring-security-oauth-azure).
