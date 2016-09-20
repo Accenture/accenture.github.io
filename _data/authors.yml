@@ -117,3 +117,16 @@
   photo: /img/author/vicente-gonzalez.jpg
   twitter: 
   linkedin:  
+
+- slug: martin_hobson
+  name: Martin Hobson
+  bio: >
+    Martin is a Software Developer Manager at Accenture Federal Services (AFS), where he is part of the Innovation Team
+    at AFS Information Technology. Here, he develops applications for use throughout AFS that provide employee-facing
+    solutions for day-to-day problems. Previously, Martin led Scrum teams at Agilex Technologies, where he focused
+    on large-scale data mining and text analysis software. Martin also leads the DevOps efforts for a customer
+    contract team.
+  gravatar:
+  photo: /img/author/martin-hobson.jpg
+  twitter:
+  linkedin: https://www.linkedin.com/in/martin-hobson
