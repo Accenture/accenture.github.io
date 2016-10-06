@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Azure UserIDs for Grails Applications"
+title: "Azure UserIDs for Grails Applications"
 categories: azure oauth grails security
 author: martin_hobson
 comments: true
