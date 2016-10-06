@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 {% assign categories = site.data.categories %}
 <div class="tier tier-right tier-white">
         <img class="tier-img tier-img-sm" src="/img/hero/hero-laying.jpg" alt="" />
@@ -18,11 +19,13 @@ layout: default
         <div class="container">
             <div class="col-md-8 col-md-offset-2">
                 <div class="categories">
+                    <!-- categories -->
                         {% for category in categories %}
                             {% if category %}
                                 <a href="/blog/categories/?c={{category.slug}}" class="category category-0 index-{{forloop.index0}}">{{category.name}}</a>
                             {% endif %}
                         {% endfor %}
+                        <!-- end categories -->
                 </div>
 
                 <ul class="post-list">
