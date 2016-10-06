@@ -17,4 +17,4 @@ Accenture contributes to the open source community.
 {:class="hdg hdg_1"}
 One example of our contributions is that we shared our DevOps platform with the open source community. The DevOps Platform is a container-based development and operations environment which supports rapid mobilization of development projects through a blueprint reference configuration of existing open source Software tools such as Jenkins. Implementation of the tools platform creates an environment to perform Continuous Delivery&mdash;continuously testing, releasing and maintaining applications.
 
-Accenture is also actively engaged with the open source community through our blog page. [Read](/blog) our latest thinking about how open source solutions are integral to today’s digital world.
+Accenture is also actively engaged with the open source community through our blog page. [Read](/blog/) our latest thinking about how open source solutions are integral to today’s digital world.
