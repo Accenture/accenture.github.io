@@ -3,7 +3,7 @@ layout: post
 title:  "Smart(er) Docker images for Java Microservices"
 author: dominik_wagenknecht
 categories: accenture opensource oss lightweight-architecture docker
-date: '2016-09-28 00:00'
+date: '2016-10-28 00:00'
 ---
 
 # Smart(er) Docker images for Java Microservices
