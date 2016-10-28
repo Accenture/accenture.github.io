@@ -29,9 +29,10 @@ some base configuration, an entry-point and you are done. To illustrate, let’s
 ```Dockerfile
 FROM openjdk:8u92-jre-alpine
 
-COPY ["app.jar", "config.yml", "/home/"]
-ENTRYPOINT ["java", "-jar", "/home/app.jar"]
 EXPOSE 8080 8081
+ENTRYPOINT ["java", "-jar", "/home/app.jar"]
+
+COPY ["app.jar", "config.yml", "/home/"]
 ```
 
 This is _ok_ but has a serious drawback:
@@ -91,10 +92,12 @@ hence we need to add the main class:
 
 ```Dockerfile
 FROM openjdk:8u92-jre-alpine
+
+EXPOSE 8080 8081
+ENTRYPOINT ["java", "-cp", "/home/app.jar:/dependency/*:.", "com.my.awesome.AppStartsHere"]
+
 ADD dependency.tar /
 COPY ["app.jar", "config.yml", "/home/"]
-ENTRYPOINT ["java", "-cp", "/home/app.jar:/dependency/*:.", "com.my.awesome.AppStartsHere"]
-EXPOSE 8080 8081
 ```
 
 
