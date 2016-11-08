@@ -142,3 +142,12 @@
   photo: /img/author/martin-hobson.jpg
   twitter:
   linkedin: https://www.linkedin.com/in/martin-hobson
+
+- slug: michael_gloger
+  name: Michael Gloger
+  bio: >
+    Michael Gloger is a software engineer from Accenture working with modern web technologies and a maintainer of Alexia Framework.
+  gravatar:
+  photo: /img/author/michael-gloger.jpg
+  twitter:
+  linkedin:
