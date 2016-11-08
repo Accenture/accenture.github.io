@@ -96,7 +96,7 @@ Note that we are not directly using `hapi`. It is optional dependency required b
 
 ### 4. Add npm start script
 
-Open `package.json` file created by `npm init` and add following line to `scripts`
+Open `package.json` file created by `npm init` and add `start` script to `scripts`
 
 {% highlight json %}
 ...
