@@ -4,6 +4,7 @@ title:  "Introducing Alexia for Amazon Echo Skill Development"
 categories: accenture opensource lightweight-architecture alexa
 author: michael_gloger
 comments: true
+date: '2016-11-18 00:00'
 ---
 
 <br />
