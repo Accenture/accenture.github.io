@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Alexia Framework"
+title:  "Introducing Alexia for Amazon Echo Skill Development"
 categories: accenture opensource lightweight-architecture alexa
 author: michael_gloger
 comments: true
@@ -211,7 +211,7 @@ Sign-in to [Amazon Developer Services](https://developer.amazon.com/) and naviga
     - Invocation Name: Choose an invocation name for your Alexa app
 3. Interaction Model:
     - Paste contents of generated speech assets from `speechAssets/intentSchema.json` and `utterances.txt` to the respective text areas
-    - (optional) Add each customSlot type with all slot samples using `Add Slot Type` button
+    - (optional) Add each custom slot type with all slot samples using `Add Slot Type` button
 4. Configuration:
     - Choose HTTPS endpoint and geographical region
     - Paste your Heroku URL
