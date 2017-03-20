@@ -31,7 +31,7 @@ At present this framework supports the following device platforms:
 
 Facebook also made React Native open-source, with the idea that compatibility with other platforms like Windows or tvOS could be worked on by the development community.
 
- ##  How does it work?
+## How does it work?
 Unlike other cross-platform SDK's like Cordova, Ionic, etc. which basically run JavaScript powered apps in a web browser, React Native compiles to native code for the respective OS, Android or iOS. That means there is no performance compromise and the apps built with React Native run just as smoothly as apps built using the actual native tools like Xcode.
 
 ![Architecture](/img/posts/reactlearnings/arch.png)
