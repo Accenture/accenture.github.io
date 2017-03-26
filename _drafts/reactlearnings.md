@@ -10,7 +10,7 @@ author:
 comments: true
 ---
 
-# Mobility—Introducing React-Native, a cross-platform app
+# Mobility—The need for a cross-platform app development framework
 For the past few years, enterprises have taken a “ready, fire, aim” approach to deploying “mobile-first” or “mobile-only” strategies for amplified productivity, superior communication and better efficiency.
 
 However, as enterprises dig into mobility solutions, challenges can arise, including security, real-time access to data, device diversity and volatility. Multiple device operating systems available in the market, coupled with frequent upgrades for the systems, make it tough to choose the right framework for application development.
@@ -52,7 +52,7 @@ React-Native has a highly responsive interface, similar to AngularJS and MeteroJ
 When the iOS or Android SDKs are updated, it takes some time for React-Native to integrate these newly introduced application programming interfaces (APIs) into the core library. 
 
 ## Risks and drawbacks
-Determining whether React-Native is a good choice for a project depends on the context. The usual limitations and hurdles that might be faced when working with any emerging technology apply because the framework is new. A few things to note: 1) some features on iOS and Android are not yet supported by React-Native; 2) since React-Native introduces another layer to any project, it can make debugging more difficult, especially at the intersection of React and the host platform. 
+Determining whether React-Native is a good choice for a project depends on the context. The usual limitations and hurdles that might be faced when working with any emerging technology apply because the framework is new. A few things to note: 1) some features on iOS and Android are not yet supported by React-Native; 2) since React-Native introduces another layer to any project, it can make debugging more difficult, especially at the intersection of React-Native and the host platform. 
 
 ## Best practices 
 Best practices are still evolving. At this point, here are some things to know:
@@ -62,7 +62,7 @@ Best practices are still evolving. At this point, here are some things to know:
     Do not use inline styling. Import JavaScript files with styles defined and reuse in multiple files.
 2. Min platform specific code
 
-    Do not use separate JS files or blocks to the extent possible for different platforms that need to be supported because it will be more difficutl to maintain the code. Accenture can register an application in the app entry point JS file (app.js) instead of registering twice in index.ios.js and index.android.js. That file (app.js) can also be used for importing all other views (.js files) of the application.
+    Do not use separate JS files or blocks to the extent possible for different platforms that need to be supported because it will be more difficult to maintain the code. Accenture can register an application in the app entry point JS file (app.js) instead of registering twice in index.ios.js and index.android.js. That file (app.js) can also be used for importing all other views (.js files) of the application.
 3. Look for third-party plugins
 
     Make use of third-party plugins for React components that are open source. It is going to improve time to market. 
@@ -87,11 +87,11 @@ Best practices are still evolving. At this point, here are some things to know:
     
 7. Responsive UI
 
-    It is exceedingly difficult to set absolute styling for everything. Options helps greatly with the layout. Third-party plugins like [react-native-resposive]( https://www.npmjs.com/package/react-native-responsive) will also help. 
+    It is exceedingly difficult to set absolute styling for everything. Options help greatly with the layout. Third-party plugins like [react-native-resposive]( https://www.npmjs.com/package/react-native-responsive) will also help. 
 
 8. Imports with exports
 
-    For every imported library, make sure there are also exports for components in those lib JS files.
+    For every imported library, make sure there are also exports for components in those library JS files.
 9. Scalable vector graphics support
 
     There is no direct support for scalable vector graphics (SVG). Please use third-party plugins like [react-native-svg](https://github.com/react-native-community/react-native-svg), which provides a SVG interface for both iOS and Android.
@@ -103,10 +103,10 @@ Best practices are still evolving. At this point, here are some things to know:
     JavaScript thread performance suffers greatly when running in dev mode. To improve the performance, Accenture can disable the dev= true option for performance testing.
 12. Slow page transition
 
-    When a route is pushed to the navigator, JavaScript needs to render all the components that are necessary for the new scene. It also needs to do the page transition in the same JS thread. So, scheduling the animation using the InteractionManager is a good option to use. While making the transition, lesser content is loaded and remaining contents are rendered, once the transition is complete. This provides a smoother user experience.
+    When a route is pushed to the navigator, JavaScript needs to render all the components that are necessary for the new scene. It also needs to do the page transition in the same JS thread. So, scheduling the animation using the InteractionManager is a good option to use. While making the transition, lesser content is loaded and remaining content is rendered, once the transition is complete. This provides a smoother user experience.
 
 ## Learnings on React-Native framework
-In React-Native, unlike other cross platform application development frameworks, the error messages or exceptions are noticed as clueless in terms of identification of the root case or where it failed. Stack traces are often helpless in such situations. We are working to solve some of the most common such errors experienced during React-Native application development:
+In React-Native, unlike other cross-platform application development frameworks, the error messages or exceptions are noticed as clueless in terms of identification of the root case or where it failed. Stack traces are often helpless in such situations. We are working to solve some of the most common errors experienced during React-Native application development:
 1. Element type is invalid
 
     <img src="/img/posts/reactlearnings/learning_pic1.png" width="200">
@@ -186,7 +186,7 @@ In React-Native, unlike other cross platform application development frameworks,
                      fontFamily: 'Roboto Medium',
                   }
             
-    2. If changes cater to multiple blocks of the same JS file, keep two separate files for iOS and Android(jsfilename.ios.js, jsfilename.android.js).
+    2. If changes cater to multiple blocks of the same JS file, keep two separate files for iOS and Android (jsfilename.ios.js, jsfilename.android.js).
 12. Could not get BatchedBridge
 
     <img src="/img/posts/reactlearnings/learning_pic12.png" width="200">
@@ -198,8 +198,7 @@ In React-Native, unlike other cross platform application development frameworks,
 
     <img src="/img/posts/reactlearnings/learning_pic13.png" width="200">
 
-    **Solution**: In render function of the launch page (for example, Login Page) 
-    , console.disableYellowBox = true;  needs to be mentioned, directing the warnings to console.
+    **Solution**: In render function of the launch page (for example, Login Page), console.disableYellowBox = true;  needs to be mentioned, directing the warnings to console.
 14. My TouchableX view is not very responsive
 
     **Solution**: Sometimes, an action in the same frame that is adjusting the opacity or highlight of a component that is responding to a touch, the effect will not be visible until after the onPress function has returned. If onPress does a setState that results in a lot of work and a few frames dropped, this may occur. To solve this, wrap any action inside of the onPress handler in requestAnimationFrame:
