@@ -10,17 +10,17 @@ author:
 comments: true
 ---
 
-# Mobility—Using a cross-platform React-Native app
+# Mobility—Introducing React-Native, a cross-platform app
 For the past few years, enterprises have taken a “ready, fire, aim” approach to deploying “mobile-first” or “mobile-only” strategies for amplified productivity, superior communication and better efficiency.
 
 However, as enterprises dig into mobility solutions, challenges can arise, including security, real-time access to data, device diversity and volatility. Multiple device operating systems available in the market, coupled with frequent upgrades for the systems, make it tough to choose the right framework for application development.
 
-When building an app in a native framework, it is sometimes best to use third-party software development kits (SDKs) or libraries, which is the recommended way for development of applications. Most of the time, these are available only in their native version. In a few cases, these libraries are written in JavaScript. But it gets increasingly difficult and costly to develop and sustain the applications using the native SDKs for every device operating system/platform. As a result, enterprises are starting to adopt a cross-platform hybrid applications strategy. 
+When building an app in a native framework, it is often best to use third-party software development kits (SDKs) or libraries, which is the recommended way to develop applications. Most of the time, these libraries are available only in their native version...although a few are written in JavaScript. But it gets increasingly difficult and costly to develop and sustain the applications using the native SDKs for every device operating system/platform. As a result, enterprises are starting to adopt a cross-platform hybrid applications strategy. 
 
 At Accenture, we are committed to open source contribution. React-Native is an exciting framework that enables web developers to create robust mobile applications using their existing JavaScript knowledge. It offers faster mobile development and more efficient code sharing across iOS, Android and the web, without sacrificing the end user’s experience or application quality. The tradeoff is that it’s new, and still a work-in-progress framework. If your team can handle the uncertainty that comes with working with a new technology, and wants to develop mobile applications for more than just one platform, take a look at React-Native.
 
 ## What is React-Native?
-React-Native is the next generation of React--a JavaScript code library developed by Facebook and Instagram, which was released on GitHub in 2013. It helps in building a real mobile app that is indistinguishable from an app built using Objective-C or Java. React- Native makes use of the same fundamental user interface building blocks as regular iOS and Android apps.
+React-Native is the next generation of React--a JavaScript code library developed by Facebook and Instagram, which was released on GitHub in 2013. It helps in building a real mobile app that is indistinguishable from an app built using Objective-C or Java. React-Native makes use of the same fundamental user interface (UI) building blocks as regular iOS and Android apps.
 
 React-Native applications consist of both JavaScript and native code (either Java or Objective-C). The JavaScript runs in a virtual machine on the mobile device and communicates with the native code through a JSON message passing interface.
 
@@ -35,7 +35,7 @@ Unlike other cross-platform SDKs such as Cordova or Ionic that basically run Jav
 
 ![Architecture](/img/posts/reactlearnings/arch.png)
 
-React-Native works by embedding the JavaScript files in the app and running them locally. However, a company could also store these files remotely on a server, enabling React-Native to fetch the latest version when the app has connectivity. This would make it faster to update the application, without having to go through the app store’s review process. Some third-party services also offer similar solutions; using them for smaller applications that do not have a lot of data to display (e.g., a festival apps) might mean that a backend is not needed.
+React-Native works by embedding the JavaScript files in the app and running them locally. However, a company could also store these files remotely on a server, enabling React-Native to fetch the latest version when the app has connectivity. This would make it faster to update the application, without having to go through the app store’s review process. Some third-party services offer similar solutions. Using them for smaller applications that do not have a lot of data to display (e.g., a festival app) might not require a backend.
 
 ## Benefits of React-Native: 
 1. Offers third-party plugin compatibility, less memory usage and a smoother experience
@@ -43,11 +43,11 @@ Third-party plugins mean there is little dependence on a web view for certain fu
 2. Native app development is much more efficient
 React-Native brings the speed and agility of web app development to the hybrid space--with native results. Under React-Native’s hood is Facebook’s popular ReactJS UI library for web applications. React-Native brings all of ReactJS’s better app performance, DOM abstraction and simplified programming methods to hybrid mobile development.
 3. Apply React-Native UI components to an existing app’s code without any rewriting
-Code reusability is much easier in React-nNtive. For example, if there is an existing hybrid app built in Cordova, the Cordova code can be reused easily with plugins.
+Code reusability is much easier in React-Native. For example, if there is an existing hybrid app built in Cordova, the Cordova code can be reused easily with plugins.
 4. React-Native can deal with both ecosystems
-Developing native apps for Android and the iOS platform can be tedious because they are two entirely different ecosystems. Android apps require knowledge of Java and Android SDK. It is important to understand the latest features of two major ecosystems to get it in sync with React-Native.
+Developing native apps for Android and iOS can be tedious because they are two entirely different ecosystems. Android apps require knowledge of Java and Android SDK. It is important to understand the latest features of the two major ecosystems to effectively use React-Native.
 5. React-Native is UI-focused
-React Native has a highly responsive interface, similar to AngularJS and MeteroJS. The JavaScript interactions between the native environment and React-Native reduces load times and gives a smoother feel to the app.
+React-Native has a highly responsive interface, similar to AngularJS and MeteroJS. The JavaScript interactions between the native environment and React-Native reduce load times and gives a smoother feel to the app.
 6. Native SDKs update
 When the iOS or Android SDKs are updated, it takes some time for React-Native to integrate these newly introduced application programming interfaces (APIs) into the core library. 
 
