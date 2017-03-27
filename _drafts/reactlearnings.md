@@ -39,17 +39,23 @@ React-Native works by embedding the JavaScript files in the app and running them
 
 ## Benefits of React-Native: 
 1. Offers third-party plugin compatibility, less memory usage and a smoother experience
-Third-party plugins mean there is little dependence on a web view for certain functions. For example, if aws-api-gateway-client functionality is added to the app, React-Native links the plugin with a native module, so linking to the server, while using less memory and loading faster. If the app supports older operating systems (and older devices), this can help keep the app running smoothly.
+
+    Third-party plugins mean there is little dependence on a web view for certain functions. For example, if aws-api-gateway-client functionality is added to the app, React-Native links the plugin with a native module, so linking to the server, while using less memory and loading faster. If the app supports older operating systems (and older devices), this can help keep the app running smoothly.
 2. Native app development is much more efficient
-React-Native brings the speed and agility of web app development to the hybrid space--with native results. Under React-Native’s hood is Facebook’s popular ReactJS UI library for web applications. React-Native brings all of ReactJS’s better app performance, DOM abstraction and simplified programming methods to hybrid mobile development.
+
+    React-Native brings the speed and agility of web app development to the hybrid space--with native results. Under React-Native’s hood is Facebook’s popular ReactJS UI library for web applications. React-Native brings all of ReactJS’s better app performance, DOM abstraction and simplified programming methods to hybrid mobile development.
 3. Apply React-Native UI components to an existing app’s code without any rewriting
-Code reusability is much easier in React-Native. For example, if there is an existing hybrid app built in Cordova, the Cordova code can be reused easily with plugins.
+
+    Code reusability is much easier in React-Native. For example, if there is an existing hybrid app built in Cordova, the Cordova code can be reused easily with plugins.
 4. React-Native can deal with both ecosystems
-Developing native apps for Android and iOS can be tedious because they are two entirely different ecosystems. Android apps require knowledge of Java and Android SDK. It is important to understand the latest features of the two major ecosystems to effectively use React-Native.
+
+    Developing native apps for Android and iOS can be tedious because they are two entirely different ecosystems. Android apps require knowledge of Java and Android SDK. It is important to understand the latest features of the two major ecosystems to effectively use React-Native.
 5. React-Native is UI-focused
-React-Native has a highly responsive interface, similar to AngularJS and MeteroJS. The JavaScript interactions between the native environment and React-Native reduce load times and gives a smoother feel to the app.
+
+    React-Native has a highly responsive interface, similar to AngularJS and MeteroJS. The JavaScript interactions between the native environment and React-Native reduce load times and gives a smoother feel to the app.
 6. Native SDKs update
-When the iOS or Android SDKs are updated, it takes some time for React-Native to integrate these newly introduced application programming interfaces (APIs) into the core library. 
+
+    When the iOS or Android SDKs are updated, it takes some time for React-Native to integrate these newly introduced application programming interfaces (APIs) into the core library. 
 
 ## Risks and drawbacks
 Determining whether React-Native is a good choice for a project depends on the context. The usual limitations and hurdles that might be faced when working with any emerging technology apply because the framework is new. A few things to note: 1) some features on iOS and Android are not yet supported by React-Native; 2) since React-Native introduces another layer to any project, it can make debugging more difficult, especially at the intersection of React-Native and the host platform. 
@@ -128,7 +134,7 @@ In React-Native, unlike other cross-platform application development frameworks,
     <img src="/img/posts/reactlearnings/learning_pic3.png" width="200">
 
     **Solution**: This error occurs when a component element tag is opened but not closed.
-    Eg: A <View> needs to be closed in the specified file as </View>
+    Eg: A &lt;View&gt; needs to be closed in the specified file as &lt;/View&gt;
 4. Could not connect to the development server 
 
     **Solution**: Restart the packager.
