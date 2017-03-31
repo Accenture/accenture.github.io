@@ -6,7 +6,7 @@ author:
     - badrinath_bahadur
     - v_poolothvalappil
     - anuradha_k_pradhan
-
+date: '2017-03-31 00:00'
 comments: true
 ---
 
@@ -82,14 +82,15 @@ Best practices are still evolving. At this point, here are some things to know:
 
     The font will be standard but will vary by different platforms. For example, the standard font on Android is Roboto Medium.
 
-    
-         ...Platform.select({
-                ios: {
-                fontFamily: 'Helvetica Neue',
-                },
-                android: {
-                 fontFamily: 'Roboto Medium',
-              }
+    {% highlight javascript %}
+    Platform.select({
+        ios: {
+            fontFamily: 'Helvetica Neue',
+        },
+        android: {
+            fontFamily: 'Roboto Medium',
+    }
+    {% endhighlight %}
     
 7. Responsive UI
 
@@ -113,16 +114,19 @@ Best practices are still evolving. At this point, here are some things to know:
 
 ## Learnings on React-Native framework
 In React-Native, unlike other cross-platform application development frameworks, the error messages or exceptions are noticed as clueless in terms of identification of the root case or where it failed. Stack traces are often helpless in such situations. We are working to solve some of the most common errors experienced during React-Native application development:
-1. Element type is invalid
+1. Element type is invalid:
 
-    <img src="/img/posts/reactlearnings/learning_pic1.png" width="200">
+![Learning 1](/img/posts/reactlearnings/learning_pic1.png)
 
-    **Solution**: Every imported item should be exported from the library
-    A library was exported by default. But if it is not getting imported by default, the above error is throw. In such a case, .default needs to be added to the imported component.
+**Solution**: Every imported item should be exported from the library
+A library was exported by default. But if it is not getting imported by default, the above error is throw. In such a case, .default needs to be added to the
+imported component.
 
-    Eg:
+ Eg:
 
-        const Drawer = require('react-native-drawer').default;
+{% highlight javascript %}
+const Drawer = require('react-native-drawer').default;
+{% endhighlight %}
 
 2. Expected a component class, got [object Object]
 
