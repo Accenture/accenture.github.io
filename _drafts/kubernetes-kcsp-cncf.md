@@ -3,15 +3,18 @@ layout: post
 title:  "Accenture is a Kubernetes Certified Service Provider"
 categories: accenture opensource oss kubernetes cloudnativecomputefoundation cncf kcsp
 ---
-# Helping enterprise become cloud-native with Kubernetes
+# Helping enterprises become cloud-native with Kubernetes
 
-We are excited to share some big news today, as we are part of the first batch of Linux Foundation partners to become an official [Kubernetes Certified Service Provider (KCSP)](https://www.cncf.io/certification/kcsp/), please refer to the official announcement for more details: [TODO](http://cncf.io)
-
+We are excited to announce that Accenture is one of the founding members of the [Kubernetes Certified Service Provider (KCSP)](https://www.cncf.io/certification/kcsp/) program started by the Cloud Native Compute Foundation in collaboration with the Linux Foundation.
 !["Kubernetes"](/img/posts/kubernetes-kcsp-cncf/kubernetes-logo.png "Kubernetes"){: style="text-align: center; margin: 0 auto; display: block"}
 
-The KCSP is great milestone for Kubernetes and the Cloud Native Compute Foundation as Kubernetes becomes part of the container fabric in cloud-native architectures. It also guarantees that partners that have achieved KCSP status provide a deep level of Kubernetes expertise to help enterprises in their Kubernetes journey.
+The KCSP program is a major milestone for helping enterprises move to a cloud native platform as it provides a strict set of rules and certified experts to guarantee that only experienced partners are allowed to participate in the program. This creates a trust relationship as enterprises can rely on Accenture bringing in the necessary experience and guide them on their Kubernetes journey to cloud native application platforms and production usage.
 
-# Our Kubernetes Capabilities
+At Accenture we are proud to be accepted in the founding class of KCSPs and will continue our work and participation in the open source community and helping enterprises to successfully adopt Kubernetes. We already have experience with implementing Kubernetes in a variety of industries: Public Infrastructure, Automotive Industry, Telecommunication, Energy Sector- and many more to come.
+
+To learn more on the KCSP program or the CNCF itself, visit the corresponding sites at [KCSP](https://www.cncf.io/certification/kcsp/) and [CNCF](https://www.cncf.io/news/blog/) or join the conversation on [Slack](https://slack.cncf.io/). 
+
+# Accentures Kubernetes Capabilities
 
 ## Container Strategy and Architecture
 
