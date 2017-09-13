@@ -45,9 +45,11 @@
 
 - slug: jan_willies
   name: Jan Willies
-  bio:
+  bio: >
+    Jan Willies has a background of open source development and is leading the Kubernetes capability at Accenture.
+    He has experience in a variety of modern cloud provider and bare-metal datacenter deployments.
   gravatar:
-  photo: /img/author/default-user.png
+  photo: /img/author/jan-willies.png
   twitter:
   linkedin:
 
