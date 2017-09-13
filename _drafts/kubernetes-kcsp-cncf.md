@@ -5,7 +5,7 @@ categories: accenture opensource oss kubernetes cloudnativecomputefoundation cnc
 ---
 # Helping enterprises become cloud-native with Kubernetes
 
-We are excited to announce that Accenture is one of the founding members of the [Kubernetes Certified Service Provider (KCSP)](https://www.cncf.io/certification/kcsp/) program started by the Cloud Native Compute Foundation in collaboration with the Linux Foundation. Please see the full announcemnet for more details: [http://events.linuxfoundation.org/events/mesoscon-europe](http://events.linuxfoundation.org/events/mesoscon-europe)
+We are excited to announce that Accenture is one of the founding members of the [Kubernetes Certified Service Provider (KCSP)](https://www.cncf.io/certification/kcsp/) program started by the Cloud Native Compute Foundation in collaboration with the Linux Foundation. Please see the full announcement for more details: [https://www.cncf.io/announcement/2017/09/11/cloud-native-computing-foundation-announces-first-kubernetes-certified-service-providers/](https://www.cncf.io/announcement/2017/09/11/cloud-native-computing-foundation-announces-first-kubernetes-certified-service-providers/)
 
 !["Kubernetes"](/img/posts/kubernetes-kcsp-cncf/kubernetes-logo.png "Kubernetes"){: style="text-align: center; margin: 0 auto; display: block"}
 
@@ -17,22 +17,28 @@ To learn more on the KCSP program or the CNCF itself, visit the corresponding si
 
 # Accenture Kubernetes Capabilities
 
-## Container Strategy and Architecture
+We are helping clients across the globe moving their workloads to Kubernetes with a broad range of offerings:
+
+### Container Strategy and Architecture
 
 A container strategy defines the long-term goals for containerization, the impact on application architectures, integration with IT operating models and application development practices (DevOps).
 
 A container architecture implements the platform aspect of a container strategy, and establishes the principles, patterns, capabilities, components and products that are desirable to have as part of a container platform. It also support the development, execution and operation of containerized applications at scale with Kubernetes.
 
-## Application Decomposition and Modernization
+### Application Decomposition and Modernization
 
 Decompose monolithic applications into smaller, cloud-native and standalone components implemented as microservices packaged and run as containers on a Kubernetes cluster.
 
-## Container Migration
+### Container Migration
 
 Driven by business needs for higher speed, flexibility and cost reductions, enterprises are turning to containers to support their journey to cloud as the means to isolate applications from the underlying infrastructure, lower the infrastructure lock-in risk and enhance DevOps processes for legacy applications.
 
-Container migration provides a structured and industrialized approach to efficiently migrate applications to Kubernetes in a cost-efficient manner.
-
-## Container Security
+### Container Security
 
 Securely manage the containerized software supply chain, from container signatures and image scanning to real-time vulnerability manage and container-enabled, policy-based container networking.
+
+
+## Links
+- [Official KCSP Announcement](https://www.cncf.io/announcement/2017/09/11/cloud-native-computing-foundation-announces-first-kubernetes-certified-service-providers/)
+- [Cloud Native Compute Foundation Blog](https://www.cncf.io/news/blog/)
+- [Kubernetes Certified Solution Provider Program](https://www.cncf.io/certification/kcsp/)
