@@ -2,6 +2,11 @@
 layout: post
 title:  "Accenture is a Kubernetes Certified Service Provider"
 categories: accenture opensource oss kubernetes cloudnativecomputefoundation cncf kcsp
+date: '2017-09-13 00:00'
+comments: true
+author:
+  - jan_willies
+  - oscar_renalias
 ---
 # Helping enterprises become cloud-native with Kubernetes
 
