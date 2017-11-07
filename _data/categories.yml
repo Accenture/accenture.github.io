@@ -26,5 +26,11 @@
   - slug: mobility
     name: Mobility
 
- - slug: alexa
-   name: Alexa
+  - slug: alexa
+    name: Alexa
+
+  - slug: rig
+    name: RIG
+  
+  - slug: elixir
+    name: Elixir
