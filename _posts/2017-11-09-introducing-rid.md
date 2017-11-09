@@ -5,6 +5,7 @@ categories: lightweightarchitecture microservices elixir rig
 comments: true
 author:
   - kevin_bader
+date: '2017-11-09 14:00'
 ---
 # RIG--the Reactive Interaction Gateway
 
