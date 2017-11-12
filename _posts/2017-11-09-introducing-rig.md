@@ -1,4 +1,4 @@
-/---
+---
 layout: post
 title: "Introducing RIG--the Reactive Interaction Gateway"
 categories: lightweightarchitecture microservices elixir rig
