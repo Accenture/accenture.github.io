@@ -1,4 +1,4 @@
----
+/---
 layout: post
 title: "Introducing RIG--the Reactive Interaction Gateway"
 categories: lightweightarchitecture microservices elixir rig
@@ -80,16 +80,22 @@ We wanted to use a modern language that would be easy to reason about and fun to
 with, including a strong networking support and powerful concurrency primitives.
 
 Our first prototype was written in Node.js. The app worked, but scaled very poorly in
-both directions. When we decided to go for a rewrite, we first thought about using
-Go, which seems to be the obvious choice for anything network-related nowadays. Still,
-the promises of Erlang/OTP were too cool to ignore, so instead we went for Elixir, the
-upcoming, functional and dynamic language on top of BEAM, the battle-tested Erlang VM.
+both directions. When we decided to rewrite RIG, we first thought about using Go,
+which is usually a good choice for network-heavy backend applications. However, after
+discussing in the development team, we chose Elixir, the upcoming, functional and
+dynamic language that runs on top of the battle-tested Erlang VM.
 
-Our curiousity has paid off. We've implemented the features we aimed for, thorougly
-tested and
-[highly scalable](http://phoenixframework.org/blog/the-road-to-2-million-websocket-connections),
-with highly maintainable, easy-to-reason-about functional code, in less than 600 SLOC.
-It takes a bit to get used to the concepts, but Elixir indeed is fun to use.
+Erlang offers advanced primitives for location-transparent networking, by means of the
+actor model. This is important to our use case, as it allows us to rely on the VM to
+route messages to the right instances over the network. Scalability and
+fault-tolerance is where Erlang shines, so it seemed like a perfect match for our
+design goals. On top of that, we were in favor of the Erlang programming model, which
+allows for clean, functional abstractions, as well as efficient and maintainable error
+handling.
+
+We have managed to implement the features we aimed for in about 2000
+[lines of code](https://github.com/AlDanial/cloc) (excluding another 1400 lines for
+tests). It takes a bit to get used to the concepts, but Elixir indeed is fun to use.
 
 ### State synchronization
 
