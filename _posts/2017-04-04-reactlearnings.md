@@ -13,7 +13,7 @@ comments: true
 # Mobility—The need for a cross-platform app development framework
 For the past few years, enterprises have taken a “ready, fire, aim” approach to deploying “mobile-first” or “mobile-only” strategies for amplified productivity, superior communication and better efficiency.
 
-However, as enterprises dig into mobility solutions, challenges can arise, including security, real-time access to data, device diversity and volatility. Multiple device operating systems available in the market, coupled with frequent upgrades for the systems, make it tough to choose the right framework for application development.
+As enterprises dig into mobility solutions, challenges can arise, including security, real-time access to data, device diversity and volatility. Multiple device operating systems available in the market, coupled with frequent upgrades for the systems, make it tough to choose the right framework for application development.
 
 When building an app in a native framework, it is often best to use third-party software development kits (SDKs) or libraries, which is the recommended way to develop applications. Most of the time, these libraries are available only in their native version...although a few are written in JavaScript. But it gets increasingly difficult and costly to develop and sustain the applications using the native SDKs for every device operating system/platform. As a result, enterprises are starting to adopt a cross-platform hybrid applications strategy. 
 

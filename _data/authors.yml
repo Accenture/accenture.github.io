@@ -45,9 +45,11 @@
 
 - slug: jan_willies
   name: Jan Willies
-  bio:
+  bio: >
+    Jan Willies has a background of open source development and is leading the Kubernetes capability at Accenture.
+    He has experience in a variety of modern cloud provider and bare-metal datacenter deployments.
   gravatar:
-  photo: /img/author/default-user.png
+  photo: /img/author/jan-willies.png
   twitter:
   linkedin:
 
@@ -169,3 +171,16 @@
   photo: /img/author/michael-gloger.jpg
   twitter:
   linkedin:
+
+- slug: kevin_bader
+  name: Kevin Bader
+  bio: >
+    Kevin works out of Vienna as a technical architect within Accenture's Emerging
+    Technology & Software Innovation practice. He holds a master's degree in Software
+    Engineering, likes agile methodologies, functional programming, the actor model
+    and microservices. Lately, he spends a lot of time with Elixir and the Erlang
+    ecosystem.
+  gravatar:
+  photo: /img/author/kevin-bader.jpg
+  twitter: https://twitter.com/KevnBadr
+  linkedin: https://www.linkedin.com/in/kevin-bader
