@@ -34,3 +34,6 @@
   
   - slug: elixir
     name: Elixir
+
+  - slug: puppet
+    name: Puppet

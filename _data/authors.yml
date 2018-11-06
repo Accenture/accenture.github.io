@@ -184,3 +184,14 @@
   photo: /img/author/kevin-bader.jpg
   twitter: https://twitter.com/KevnBadr
   linkedin: https://www.linkedin.com/in/kevin-bader
+
+- slug: david_hayes
+  name: David Hayes
+  bio: >
+    David is a Systems Engineer within Accenture Technology, working with DevOps
+    focused environments in Amazon Web services. When not working, he can normally be found 
+    climbing a mountain somewhere.
+  gravatar:
+  photo: /img/author/david-hayes.png
+  twitter:
+  linkedin: https://www.linkedin.com/in/evidex
