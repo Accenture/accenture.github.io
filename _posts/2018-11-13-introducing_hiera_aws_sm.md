@@ -4,6 +4,7 @@ title: "Introducing a Hiera 5 Backend for AWS Secrets Manager"
 author: david_hayes
 categories: opensource devops puppet
 comments: true
+date: '2018-11-13 00:00'
 ---
 Hiera AWS SM – Hiera 5 Backend for AWS Secrets Manager
 =====================================================
