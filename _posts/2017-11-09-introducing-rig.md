@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Introducing RIG--the Reactive Interaction Gateway"
+title: "Introducing RIG – the Reactive Interaction Gateway"
 categories: lightweightarchitecture microservices elixir rig
 comments: true
 author:
   - kevin_bader
 date: '2017-11-09 14:00'
 ---
-# RIG--the Reactive Interaction Gateway
+# RIG – the Reactive Interaction Gateway
 
 *...makes it easy to send messages from your back-end services to your front-ends.*
 
