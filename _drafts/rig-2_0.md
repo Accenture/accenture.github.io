@@ -6,11 +6,12 @@ comments: true
 author:
   - kevin_bader
 ---
+
 # RIG 2.0: CloudEvents!
 
 We are proud to release the next major milestone of the [Reactive Interaction Gateway](https://github.com/Accenture/reactive-interaction-gateway)! [Version 2.0](https://github.com/Accenture/reactive-interaction-gateway/releases/tag/2.0.0) comes with lots of new features, changes and improvements. Many thanks to our contributors!
 
-![Logo](https://raw.githubusercontent.com/Accenture/reactive-interaction-gateway/master/logo/Reactive-Interaction-Gateway-logo-cropped.png)
+![The Reactive Interaction Gateway.](/img/posts/rig-2_0/logo-with-text.png)
 
 Here are some of the most prominent features (see below for some details and the [Changelog](https://github.com/Accenture/reactive-interaction-gateway/blob/master/CHANGELOG.md) for the full list):
 
@@ -25,21 +26,30 @@ Here are some of the most prominent features (see below for some details and the
 
 ## CloudEvents
 
-We fully embrace the upcoming [CloudEvents CNCF open standard](https://cloudevents.io/). Coming from the serverless domain, CloudEvents greatly helps with interoperability among applications and vendor services. And the best thing about it: unlike other standards it is _really simple_ by design. Take a look at the official example:
+We fully embrace the upcoming [CloudEvents CNCF open standard](https://cloudevents.io/). Coming from the serverless domain, CloudEvents greatly helps with interoperability among applications and vendor services. And the best thing about it: unlike other standards it is _really simple_ by design. For example, an event that describes a created Github pull request looks similar to this:
 
 ```json
 {
-    "specversion" : "0.2",
-    "type" : "com.github.pull.create",
-    "source" : "https://github.com/cloudevents/spec/pull/123",
-    "id" : "A234-1234-1234",
-    "time" : "2018-04-05T17:31:00Z",
-    "comexampleextension1" : "value",
-    "comexampleextension2" : {
-        "othervalue": 5
+  "specversion": "0.2",
+  "type": "com.github.pull.create",
+  "source": "/desktop-app",
+  "id": "A234-1234-1234",
+  "time": "2018-04-05T17:31:00Z",
+  "data": {
+    "assignee": {
+      "login": "octocat"
     },
-    "contenttype" : "text/xml",
-    "data" : "<much wow=\"xml\"/>"
+    "head": {
+      "repo": {
+        "full_name": "octocat/Hello-World"
+      }
+    },
+    "base": {
+      "repo": {
+        "full_name": "octocat/Hello-World"
+      }
+    }
+  }
 }
 ```
 
@@ -51,13 +61,17 @@ For RIG this means that it will get even easier to interface with CloudEvents en
 
 As any good piece of foundational infrastructure RIG never imposed the use of special libraries (or formats, or protocols) on your application but a pattern – so when starting fresh it would _just fit_. However, through ongoing integrations we found the need to support a greater variety of event dispatching use cases to simplify integrating RIG into an existing landscape.
 
-TODO illustrate the old way
+In the previous RIG 1.x series we have implemented the idea that backend services target a user directly — effectively making a message out of an event:
 
-In the previous RIG 1.x series we have implemented the idea that backend services target a user directly — effectively making a message out of an event. While this is simple and effective, it requires systems to follow this pattern. Trying to do something in a _different_ way required services to couple themselves to RIG: e.g., in order to send messages to all users, services would have to fetch/handle the list of online users. Just telling the world that something happened without targeting a specific user was effectively not supported.
+![Events as messages.](/img/posts/rig-2_0/events_1.x_512x464.gif)
 
-TODO illustrate the new way
+Note how both Alice and Bob receive updates for flights they are not interested in. Also, while this is simple conceptually, it requires all services of interest to frontends to follow this pattern. Trying to do something in a different way required services to couple themselves to RIG: e.g., in order to send messages to all users, services would have to fetch/handle the list of online users. Just telling the world that something happened without targeting a specific user was effectively not supported.
 
-Today, RIG 2.0 addresses this by allowing clients (i.e. users' frontends) to _subscribe_ to events they are interested in. This shifts the responsibility of selecting the right messages from the backend team to the frontend team and relieves backend services from keeping track of online users in many cases.
+Today, RIG 2.0 addresses this by allowing clients (i.e. users' frontends) to simply _subscribe_ to events they are interested in:
+
+![Events as events.](/img/posts/rig-2_0/events_2.0_512x464.gif)
+
+This shifts the responsibility of selecting the right messages from the backend team to the frontend team and relieves backend services from keeping track of online users in many cases.
 
 Of course RIG 2.0 continues to fully support the foundational behaviour, now further enhanced and more flexible than ever, by using so-called subscription constraints (where messages include the user ID and the subscription relates to that ID). For more details on the mechanics see the related [Github issue](https://github.com/Accenture/reactive-interaction-gateway/issues/90).
 
@@ -75,4 +89,6 @@ Other features planned:
 - Jaeger/OpenTracing
 - Get rid of some tech debt and [apply our learnings](https://github.com/Accenture/reactive-interaction-gateway/issues/102) around how to properly structure Mix Umbrella projects. This will allow us to easily integrate with new message broker products and protocols in the future.
 
-For the current roadmap you can always check out our [Github milestones](https://github.com/Accenture/reactive-interaction-gateway/milestones?direction=asc&sort=title&state=open). We are looking forward to [your feedback](https://github.com/Accenture/reactive-interaction-gateway/issues). Oh, and don't forget to [star us](https://github.com/Accenture/reactive-interaction-gateway) on Github :)
+For the current roadmap you can always check out our [Github milestones](https://github.com/Accenture/reactive-interaction-gateway/milestones?direction=asc&sort=title&state=open). We are looking forward to [your feedback](https://github.com/Accenture/reactive-interaction-gateway/issues).
+
+Feel free to [star us on Github](https://github.com/Accenture/reactive-interaction-gateway)!
