@@ -75,7 +75,7 @@ This shifts the responsibility of selecting the right messages from the backend 
 
 Of course RIG 2.0 continues to fully support the foundational behaviour, now further enhanced and more flexible than ever, by using so-called subscription constraints (where messages include the user ID and the subscription relates to that ID). For more details on the mechanics see the related [Github issue](https://github.com/Accenture/reactive-interaction-gateway/issues/90).
 
-Generalizing more cleanly to events also enables us to integrate with other event-based brokers. For example, in cooperation with Serverless Inc. we have successfully built a proof-of-concept setup for exchanging events both ways with the the Serverless Event Gateway.
+Organizing around events rather than messages also enables us to integrate with other event-based brokers. For example, in cooperation with Serverless Inc. we have successfully built a proof-of-concept setup for exchanging events both ways with the the Serverless Event Gateway.
 
 > Migration: Revisit the kind of messages and events that currently flow through RIG. Create (JWT based) automatic subscriptions where you want to keep the current behaviour, e.g., for messages that target a specific user. Change messages to events where services communicate _changes_ and let your frontend code set up the right subscriptions.
 
