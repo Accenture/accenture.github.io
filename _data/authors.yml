@@ -175,11 +175,9 @@
 - slug: kevin_bader
   name: Kevin Bader
   bio: >
-    Kevin works out of Vienna as a technical architect within Accenture's Emerging
-    Technology & Software Innovation practice. He holds a master's degree in Software
-    Engineering, likes agile methodologies, functional programming, the actor model
-    and microservices. Lately, he spends a lot of time with Elixir and the Erlang
-    ecosystem.
+    Kevin is based in Vienna where he works as a Technology Architect within
+    Accenture’s Software Innovation group. He is interested in event-driven
+    microservice architectures, functional programming patterns and reactive systems.
   gravatar:
   photo: /img/author/kevin-bader.jpg
   twitter: https://twitter.com/KevnBadr
