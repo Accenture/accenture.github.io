@@ -65,7 +65,7 @@ In the previous RIG 1.x series, we have implemented the idea that back-end servi
 
 ![Events as messages.](/img/posts/rig-2_0/events_1.x_512x464.gif)
 
-Note how both Alice and Bob receive updates for flights they are not interested in. Also, while this is simple conceptually, it requires all services of interest to front-ends to follow this pattern. Trying to do something in a different way required services to couple themselves to RIG. For example, in order to send messages to all users, services would have to fetch/handle the list of online users. Just telling the world that something happened without targeting a specific user was effectively not supported.
+Note how both Alice and Bob receive updates for flights they are not interested in. Also, while this is simple conceptually, it requires all services of interest to front-ends to follow this pattern. Trying to do something in a different way requires services to couple themselves to RIG. For example, in order to send messages to all users, services would have to fetch/handle the list of online users. Just telling the world that something happened without targeting a specific user was effectively not supported.
 
 Today, RIG 2.0 addresses this by allowing clients (i.e., users' front-ends) to simply _subscribe_ to events they are interested in:
 
