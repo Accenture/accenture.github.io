@@ -87,7 +87,7 @@ Other features planned:
 
 - Prometheus monitoring
 - Jaeger/OpenTracing
-- Get rid of some tech debt and [apply our learnings](https://github.com/Accenture/reactive-interaction-gateway/issues/102) around how to properly structure Mix Umbrella projects. This will allow us to easily integrate with new message broker products and protocols in the future.
+- Get rid of some tech debt and [apply our learnings](https://github.com/Accenture/reactive-interaction-gateway/issues/102) around how to structure properly the Mix Umbrella projects. This will allow us to integrate easily with new message broker products and protocols in the future.
 
 For the current roadmap, you can always check out our [Github milestones](https://github.com/Accenture/reactive-interaction-gateway/milestones?direction=asc&sort=title&state=open). We are looking forward to [your feedback](https://github.com/Accenture/reactive-interaction-gateway/issues).
 
