@@ -9,7 +9,7 @@ author:
 
 # RIG 2.0: CloudEvents!
 
-We are proud to release the next major milestone of the [Reactive Interaction Gateway](https://github.com/Accenture/reactive-interaction-gateway)! [Version 2.0](https://github.com/Accenture/reactive-interaction-gateway/releases/tag/2.0.0) comes with lots of new features, changes and improvements. Many thanks to our contributors!
+We are proud to release the next major milestone of the [Reactive Interaction Gateway](https://github.com/Accenture/reactive-interaction-gateway)! [Version 2.0](https://github.com/Accenture/reactive-interaction-gateway/releases) comes with lots of new features, changes and improvements. Many thanks to our contributors!
 
 ![The Reactive Interaction Gateway.](/img/posts/rig-2_0/logo-with-text.png)
 
