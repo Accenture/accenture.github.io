@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "RIG 2.0: CloudEvents!"
+title: "RIG 2.0: CloudEvents"
 categories: lightweightarchitecture microservices elixir rig
 comments: true
 author:
   - kevin_bader
 ---
 
-# RIG 2.0: CloudEvents!
+# RIG 2.0: CloudEvents
 
 We are proud to release the next major milestone of the [Reactive Interaction Gateway](https://github.com/Accenture/reactive-interaction-gateway)! [Version 2.0](https://github.com/Accenture/reactive-interaction-gateway/releases) comes with lots of new features, changes and improvements. Many thanks to our contributors!
 
@@ -61,7 +61,7 @@ For RIG, this means that it will get even easier to interface with CloudEvents-e
 
 As any good piece of foundational infrastructure, RIG never imposed the use of special libraries (or formats, or protocols) on your application but a pattern – so when starting fresh it would _just fit_. However, through ongoing integrations we found the need to support a greater variety of event dispatching use cases to simplify integrating RIG into an existing landscape.
 
-In the previous RIG 1.x series, we have implemented the idea that backend services target a user directly — effectively making a message out of an event:
+In the previous RIG 1.x series, we have implemented the idea that back-end services target a user directly — effectively making a message out of an event:
 
 ![Events as messages.](/img/posts/rig-2_0/events_1.x_512x464.gif)
 
@@ -71,13 +71,13 @@ Today, RIG 2.0 addresses this by allowing clients (i.e., users' frontends) to si
 
 ![Events as events.](/img/posts/rig-2_0/events_2.0_512x464.gif)
 
-This shifts the responsibility of selecting the right messages from the backend team to the frontend team and relieves backend services from keeping track of online users in many cases.
+This shifts the responsibility of selecting the right messages from the back-end team to the front-end team and relieves back-end services from keeping track of online users in many cases.
 
 Of course, RIG 2.0 continues to support fully the foundational behavior, now further enhanced and more flexible than ever, by using so-called subscription constraints (where messages include the user ID and the subscription relates to that ID). For more details on the mechanics, see the related [Github issue](https://github.com/Accenture/reactive-interaction-gateway/issues/90).
 
-Organizing around events rather than messages also enables us to integrate with other event-based brokers. For example, in cooperation with Serverless Inc. we have successfully built a proof-of-concept setup for exchanging events both ways with the Serverless Event Gateway.
+Organizing around events rather than messages also enables us to integrate with other event-based brokers. For example, in cooperation with Serverless Inc., we have successfully built a proof-of-concept setup for exchanging events both ways with the Serverless Event Gateway.
 
-> Migration: Revisit the kind of messages and events that currently flow through RIG. Create (JWT-based) automatic subscriptions where you want to keep the current behavior (e.g., for messages that target a specific user). Change messages to events where services communicate _changes_ and let your frontend code set up the right subscriptions.
+> Migration: Revisit the kind of messages and events that currently flow through RIG. Create (JWT-based) automatic subscriptions where you want to keep the current behavior (e.g., for messages that target a specific user). Change messages to events where services communicate _changes_ and let your front-end code set up the right subscriptions.
 
 ## Preview Features and Outlook
 
@@ -87,7 +87,7 @@ Other features planned:
 
 - Prometheus monitoring
 - Jaeger/OpenTracing
-- Get rid of some tech debt and [apply our learnings](https://github.com/Accenture/reactive-interaction-gateway/issues/102) around how to structure properly Mix Umbrella projects. This will allow us to integrate easily with new message broker products and protocols in the future.
+- Get rid of some tech debt and [apply our learnings](https://github.com/Accenture/reactive-interaction-gateway/issues/102) around how to structure properly Mix umbrella projects. This will allow us to integrate easily with new message broker products and protocols in the future.
 
 For the current roadmap, you can always check out our [Github milestones](https://github.com/Accenture/reactive-interaction-gateway/milestones?direction=asc&sort=title&state=open). We are looking forward to [your feedback](https://github.com/Accenture/reactive-interaction-gateway/issues).
 
