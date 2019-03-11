@@ -37,3 +37,9 @@
 
   - slug: puppet
     name: Puppet
+
+  - slug: bdd
+    name: Behavorial Driven Development
+
+  - slug: testautomation
+    name: Test Automation
