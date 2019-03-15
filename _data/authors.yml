@@ -193,3 +193,13 @@
   photo: /img/author/david-hayes.png
   twitter:
   linkedin: https://www.linkedin.com/in/evidex
+
+- slug: mike_parcewski
+  name: Mike Parcewski
+  bio: >
+    Mike is Cloud Native Delivery and Capabilities Lead out of Charlotte, NC who
+    has a passion for DDD, BDD & Reactive Architecture
+  photo: /img/author/mike-parcewski.png
+  twitter: http://twitter.com/wickedagile
+  linkedin: https://www.linkedin.com/in/formike
+
