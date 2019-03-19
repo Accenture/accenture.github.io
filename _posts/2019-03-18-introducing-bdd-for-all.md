@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Introducing BDD for All"
-date:   2019-03-10 08:45:44 +0600
+date:   2019-03-18 08:45:44 +0600
 categories: bdd microservices testautomation
 author: mike_parcewski
 ---
 
-> Skip the B.S. and go right to the [repo](https://github.com/Accenture/bdd-for-all)
+> Skip the introduction and go right to the [repo](https://github.com/Accenture/bdd-for-all)
 
 ![BDD For All](https://github.com/Accenture/bdd-for-all/raw/develop/docs/samples/bdd-white-logo.png)
 
