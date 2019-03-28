@@ -43,3 +43,6 @@
 
   - slug: testautomation
     name: Test Automation
+  
+  - slug: java
+    name: Java
