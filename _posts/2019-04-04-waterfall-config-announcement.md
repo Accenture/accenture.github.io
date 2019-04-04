@@ -3,6 +3,7 @@ layout: post
 title:  "Introducing the Waterfall Config Library for Java"
 categories: java
 author: sergiofgonzalez
+date: '2019-04-04 00:00'
 ---
 
 # Hello, Waterfall Config!
