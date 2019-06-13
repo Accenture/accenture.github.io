@@ -4,6 +4,8 @@ title:  "Hyperledger Fabric meets Kubernetes"
 categories: kubernetes hl_fabric blockchain
 author: hakan_eryargi
 ---
+# Hyperledger Fabric meets Kubernetes
+
 ![Fabric Meets K8S](/img/posts/hl_fabric_meets_kubernetes/fabric_meets_k8s.png)
 
 # Summary
@@ -157,7 +159,7 @@ helm template -f network.yaml -f crypto-config.yaml ./chaincode-flow/ | argo sub
 
 Upgrading all chaincodes to version 2.0:
 {% highlight bash %}
-helm template -f network.yaml -f crypto-config.yaml -f chaincode-flow/values.upgrade.yaml –set chaincode.version=2.0 ./chaincode-flow/ | argo submit -
+helm template -f network.yaml -f crypto-config.yaml -f chaincode-flow/values.upgrade.yaml –-set chaincode.version=2.0 ./chaincode-flow/ | argo submit -
 {% endhighlight %}		
 
 Upgrading only info chaincode to version 3.0:
@@ -179,7 +181,7 @@ Based on this convention, collecting just right piece of data from relevant plac
 ### How it works? - Populating the Network
 
 Kubernetes has a concept of Job, which is basically a pod launched to perform a certain task then stop after completion. 
-With Helm’s power of injecting correct data to correct pod makes Kubernetes jobs a good candidate to populate HL network
+With Helm’s power of injecting correct data to correct pod makes Kubernetes jobs a good candidate to populate HL network.
 
 Launch the pod, execute the command with correct data and credentials and stop. Commands are atomic things: 
 
@@ -192,7 +194,7 @@ Missing part was, Kubernetes is not providing a mechanism to orchestrate the job
 While searching for an orchestrating mechanism for jobs, I’ve found Argo. 
 
 It’s a nice Kubernetes native workflow engine capable of running tasks sequentially or in parallel and also allows hierarchical grouping of tasks.
-It does this by defining its own resource type, *Workflow*{: style="color: blue"}, thanks to Kubernetes’ extension mechanism
+It does this by defining its own resource type *Workflow*{: style="color: blue"}, thanks to Kubernetes’ extension mechanism.
 
 It also provides a retry mechanism for failed tasks (yes these tasks temporarily fail every now and then and retrying them in Bash scripts is one of the things that makes those scripts a lot complicated).
 So, again by leveraging Helm’s template engine capabilities, iterating over channels, chaincodes, organizations and peers, we create a workflow and execute it through Argo.
@@ -230,7 +232,7 @@ In particular this can be an issue since there is no backup/restore mechanism fo
 
 ![HL_backup_restore](/img/posts/hl_fabric_meets_kubernetes/HL_backup_restore.png)
 
-Backup:
+#### Backup:
 
 * Start backup procedure
 {% highlight bash %}
@@ -247,7 +249,7 @@ Backup:
 	helm upgrade hlf-kube ..
 {% endhighlight %}
 	
-Restore:
+#### Restore:
 
 * Start restore procedure
 {% highlight bash %}
@@ -256,7 +258,7 @@ Restore:
 
 * Restore from backup:
 {% highlight bash %}
-	helm template --set backup.key='<backup key> .. restore-flow/ | argo submit  -
+	helm template --set backup.key=<backup key> .. restore-flow/ | argo submit  -
 {% endhighlight %}
 	
 * Go back to normal operation
