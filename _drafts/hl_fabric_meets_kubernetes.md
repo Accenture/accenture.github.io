@@ -4,7 +4,7 @@ title:  "Hyperledger Fabric meets Kubernetes"
 categories: kubernetes hl_fabric blockchain
 author: hakan_eryargi
 ---
-![Fabric Meets K8S](https://s3-eu-west-1.amazonaws.com/raft-fabric-kube/images/fabric_meets_k8s.png)
+![Fabric Meets K8S](/img/posts/hl_fabric_meets_kubernetes/fabric_meets_k8s.png)
 
 # Summary
 Looks like our project is globally pioneering the process of running Hyperledger Fabric in Kubernetes and getting close to a production ready setup step by step.
@@ -114,11 +114,11 @@ Also one sample by IBM
 
 ### Simple Network Architecture
 
-![Simple Network](https://s3-eu-west-1.amazonaws.com/raft-fabric-kube/images/HL_in_Kube_simple.png)
+![Simple Network](/img/posts/hl_fabric_meets_kubernetes/HL_in_Kube_simple.png)
 
 ### Scaled Up Network Architecture
 
-![Scaled Up Network](https://s3-eu-west-1.amazonaws.com/raft-fabric-kube/images/HL_in_Kube_scaled.png)
+![Scaled Up Network](/img/posts/hl_fabric_meets_kubernetes/HL_in_Kube_scaled.png)
 
 # [PIVT Way](#pivt-way)
 
@@ -227,7 +227,7 @@ In particular this can be an issue since there is no backup/restore mechanism fo
 
 ### Backup Restore Flow
 
-![HL_backup_restore](https://raft-fabric-kube.s3-eu-west-1.amazonaws.com/images/HL_backup_restore.png)
+![HL_backup_restore](/img/posts/hl_fabric_meets_kubernetes/HL_backup_restore.png)
 
 Backup:
 
@@ -269,10 +269,10 @@ Restore:
 
 Let's have a look what this work provides regarding Accenture's Architecture Concerns (NFR's)
 
-![Accenture_NFR](https://raft-fabric-kube.s3-eu-west-1.amazonaws.com/images/accenture_nfrs.png)
+![Accenture_NFR](/img/posts/hl_fabric_meets_kubernetes/accenture_nfrs.png)
 
 # [Future (Dream) Work](#future-dream-work)
-![Magic](https://raft-fabric-kube.s3-eu-west-1.amazonaws.com/images/magic.jpg)
+![Magic](/img/posts/hl_fabric_meets_kubernetes/magic.jpg)
 
 Wrapping up everything in a Kubernetes Operator will be more than awesome! :) 
 So one will provide the operator the desired state of Fabric network, both the network itself and the channels, chaincodes etc., and let it reach that state if possible. 
