@@ -15,6 +15,8 @@ I’m also very happy and proud to announce that, this work is now open source a
 
 [https://github.com/APGGroeiFabriek/PIVT](https://github.com/APGGroeiFabriek/PIVT)
 
+Special thanks to [APG](https://www.apg.nl/en) for allowing opening the source code :)
+
 # Contents
 
 * [What is this?](#what-is-this)
@@ -130,7 +132,7 @@ Also one sample by IBM
 After creating crypto material and channel artifacts, launching the network is as simple as:
 
 {% highlight bash %}
-	helm install -f crypto-config.yaml ./hlf-kube
+helm install -f crypto-config.yaml ./hlf-kube
 {% endhighlight %}	
 
 The crypto-config.yaml is actually HL’s own configuration file, so we are not maintaining multiple copies of same information
@@ -141,7 +143,7 @@ And creates all the mentioned secrets, pods, services, etc. cross configures the
 Hopefully, in the future, when an actor joins or exits the network, after creating crypto material, updating the network will be as simple as:
 
 {% highlight bash %}
-	helm upgrade -f crypto-config.yaml ./hlf-kube
+helm upgrade -f crypto-config.yaml ./hlf-kube
 {% endhighlight %}		
 *Note, some command arguments are omitted for brevity*{: style="color: orange"}
 
@@ -236,34 +238,34 @@ In particular this can be an issue since there is no backup/restore mechanism fo
 
 * Start backup procedure
 {% highlight bash %}
-	helm upgrade hlf-kube --set backup.enabled=true ..
+helm upgrade hlf-kube --set backup.enabled=true ..
 {% endhighlight %}
 
 * Take backup:
 {% highlight bash %}
-	helm template .. backup-flow/ | argo submit  -
+helm template .. backup-flow/ | argo submit  -
 {% endhighlight %}
 
 * Go back to normal operation
 {% highlight bash %}
-	helm upgrade hlf-kube ..
+helm upgrade hlf-kube ..
 {% endhighlight %}
 	
 #### Restore:
 
 * Start restore procedure
 {% highlight bash %}
-	helm upgrade hlf-kube --set restore.enabled=true ..
+helm upgrade hlf-kube --set restore.enabled=true ..
 {% endhighlight %}
 
 * Restore from backup:
 {% highlight bash %}
-	helm template --set backup.key=<backup key> .. restore-flow/ | argo submit  -
+helm template --set backup.key=<backup key> .. restore-flow/ | argo submit  -
 {% endhighlight %}
 	
 * Go back to normal operation
 {% highlight bash %}
-	helm upgrade hlf-kube ..
+helm upgrade hlf-kube ..
 {% endhighlight %}
 	
 *Note, some command arguments are omitted for brevity*{: style="color: orange"}
