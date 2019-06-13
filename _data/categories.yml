@@ -46,3 +46,9 @@
   
   - slug: java
     name: Java
+
+  - slug: hl_fabric
+    name: Hyperledger Fabric
+
+  - slug: blockchain
+    name: Blockchain
