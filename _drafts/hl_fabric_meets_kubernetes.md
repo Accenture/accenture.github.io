@@ -98,6 +98,7 @@ One sample provided by one of HLF contributors (Alex)
 * Everything is still should be manually configured, so *not reducing complexity*{: style="color: red"} at all
 * One nice idea is running peer and CouchDB containers in the same pod, which I barrowed, more on this later
 * [https://github.com/feitnomore/hyperledger-fabric-kubernetes](https://github.com/feitnomore/hyperledger-fabric-kubernetes)
+
 Also one sample by IBM
 * Similar to above, no Helm just plain yaml Kubernetes manifest files
 * Everything is still should be manually configured, so *not reducing complexity*{: style="color: red"} at all
@@ -175,7 +176,7 @@ We are basically leveraging Helm’s template engine capabilities. Iterating ove
 Convention over configuration makes life easier, for example every MSP name is &lt;orgname&gt;MSP, apgMSP, pggmMSP etc.   
 Based on this convention, collecting just right piece of data from relevant place and mounting to the correct place in the pod
 
-# How it works? - Populating the Network
+### How it works? - Populating the Network
 
 Kubernetes has a concept of Job, which is basically a pod launched to perform a certain task then stop after completion. 
 With Helm’s power of injecting correct data to correct pod makes Kubernetes jobs a good candidate to populate HL network
