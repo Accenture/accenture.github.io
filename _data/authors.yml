@@ -222,3 +222,13 @@
   photo: /img/author/hakan_eryargi.jpg
   linkedin: https://www.linkedin.com/in/hakaneryargi/
   github: https://github.com/raftAtGit
+
+- slug: azlam_abdulsalam
+  name: Azlam Abdulsalam
+  bio: >
+    Azlam is a Tech Architect with a particular interest on delivering iterative software.
+    He is passionate on developer enablement utitilzing plugins, frameworks along with automation. 
+    These days, he is focused on improving the speed and quality of Salesforce Development
+  photo: /img/author/azlam-abdulsalam.jpg
+  linkedin: https://www.linkedin.com/in/azlam/
+  github: https://github.com/azlamsalam

@@ -52,3 +52,9 @@
 
   - slug: blockchain
     name: Blockchain
+
+  - slug: salesforce
+    name: Salesforce
+
+  - slug: sfdx
+    name: Salesforce DX
