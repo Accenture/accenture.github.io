@@ -68,7 +68,7 @@ Star it, share it, use it, fork it and don't forget to submit your pull requests
 We're excited to release our first milestone to the open source community.
 Let us know what you think! Find us on
 [Github](https://github.com/Accenture/sfpowerkit).
-[Azure Boards](https://dev.azure.com/cloudfirstanz/SFPowerkit/_boards/board/t/SFPowerkit%20Team/Issues)
+
 
 
 > **About Azlam Abdulsalam**
