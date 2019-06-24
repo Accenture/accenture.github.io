@@ -32,7 +32,7 @@ more in this [blogpost](https://andyinthecloud.com/2019/02/10/salesforce-dx-inte
 
 
 We at Salesforce Business group in ANZ, have been adopting Salesforce DX for a number of projects, some greenfield and other transforming
-utilizing scratch orgs, unlocked packaging and the whole of Salesforce DX goodies.
+into a source driven model utilizing scratch orgs, unlocked packaging and the whole of Salesforce DX goodies.
 
 SFPowerkit was born as need to collaborate and standardize the plugins which our Salesforce DevOps teams have found useful across these programs.
 
