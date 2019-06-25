@@ -3,6 +3,7 @@ layout: post
 title:  "Hyperledger Fabric Meets Kubernetes"
 categories: kubernetes hl_fabric blockchain
 author: hakan_eryargi
+date: '2019-06-25 00:00'
 ---
 # Hyperledger Fabric Meets Kubernetes
 
