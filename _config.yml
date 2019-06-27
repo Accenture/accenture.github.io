@@ -11,7 +11,7 @@ email: "oscar.renalias@accenture.com"
 description: "Open source is a driving force behind enterprise IT innovation, operational effectiveness and business value creation."
 footer_line: "Opinions expressed on this blog reflect the writer's views and not the position of Accenture."
 baseurl: "" # this is for developing purposes only needs to be changed.
-url: "https://accenture.github.io/accenture.github.redesign" # the base hostname & protocol for your site
+url: "https://accenture.github.io/accenture.github.redesign/" # the base hostname & protocol for your site
 twitter_username: "AccentureTech"
 github_username:  "accenture"
 facebook_username:  "accenture"
