@@ -4,7 +4,7 @@ title:  "SFPowerkit - Opensourcing our first Salesforce DX Plugin"
 categories: devops sfdx salesforce
 author: azlam_abdulsalam
 comments: true
-
+date: '2019-06-27 00:00'
 ---
 
 # SFPowerkit – A Salesforce DX Plugin for automating common tasks in Salesforce Deployment
