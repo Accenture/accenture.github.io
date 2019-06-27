@@ -19,9 +19,7 @@
         <div class="navbar-collapse collapse" id="navbar">
             <ul class="nav navbar-nav">
                 {% for my_page in site.pages %}
-                  {% if my_page.title and my_page.external_url %}
-                    <li><a class="page-link" rel="noopener noreferrer" target="_blank" href="{{ my_page.external_url}}">{{ my_page.title }}</a></li>
-                  {% elsif my_page.title %}
+                  {% if my_page.title %}
                     <li><a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
                   {% endif %}
                 {% endfor %}
