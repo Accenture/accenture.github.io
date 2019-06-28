@@ -12,7 +12,7 @@ Some of us have been using Docker in one way or another for a while now and we'r
 
 After the initial excitement, we soon realized that there was no structured way to describe how a container platform should work and what capabilities it should provide. Being the architect types that we are, we set out to create a high-level container platform reference architecture that contained (no pun intended) a list of capabilities that we thought are necessary to run containers at scale. Architects love frameworks and diagrams with boxes so without further ado, this the result:
 
-![Container Reference Architecture](/img/posts/the-lightweight-docker-runtime/refarch.jpg)
+![Container Reference Architecture]({{site.baseurl}}/img/posts/the-lightweight-docker-runtime/refarch.jpg)
 
 This post is not about going deep into our model's capabilities, but they should be quite self-explanatory for readers who have worked with containers before.
 

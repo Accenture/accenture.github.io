@@ -9,7 +9,7 @@ date: '2016-11-18 00:00'
 
 <br />
 
-![Alexia](/img/posts/alexia-framework/alexia-logo.png "Alexia")
+![Alexia]({{site.baseurl}}/img/posts/alexia-framework/alexia-logo.png "Alexia")
 
 Alexia is a framework for creating Amazon Echo (Alexa) skills in Node.js. It was developed by the Accenture Open Web Platform core team located in Bratislava.
 
