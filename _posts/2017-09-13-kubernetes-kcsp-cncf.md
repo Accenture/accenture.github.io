@@ -12,7 +12,7 @@ author:
 
 We are excited to announce that Accenture is one of the founding members of the [Kubernetes Certified Service Provider (KCSP)](https://www.cncf.io/certification/kcsp/) program started by the Cloud Native Compute Foundation in collaboration with the Linux Foundation. Please see the full announcement for more details: [https://www.cncf.io/announcement/2017/09/11/cloud-native-computing-foundation-announces-first-kubernetes-certified-service-providers/](https://www.cncf.io/announcement/2017/09/11/cloud-native-computing-foundation-announces-first-kubernetes-certified-service-providers/)
 
-!["Kubernetes"](/img/posts/kubernetes-kcsp-cncf/kubernetes-logo.png "Kubernetes"){: style="text-align: center; margin: 0 auto; display: block"}
+!["Kubernetes"]({{site.baseurl}}/img/posts/kubernetes-kcsp-cncf/kubernetes-logo.png "Kubernetes"){: style="text-align: center; margin: 0 auto; display: block"}
 
 The KCSP program is a major milestone to help enterprises move to a cloud native platform as it provides a strict set of rules and certified experts to guarantee that only experienced partners are part of the program. This creates a trust relationship as enterprises can rely on Accenture bringing in the necessary experience and guide them on their Kubernetes journey to cloud native application platforms and production usage.
 

@@ -33,7 +33,7 @@ Facebook also made React-Native into an open source option, with the idea that c
 ## How does it work?
 Unlike other cross-platform SDKs such as Cordova or Ionic that basically run JavaScript-powered apps in a web browser, React-Native compiles to native code for the respective operating system, Android or iOS. This means there is no performance compromise and the apps built with React-Native run just as smoothly as apps built using the actual native tools like Xcode.
 
-![Architecture](/img/posts/reactlearnings/arch.png)
+![Architecture]({{site.baseurl}}/img/posts/reactlearnings/arch.png)
 
 React-Native works by embedding the JavaScript files in the app and running them locally. However, a company could also store these files remotely on a server, enabling React-Native to fetch the latest version when the app has connectivity. This would make it faster to update the application, without having to go through the app store’s review process. Some third-party services offer similar solutions. Using them for smaller applications that do not have a lot of data to display (e.g., a festival app) might not require a backend.
 
@@ -135,7 +135,7 @@ In React-Native, unlike other cross-platform application development frameworks,
 
 ### Element type is invalid
 
-![Learning 1](/img/posts/reactlearnings/learning_pic1.png){:width="220"}
+![Learning 1]({{site.baseurl}}/img/posts/reactlearnings/learning_pic1.png){:width="220"}
 
 **Solution**: Every imported item should be exported from the library
 A library was exported by default. But if it is not getting imported by default, the above error is throw. In such a case, .default needs to be added to the
@@ -149,13 +149,13 @@ const Drawer = require('react-native-drawer').default;
 
 ### Expected a component class, got [object Object]
 
-![Learning 2](/img/posts/reactlearnings/learning_pic2.png){:width="220"}
+![Learning 2]({{site.baseurl}}/img/posts/reactlearnings/learning_pic2.png){:width="220"}
 
 **Solution**: Class name/Component names should start with a capital letter.
 
 ### Expected corresponding JSX closing tag
 
-![Learning 3](/img/posts/reactlearnings/learning_pic3.png){:width="220"}
+![Learning 3]({{site.baseurl}}/img/posts/reactlearnings/learning_pic3.png){:width="220"}
 
 **Solution**: This error occurs when a component element tag is opened but not closed.
  Eg: A &lt;View&gt; needs to be closed in the specified file as &lt;/View&gt;
@@ -166,19 +166,19 @@ const Drawer = require('react-native-drawer').default;
 
 ### React-packager has encountered an internal error
 
-![Learning 6](/img/posts/reactlearnings/learning_pic5.png){:width="220"}
+![Learning 6]({{site.baseurl}}/img/posts/reactlearnings/learning_pic5.png){:width="220"}
 
 **Solution**: Error in running the packager. The terminal error will suggest the problem and solution in most of the cases.
 
 ### Failed to execute importScripts on WorkerGlobalScope
 
-![Learning 6](/img/posts/reactlearnings/learning_pic6.png){:width="220"}
+![Learning 6]({{site.baseurl}}/img/posts/reactlearnings/learning_pic6.png){:width="220"}
 
 **Solution**: This could either be because the debug browser window needs a reopen or there is some syntax error in the program. So, try undoing the changes to run successfully.
 
 ### The source for assign must be an object
 
-![Learning 7](/img/posts/reactlearnings/learning_pic7.png){:width="220"}
+![Learning 7]({{site.baseurl}}/img/posts/reactlearnings/learning_pic7.png){:width="220"}
 
 **Solution**: In Stylesheet, StyleSheet.create does not return a plain JavaScript object, so usage of … operator cannot be applied. While deriving two different style objects from one basic style where only one property is added, the ‘flatten’ method can be used.
     
@@ -189,13 +189,13 @@ const amountStyles = StyleSheet.flatten([styles.amountSection, {borderColor: amo
 
 ### Application has not been registered
 
-![Learning 8](/img/posts/reactlearnings/learning_pic8.png){:width="220"}
+![Learning 8]({{site.baseurl}}/img/posts/reactlearnings/learning_pic8.png){:width="220"}
 
 **Solution**: The application is not registered in JS page.
 
 ### Unknown named module
 
-![Learning 9](/img/posts/reactlearnings/learning_pic9.png){:width="220"}
+![Learning 9]({{site.baseurl}}/img/posts/reactlearnings/learning_pic9.png){:width="220"}
 
 **Solution**: The package server started by React-Native start seems to have cache of the node modules. Stopping and restarting the server solves the issue.
 
@@ -231,7 +231,7 @@ But if changes cater to multiple blocks of the same JS file, keep two separate f
 
 ### Could not get BatchedBridge
 
-![Learning 12](/img/posts/reactlearnings/learning_pic12.png){:width="220"}
+![Learning 12]({{site.baseurl}}/img/posts/reactlearnings/learning_pic12.png){:width="220"}
 
 **Solution**: This is a debug version of app running in mobile. Follow the steps at [React-Native github](https://facebook.github.io/react-native/docs/signed-apk-android.html) to prepare release version of APK.
 
@@ -239,7 +239,7 @@ But if changes cater to multiple blocks of the same JS file, keep two separate f
     
 This warning appears in application launch screen.
 
-![Learning 13](/img/posts/reactlearnings/learning_pic13.png){:width="220"}
+![Learning 13]({{site.baseurl}}/img/posts/reactlearnings/learning_pic13.png){:width="220"}
 
 **Solution**: In render function of the launch page (for example, Login Page), console.disableYellowBox = true;  needs to be mentioned, directing the warnings to console.
 

@@ -9,7 +9,7 @@ layout: default
                 <div class="categories categories-white col-sm-8 col-sm-offset-2">
                     {% for category in categories %}
                         {% if category %}
-                            <a href="/blog/categories/?c={{category.slug}}" class="category category-0 index-{{forloop.index0}} {{category.slug}}">{{category.name}}</a>
+                            <a href="{{site.baseurl}}/blog/categories/?c={{category.slug}}" class="category category-0 index-{{forloop.index0}} {{category.slug}}">{{category.name}}</a>
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -150,7 +150,7 @@ defer(function () {
 	    			}
 	    		}
 	    		active = (categories.required[0] == cat) ? "active" : "";
-	    		postCategoriesList += '<a href="/blog/categories/?c='+cat+'" class="category category-0 index-'+index+'">'+catName+'</a>'+"\n";
+	    		postCategoriesList += '<a href="{{site.baseurl}}/blog/categories/?c='+cat+'" class="category category-0 index-'+index+'">'+catName+'</a>'+"\n";
 	    	});
 
 	    	
@@ -163,11 +163,11 @@ defer(function () {
     		postAuthor = 	'<div class="media">'+
 		                        '<div class="media-left">'+
 		                            '<div class="headshot">'+
-		                            '<img alt="'+authorName+'" src="'+authorPhoto+'" />'+
+		                            '<img alt="'+authorName+'" src="{{site.baseurl}}'+authorPhoto+'" />'+
 		                        '</div>'+
 		                        '</div>'+
 		                        '<div class="media-body">'+
-		                            '<a href="/contributors#'+post.author+'" class="author-name">'+authorName+'</a>'+
+		                            '<a href=" {{site.baseurl}}/contributors#'+post.author+'" class="author-name">'+authorName+'</a>'+
 		                        '</div>'+
 		                    '</div>'+
 		    				"\n";
@@ -175,7 +175,7 @@ defer(function () {
 
 			listItem += '<li>'+
 	                        '<div class="post-meta">16 JAN 2016</div>'+
-	                        '<h2 class="hdg hdg_1"><a class="post-link" href="'+post.url+'">'+post.title+'</a></h2>'+
+	                        '<h2 class="hdg hdg_1"><a class="post-link" href="{{site.baseurl}}'+post.url+'">'+post.title+'</a></h2>'+
 	                        '<div class="categories categories-left">'+
 	                            postCategoriesList+
 	                        '</div>'+
@@ -209,7 +209,7 @@ defer(function () {
 	    	// console.log(cat['slug']);
 	    	// console.log(cat['name']);
 	    });
-		$('#output').append("<p>Sorry, no posts found matching \""+catName+"\" category. <br><br><a class='btn btn-secondary btn-mobile' href='/blog/' role='button'>Return to the blog</a></p>");
+		$('#output').append("<p>Sorry, no posts found matching \""+catName+"\" category. <br><br><a class='btn btn-secondary btn-mobile' href='{{site.baseurl}}/blog/' role='button'>Return to the blog</a></p>");
 		$('#curr_cat, title').empty().append(catName);
 		$('.category.'+categories.required[0]).addClass('active');
 	    // postsList = document.createElement("p");

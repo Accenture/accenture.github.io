@@ -7,7 +7,7 @@ date: '2019-04-04 00:00'
 ---
 
 # Hello, Waterfall Config!
-![It's not really a waterfall](/img/posts/waterfall-config-announcement/the-sea-3018128_640.jpg)
+![It's not really a waterfall]({{site.baseurl}}/img/posts/waterfall-config-announcement/the-sea-3018128_640.jpg)
 
 We're proud to introduce [*Waterfall Config*](https://github.com/Accenture/waterfall-config), a simple configuration library for the JVM, heavily based on [Typesafehub Config](https://github.com/lightbend/config), with some additional features.
 

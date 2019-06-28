@@ -5,8 +5,8 @@ layout: default
 
 {% assign categories = site.data.categories %}
 <div class="tier tier-right tier-white">
-        <img class="tier-img tier-img-sm" src="/img/hero/hero-laying.jpg" alt="" />
-        <img class="tier-img tier-img-lg" src="/img/hero/hero-laying-lg.jpg" alt="" />
+        <img class="tier-img tier-img-sm" src="{{site.baseurl}}/img/hero/hero-laying.jpg" alt="" />
+        <img class="tier-img tier-img-lg" src="{{site.baseurl}}/img/hero/hero-laying-lg.jpg" alt="" />
 		<div class="container">
             <div class="col-md-8 col-md-offset-2 text-center">
     			<h1 class="hdg hdg_hero">{{site.blog_title}}</h1>
@@ -22,7 +22,7 @@ layout: default
                     <!-- categories -->
                         {% for category in categories %}
                             {% if category %}
-                                <a href="/blog/categories/?c={{category.slug}}" class="category category-0 index-{{forloop.index0}}">{{category.name}}</a>
+                                <a href="{{site.baseurl}}/blog/categories/?c={{category.slug}}" class="category category-0 index-{{forloop.index0}}">{{category.name}}</a>
                             {% endif %}
                         {% endfor %}
                         <!-- end categories -->
@@ -32,7 +32,7 @@ layout: default
                     {% for post in paginator.posts %}
                     <li>
                         <div class="post-meta">{{ post.date | date: "%-d %b %Y" }}</div>
-                        <h2 class="hdg hdg_1"><a class="post-link" href="{{post.url}}">{{post.title}}</a></h2>
+                        <h2 class="hdg hdg_1"><a class="post-link" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h2>
                         <div class="categories categories-left">
                             {% assign post_cats = post.categories %}
                             {% assign count = 0 %}
@@ -40,7 +40,7 @@ layout: default
                                 {% if category %}
                                     {% for post_cat in post_cats %}
                                         {% if post_cat == category.slug %}
-                                            <a href="/blog/categories/?c={{category.slug}}" class="category category-0 index-{{count}}">{{category.name}}</a>
+                                            <a href="{{site.baseurl}}/blog/categories/?c={{category.slug}}" class="category category-0 index-{{count}}">{{category.name}}</a>
                                             {% assign count = count | plus: 1 %}
                                         {% endif %}
                                     {% endfor %}
@@ -55,11 +55,11 @@ layout: default
                                     <div class="media">
                                         <div class="media-left">
                                             <div class="headshot">
-                                                <img alt="{{author.name}}" src="{{author.photo}}" />
+                                                <img alt="{{author.name}}" src="{{site.baseurl}}{{author.photo}}" />
                                             </div>
                                         </div>
                                         <div class="media-body">
-                                            <a href="/contributors#{{author.slug}}" class="author-name" title="{{author.name}}">{{author.name}}</a>
+                                            <a href="{{site.baseurl}}/contributors#{{author.slug}}" class="author-name" title="{{author.name}}">{{author.name}}</a>
                                         </div>
                                     </div>
                                 {% endif %}
@@ -72,9 +72,9 @@ layout: default
                     <div class="pagination">
                         {% capture prev-disabled %}{% if paginator.previous_page == null %}pagination-disabled{% endif %}{% endcapture %}
                         {% capture next-disabled %}{% if paginator.next_page == null %}pagination-disabled{% endif %}{% endcapture %}
-                        <a class="pagination-prev {{prev-disabled}}" href="{{ paginator.previous_page_path }}"><i class="icn icn_arrowLeft">Previous</i></a>
+                        <a class="pagination-prev {{prev-disabled}}" href="{{site.baseurl}}{{ paginator.previous_page_path }}"><i class="icn icn_arrowLeft">Previous</i></a>
                         <span class="pagination-pages">{{paginator.page}} of {{paginator.total_pages}}</span>
-                        <a class="pagination-next {{next-disabled}}" href="{{ paginator.next_page_path }}"><i class="icn icn_arrowRight">Next</i></a>
+                        <a class="pagination-next {{next-disabled}}" href="{{site.baseurl}}{{ paginator.next_page_path }}"><i class="icn icn_arrowRight">Next</i></a>
                     </div>
                 </div>
             </div> <!-- /col -->

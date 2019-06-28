@@ -35,11 +35,11 @@ layout: default
                             <div class="media">
                                 <div class="media-left">
                                     <div class="headshot">
-                                        <img alt="{{author.name}}" src="{{author.photo}}" />
+                                        <img alt="{{author.name}}" src="{{site.baseurl}}{{author.photo}}" />
                                     </div>
                                 </div>
                                 <div class="media-body">
-                                    <a href="/contributors#{{author.slug}}" class="author-name author-name-light">{{author.name}}</a>
+                                    <a href="{{site.baseurl}}/contributors#{{author.slug}}" class="author-name author-name-light">{{author.name}}</a>
                                 </div>
                             </div>
                         {% endif %}
@@ -61,8 +61,8 @@ layout: default
                     <div class="pagination">
 						{% capture prev-disabled %}{% if paginator.previous_page == null %}pagination-disabled{% endif %}{% endcapture %}
                         {% capture next-disabled %}{% if paginator.next_page == null %}pagination-disabled{% endif %}{% endcapture %}
-                        <a class="pagination-prev {{prev-disabled}}" href="{{ page.previous.url }}"><i class="icn icn_arrowLeft">Previous</i></a>
-                        <a class="pagination-next {{next-disabled}}" href="{{ page.next.url }}"><i class="icn icn_arrowRight">Next</i></a>
+                        <a class="pagination-prev {{prev-disabled}}" href="{{ site.baseurl }}{{ page.previous.url }}"><i class="icn icn_arrowLeft">Previous</i></a>
+                        <a class="pagination-next {{next-disabled}}" href="{{ site.baseurl }}{{ page.next.url }}"><i class="icn icn_arrowRight">Next</i></a>
                     </div>
                 </div>
                 
