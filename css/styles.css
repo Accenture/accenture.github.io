@@ -55,6 +55,12 @@
   }
 }
 
+@media (min-width: 992px) {
+  .left-padding-custom {
+    padding-left: 100px;
+  }
+}
+
 .icon-wrapper {
   position: absolute;
   bottom: 0;
@@ -83,3 +89,11 @@
   cursor: pointer;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
 } */
+
+.conference-item-light {
+  background-color: white;
+}
+
+.conference-item-dark {
+  background-color: rgb(228, 238, 241);
+}
