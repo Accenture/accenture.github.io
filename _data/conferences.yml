@@ -9,7 +9,7 @@
   website: https://www.openslava.sk/2019/#/
   date: October 17-18, 2019
   video: https://www.youtube.com/watch?v=tEh1SkmwW-8
-
+ 
 - slug: openmunich
   title: OpenMunich
   tagline: Conference for Open Source and New IT
@@ -19,27 +19,7 @@
   website: https://openmunich.eu/
   date: December 13, 2019
   video: 
-
-- slug: eosc
-  title: Enterprise Open Source Conference
-  tagline: 
-  description: 
-  location: Madrid, Spain
-  logo: /img/project/rig.svg
-  website: https://opensourceconference.es/
-  date:
-  video:
-
-- slug: mexiconow
-  title: MexicoNow
-  tagline: 
-  description: 
-  location: Monterrey, Mexico
-  logo: /img/project/rig.svg
-  website: https://www.accenture.com/mx-es/event-mexico-now-monterrey
-  date:
-  video:
-
+ 
 - slug: helsinkidays
   title: Helsinki Days
   tagline: 
@@ -50,3 +30,22 @@
   date:
   video:
 
+- slug: mexiconow
+  title: MexicoNow
+  tagline: New Tech. New Futures.
+  description: 
+  location: Madrid, Spain
+  logo: /img/conference/bannerMXNOW.png
+  website: https://www.accenture.com/mx-es/event-mexico-now-monterrey
+  date:
+  video:
+
+- slug: eosc
+  title: Enterprise Open Source Conference
+  tagline: 
+  description: 
+  location: Madrid, Spain
+  logo: /img/conference/eosclogo.jpg
+  website: https://opensourceconference.es/
+  date:
+  video:
