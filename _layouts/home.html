@@ -14,12 +14,45 @@ layout: default
         </div>
 	</div>
 </div>
-<div class="tier">
-    <div class="container">
-        <div class="col-sm-8 col-sm-offset-2">
-            {{ content }}
-        </div>
+
+<div class="container">
+    <div class="col-sm-8 col-sm-offset-2">
+        {{ content }}
     </div>
+</div>
+
+{% assign projects = site.data.projects %}
+
+<div class="container">
+    {% for project in projects %}
+        {% if project %}
+            <div class="col-md-4">
+                <div class="card thumbnail">
+                    <img class="card-logo" src="{{site.baseurl}}{{project.logo}}" alt="{{project.title}}">
+                    <div class="caption">
+                        <h4>{{project.title}}</h4>
+                        <p>{{project.description}}</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        {% if project.github %} 
+                            <div class="icon-button" style="float:left; width: 30px; margin: 5px;">
+                                <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer">
+                                    <img src="{{ "/img/icon/github-logo.svg" | prepend: site.baseurl }}" />
+                                </a>
+                            </div>
+                        {% endif %}
+                        {% if project.website %} 
+                            <div class="icon-button" style="float:left; width: 30px; margin: 5px;">
+                                <a href="{{ project.website }}" target="_blank" rel="noopener noreferrer">
+                                    <img src="{{ "/img/icon/document.svg" | prepend: site.baseurl }}" />
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
 </div>
 
 <div class="tier tier-white">
