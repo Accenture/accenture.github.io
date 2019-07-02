@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="tier tier-right tier-white hero-tier">
-    <img class="tier-img" src="{{site.baseurl}}/img/hero/10695.jpg" alt="" />
+    <img class="tier-img" src="{{site.baseurl}}/img/hero/10695.jpg" alt="{{ page.title }}" />
     <div class="container">
         <div class="col-sm-8 col-sm-offset-2 text-center">
             <h1 class="hdg hdg_hero hdg_spaced">{{ page.title }}</h1>
@@ -21,7 +21,7 @@ layout: default
                 <div class="row">
                     {% if mod==1 %}
                         <div class="col-md-4 col-md-offset-1">
-                            <img class="" style="max-height: 180px;" src="{{site.baseurl}}{{conference.logo}}" alt="{{conference.title}}" />
+                            <img class="conference-logo" src="{{site.baseurl}}{{conference.logo}}" alt="{{conference.title}}" />
                         </div>
                         <div class="col-md-7">
                             <div class="caption">
@@ -33,7 +33,7 @@ layout: default
                     {% endif %}
                     {% if mod==0 %}
                         <div class="col-md-4 col-md-push-7 col-md-offset-1">
-                            <img class="" style="max-height: 180px; " src="{{site.baseurl}}{{conference.logo}}" alt="{{conference.title}}" />
+                            <img class="conference-logo" src="{{site.baseurl}}{{conference.logo}}" alt="{{conference.title}}" />
                         </div>
                         <div class="col-md-7 col-md-pull-5 left-padding-custom">
                             <div class="caption">
