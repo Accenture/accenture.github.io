@@ -153,26 +153,30 @@ defer(function () {
 	    		postCategoriesList += '<a href="{{site.baseurl}}/blog/categories/?c='+cat+'" class="category category-0 index-'+index+'">'+catName+'</a>'+"\n";
 	    	});
 
-	    	
+			authorNames = [];
+			authorPhotos = [];
+			authorSlugs = [];
     		for(i=0;i<siteAuthors.length;i++){
-    			if(siteAuthors[i].slug == post.author){
-    				authorName = siteAuthors[i].name;
-    				authorPhoto = siteAuthors[i].photo;
+    			if(post.author && post.author.includes(siteAuthors[i].slug)) {
+					authorNames.push(siteAuthors[i].name)
+					authorPhotos.push(siteAuthors[i].photo);
+					authorSlugs.push(siteAuthors[i].slug);
     			}
-    		}
-    		postAuthor = 	'<div class="media">'+
+			}
+			authorNames.forEach(function(author, index){
+				postAuthor += 	'<div class="media">'+
 		                        '<div class="media-left">'+
 		                            '<div class="headshot">'+
-		                            '<img alt="'+authorName+'" src="{{site.baseurl}}'+authorPhoto+'" />'+
+		                            '<img alt="'+author+'" src="{{site.baseurl}}'+authorPhotos[index]+'" />'+
 		                        '</div>'+
 		                        '</div>'+
 		                        '<div class="media-body">'+
-		                            '<a href=" {{site.baseurl}}/contributors#'+post.author+'" class="author-name">'+authorName+'</a>'+
+		                            '<a href=" {{site.baseurl}}/contributors#'+authorSlugs[index]+'" class="author-name">'+author+'</a>'+
 		                        '</div>'+
 		                    '</div>'+
 		    				"\n";
+			});
 	    	
-
 			listItem += '<li>'+
 	                        '<div class="post-meta">16 JAN 2016</div>'+
 	                        '<h2 class="hdg hdg_1"><a class="post-link" href="{{site.baseurl}}'+post.url+'">'+post.title+'</a></h2>'+
