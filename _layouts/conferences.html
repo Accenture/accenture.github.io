@@ -19,25 +19,37 @@ layout: default
         <div class="tier {% if mod==1 %} conference-item-dark {% else %} conference-item-light {% endif %}">
             <div class="container">
                 <div class="row">
-                    {% if mod==1 %}
+                    {% if mod == 1 %}
                         <div class="col-md-4 col-md-offset-1">
                             <img class="conference-logo" src="{{site.baseurl}}{{conference.logo}}" alt="{{conference.title}}" />
                         </div>
                         <div class="col-md-7">
                             <div class="caption">
-                                <a href="{{conference.website}}" target="_blank" rel="noopener noreferrer"><h3><b>{{conference.title}}</b> -&nbsp;{{conference.location}}</h3></a>
+                                {% if conference.website %}
+                                    <a href="{{conference.website}}" target="_blank" rel="noopener noreferrer">
+                                        <h3><b>{{conference.title}}</b> -&nbsp;{{conference.location}}</h3>
+                                    </a>
+                                {% else %}
+                                    <h3><b>{{conference.title}}</b> -&nbsp;{{conference.location}}</h3>
+                                {% endif %}
                                 <p><i>{{conference.date}}</i></p>
                                 <p>{{conference.tagline}}</p>
                             </div>
                         </div>
                     {% endif %}
-                    {% if mod==0 %}
+                    {% if mod == 0 %}
                         <div class="col-md-4 col-md-push-7 col-md-offset-1">
                             <img class="conference-logo" src="{{site.baseurl}}{{conference.logo}}" alt="{{conference.title}}" />
                         </div>
                         <div class="col-md-7 col-md-pull-5 left-padding-custom">
                             <div class="caption">
-                                <a href="{{conference.website}}" target="_blank" rel="noopener noreferrer"><h3><b>{{conference.title}}</b> -&nbsp;{{conference.location}}</h3></a>
+                                {% if conference.website %}
+                                    <a href="{{conference.website}}" target="_blank" rel="noopener noreferrer">
+                                        <h3><b>{{conference.title}}</b> -&nbsp;{{conference.location}}</h3>
+                                    </a>
+                                {% else %}
+                                    <h3><b>{{conference.title}}</b> -&nbsp;{{conference.location}}</h3>
+                                {% endif %}
                                 <p><i>{{conference.date}}</i></p>
                                 <p>{{conference.tagline}}</p>
                             </div>
