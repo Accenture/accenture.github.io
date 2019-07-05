@@ -119,7 +119,12 @@
     max-height: 505px;
   }
 }
-
+@media (max-width: 600px) {
+  /* override for tiers */
+  .hero-tier {
+    max-height: 260px;
+  }
+}
 /* customizing navbar collapse breakpoint */
 @media (max-width: 991px) {
   .navbar-header {
