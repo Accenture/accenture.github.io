@@ -35,33 +35,6 @@
   max-height: 100px;
 }
 
-/* When cards stacked vertically */
-@media (max-width: 991px ) {
-  .card {
-    min-height: 300px;
-    max-height: 300px;
-  }
-  .card-logo {
-    max-height: 80px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .card {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .card-logo {
-    max-height: 80px;
-  }
-}
-
-@media (min-width: 992px) {
-  .left-padding-custom {
-    padding-left: 100px;
-  }
-}
-
 .icon-wrapper {
   position: absolute;
   bottom: 0;
@@ -103,7 +76,95 @@
 .conference-item-dark {
   background-color: rgb(228, 238, 241);
 }
-/* override for tiers */
-.hero-tier{
-  max-height: 505px;
+
+/* Media Queries: */
+
+/* When cards stacked vertically */
+@media (max-width: 991px ) {
+  .card {
+    min-height: 300px;
+    max-height: 300px;
+  }
+  .card-logo {
+    max-height: 80px;
+  }
+}
+
+/* Bootstrap 'md' width */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .card {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .card-logo {
+    max-height: 80px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .hero-tier {
+    max-height: 374px;
+  }
+}
+
+@media (min-width: 992px) {
+  .left-padding-custom {
+    padding-left: 100px;
+  }
+}
+
+@media (min-width: 1199px) {
+  /* override for tiers */
+  .hero-tier {
+    max-height: 505px;
+  }
+}
+
+/* customizing navbar collapse breakpoint */
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+  margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+    display:block !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-default .navbar-collapse {
+    background-color: rgba(255,255,255,.95);
+    border: 0;
+    margin-left: -130px;
+    margin-right: -130px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
 }
