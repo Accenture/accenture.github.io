@@ -1,0 +1,22 @@
+# Projects
+
+- slug: rig
+  title: Reactive Interaction Gateway
+  description: The missing link between backend and frontend -- stop polling and go real-time!
+  logo: /img/project/rig.png
+  github: https://github.com/Accenture/reactive-interaction-gateway
+  website: https://accenture.github.io/reactive-interaction-gateway/
+
+- slug: ampligraph
+  title: AmpliGraph
+  description: An open source Python library that predicts links between concepts in a knowledge graph
+  logo: /img/project/acn_placeholder_logo.svg
+  github: https://github.com/Accenture/AmpliGraph
+  website: https://docs.ampligraph.org/en/1.0.3/#
+
+- slug: adop
+  title: Accenture DevOps Platform
+  description: ADOP is a tools environment for continuously testing, releasing and maintaining applications
+  logo: /img/project/acn_placeholder_logo.svg
+  github: https://github.com/Accenture/adop-docker-compose
+  website: https://accenture.github.io/adop-docker-compose/

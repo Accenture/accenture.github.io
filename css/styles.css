@@ -21,3 +21,155 @@
 .post_tier {
   padding: 0px;
 }
+
+
+.card {
+  margin-top: 30px;
+  min-height: 370px;
+  max-height: 370px;
+  position: relative;
+  padding: 30px;
+}
+
+.card-logo {
+  max-height: 100px;
+}
+
+.icon-wrapper {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 20px;
+  margin-left: 5px;
+}
+
+.icon-button {
+  float: left;
+  width: 30px;
+  margin: 5px;
+}
+
+.thumbnail {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  min-width: 40%;
+  border-radius: 5px;
+}
+
+.thumbnail-description {
+  min-height: 40px;
+}
+
+/* .thumbnail:hover {
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+} */
+
+.conference-logo {
+  max-height: 180px;
+  max-width: 360px;
+}
+
+.conference-item-light {
+  background-color: white;
+}
+
+.conference-item-dark {
+  background-color: rgb(228, 238, 241);
+}
+
+/* Media Queries: */
+
+/* When cards stacked vertically */
+@media (max-width: 991px ) {
+  .card {
+    min-height: 300px;
+    max-height: 300px;
+  }
+  .card-logo {
+    max-height: 80px;
+  }
+}
+
+/* Bootstrap 'md' width */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .card {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .card-logo {
+    max-height: 80px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .hero-tier {
+    max-height: 374px;
+  }
+}
+
+@media (min-width: 992px) {
+  .left-padding-custom {
+    padding-left: 100px;
+  }
+}
+
+@media (min-width: 1199px) {
+  /* override for tiers */
+  .hero-tier {
+    max-height: 505px;
+  }
+}
+@media (max-width: 600px) {
+  /* override for tiers */
+  .hero-tier {
+    max-height: 260px;
+  }
+}
+/* customizing navbar collapse breakpoint */
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+  margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+    display:block !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-default .navbar-collapse {
+    background-color: rgba(255,255,255,.95);
+    border: 0;
+    margin-left: -130px;
+    margin-right: -130px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}

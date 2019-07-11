@@ -7,7 +7,7 @@ date: '2019-06-25 00:00'
 ---
 # Hyperledger Fabric Meets Kubernetes
 
-![Fabric Meets K8S](/img/posts/hl_fabric_meets_kubernetes/fabric_meets_k8s.png)
+![Fabric Meets K8S]({{site.baseurl}}/img/posts/hl_fabric_meets_kubernetes/fabric_meets_k8s.png)
 
 # Summary
 Looks like our project is globally pioneering the process of running Hyperledger Fabric in Kubernetes and getting close to a production-ready setup step by step.
@@ -119,11 +119,11 @@ Also one sample by IBM
 
 ### Simple Network Architecture
 
-![Simple Network](/img/posts/hl_fabric_meets_kubernetes/HL_in_Kube_simple.png)
+![Simple Network]({{site.baseurl}}/img/posts/hl_fabric_meets_kubernetes/HL_in_Kube_simple.png)
 
 ### Scaled Up Network Architecture
 
-![Scaled Up Network](/img/posts/hl_fabric_meets_kubernetes/HL_in_Kube_scaled.png)
+![Scaled Up Network]({{site.baseurl}}/img/posts/hl_fabric_meets_kubernetes/HL_in_Kube_scaled.png)
 
 # [PIVT Way](#pivt-way)
 
@@ -232,7 +232,7 @@ In particular, this can be an issue since there is no backup/restore mechanism f
 
 ### Backup/Restore Flow
 
-![HL_backup_restore](/img/posts/hl_fabric_meets_kubernetes/HL_backup_restore.png)
+![HL_backup_restore]({{site.baseurl}}/img/posts/hl_fabric_meets_kubernetes/HL_backup_restore.png)
 
 #### Backup:
 
@@ -274,10 +274,10 @@ helm upgrade hlf-kube ..
 
 Let's have a look what this work provides regarding Accenture's Architecture Concerns (NFR's)
 
-![Accenture_NFR](/img/posts/hl_fabric_meets_kubernetes/accenture_nfrs.png)
+![Accenture_NFR]({{site.baseurl}}/img/posts/hl_fabric_meets_kubernetes/accenture_nfrs.png)
 
 # [Future (Dream) Work](#future-dream-work)
-![Magic](/img/posts/hl_fabric_meets_kubernetes/magic.jpg)
+![Magic]({{site.baseurl}}/img/posts/hl_fabric_meets_kubernetes/magic.jpg)
 
 Wrapping up everything in a Kubernetes Operator will be more than awesome! :) 
 So one will provide the Operator the desired state of HL Fabric network, both the network itself and the channels, chaincodes etc., and let it reach that state if possible. 

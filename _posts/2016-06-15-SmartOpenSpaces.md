@@ -16,7 +16,7 @@ comments: true
 
 Open space management is an emerging concept useful in scenarios where there is a large volume of people activity. Applying intelligence to open spaces makes it possible to understand what is happening indoors or outdoors--in areas such as museums, department stores, city downtowns or public venues--and in spaces with no common “business” needs among the people who are in the location. 
 
-![Different scopes of Open Spaces](/img/posts/smart-open-spaces/scopes.png)
+![Different scopes of Open Spaces]({{site.baseurl}}/img/posts/smart-open-spaces/scopes.png)
 
 Government agencies and businesses can gain valuable insights and make better decisions by knowing what is happening at a location, both through real-time data and historical information. Examples include:
 
@@ -28,7 +28,7 @@ Government agencies and businesses can gain valuable insights and make better de
 
 To explore the opportunity, we defined some “presence zones” within which we could monitor people activity. In an effort to be discreet, we tracked people activity into one of our offices, through the radio signals of their personal devices: smart phones, wearables, laptops and tablets. This is similar to taking “snapshots” of where each device is at an exact moment in time. The idea was to collect data to better understand how people are moving around an open space.
 
-![Customers evolutions into a Smart Open Space](/img/posts/smart-open-spaces/evolution.gif)
+![Customers evolutions into a Smart Open Space]({{site.baseurl}}/img/posts/smart-open-spaces/evolution.gif)
 
 An organization can use collected information in real time to answer questions such as:
 
@@ -62,7 +62,7 @@ We used the following technologies to develop the solution:
 	* Beaglebone Black
 	* Arduino
 
-![Technology selection schema](/img/posts/smart-open-spaces/technologySchema.png)
+![Technology selection schema]({{site.baseurl}}/img/posts/smart-open-spaces/technologySchema.png)
 	
 This diagram shows a simple example of how sniffers and a collector work together.
 
@@ -73,7 +73,7 @@ This diagram shows a simple example of how sniffers and a collector work togethe
 	
 ## Working example
 
-![Working example](/img/posts/smart-open-spaces/workingExample.gif)
+![Working example]({{site.baseurl}}/img/posts/smart-open-spaces/workingExample.gif)
 
 This diagram shows a hypothetical example of how we could detect and use real-time information.
 
@@ -87,13 +87,13 @@ And here is how we could use aggregated data: First, Nexus 5 is detected by Rasp
 
 This approach is valid if an organization needs to manage one open space; however, going forward, what if it needs to manage two, three or 50 of them? Is there a good and easy way to scale out this solution? The answer is yes, and its name is MQTT.
 
-![One data collector MQTT](/img/posts/smart-open-spaces/dataCollectorMQTT.png)
+![One data collector MQTT]({{site.baseurl}}/img/posts/smart-open-spaces/dataCollectorMQTT.png)
 
 The idea is to split the data collector into a data collector itself and a data center for real-time and aggregated data. The data collector receives sockets from beacons, and sends information to the data center using MQTT. The data center has to serve the requests of historic information, real-time information and analytics.
 
 The result is an easy-to-scale solution as many times as necessary and without location restrictions.
 
-![Scaled out solution](/img/posts/smart-open-spaces/scaledOutSolution.png)
+![Scaled out solution]({{site.baseurl}}/img/posts/smart-open-spaces/scaledOutSolution.png)
 
 Combining MQTT topics and wildcards also produces only the needed information. For example:
 
@@ -103,7 +103,7 @@ Combining MQTT topics and wildcards also produces only the needed information. F
 * The activity in all electronic departments.
 * Or all the activity.
 
-![MQTT filtering data](/img/posts/smart-open-spaces/mqttFiltering.png)
+![MQTT filtering data]({{site.baseurl}}/img/posts/smart-open-spaces/mqttFiltering.png)
 
 ## Conclusions
 

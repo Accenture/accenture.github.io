@@ -21,7 +21,7 @@ specific user becomes as easy as publishing a message to a Kafka topic.
 Additionally, RIG comes with a basic API gateway implementation. This way, RIG can be used to
 communicate both ways between your microservices and your front-ends.
 
-![RIG Overview](/img/posts/introducing-rig/overview.svg)
+![RIG Overview]({{site.baseurl}}/img/posts/introducing-rig/overview.svg)
 
 Other features:
 
