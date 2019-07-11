@@ -1,0 +1,51 @@
+# Conferences
+
+- slug: openslava
+  title: OpenSlava
+  tagline: Accenture conference on emerging technologies and open source
+  description: 
+  location: Bratislava, Slovakia
+  logo: /img/conference/openslava.jpg
+  website: https://www.openslava.sk/2019/#/
+  date: October 17-18, 2019
+  video: https://www.youtube.com/watch?v=tEh1SkmwW-8
+ 
+- slug: openmunich
+  title: OpenMunich
+  tagline: Conference for Open Source and New IT
+  description: 
+  location: Munich, Germany
+  logo: /img/conference/openmunich.svg
+  website: https://openmunich.eu/
+  date: December 13, 2019
+  video: 
+ 
+- slug: helsinkidays
+  title: Helsinki Days
+  tagline: 
+  description: 
+  location: Helsinki, Finland
+  logo: /img/project/acn_placeholder_logo.svg
+  website: 
+  date:
+  video:
+
+- slug: mexiconow
+  title: MexicoNow
+  tagline: New Tech. New Futures.
+  description: 
+  location: Monterrey, Mexico
+  logo: /img/conference/bannerMXNOW.png
+  website: https://www.accenture.com/mx-es/event-mexico-now-monterrey
+  date:
+  video:
+
+- slug: eosc
+  title: Enterprise Open Source Conference
+  tagline: 
+  description: 
+  location: Madrid, Spain
+  logo: /img/conference/eosclogo.png
+  website: https://opensourceconference.es/
+  date:
+  video:

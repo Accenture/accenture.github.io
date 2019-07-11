@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<div class="tier tier-right tier-white">
-        <img class="tier-img tier-img" src="/img/hero/hero-shoes-right.jpg" alt="" />
+<div class="tier tier-right tier-white hero-tier">
+        <img class="tier-img tier-img" src="{{site.baseurl}}/img/hero/hero-shoes-right.jpg" alt="" />
 		<div class="container">
             <div class="col-sm-8 col-sm-offset-2 text-center">
     			<h1 class="hdg hdg_hero hdg_spaced">{{ page.title }}</h1>
@@ -24,7 +24,7 @@ layout: default
                             <a class="anchor" id="{{author.slug}}" style="display: block; position: relative; top: -106px; visibility: hidden;"></a>
                             <div class="media-left">
                                 <div class="headshot headshot-large">
-                                    <img alt="{{author.name}}" src="{{author.photo}}" />
+                                    <img alt="{{author.name}}" src="{{site.baseurl}}{{author.photo}}" />
                                 </div>
                             </div>
                             <div class="media-body">
@@ -51,7 +51,7 @@ layout: default
                                             {% if post and post_author == author.slug %}
                                             <li>
                                                 <div class="post-meta">{{ post.date | date: "%-d %b %Y" }}</div>
-                                                <div class="hdg hdg_3"><a class="post-title" href="{{post.url}}">{{post.title}}</a></div>
+                                                <div class="hdg hdg_3"><a class="post-title" href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></div>
                                                 <div class="categories categories-left">
                                                     {% assign post_cats = post.categories %}
                                                     {% assign count = 0 %}
@@ -59,7 +59,7 @@ layout: default
                                                         {% if category %}
                                                             {% for post_cat in post_cats %}
                                                                 {% if post_cat == category.slug %}
-                                                                    <a href="/blog/categories/?c={{category.slug}}" class="category category-0 index-{{count}}">{{category.name}}</a>
+                                                                    <a href="{{site.baseurl}}/blog/categories/?c={{category.slug}}" class="category category-0 index-{{count}}">{{category.name}}</a>
                                                                     {% assign count = count | plus: 1 %}
                                                                 {% endif %}
                                                             {% endfor %}        

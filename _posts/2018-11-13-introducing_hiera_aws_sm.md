@@ -99,7 +99,7 @@ Using this module, you no longer store your secret information in Hiera
 or in your Puppet code, but rather just a _reference_ to your secret
 data.
  
-![Puppet Workflow](/img/posts/introducing-hiera-aws-sm/workflow.svg)
+![Puppet Workflow]({{site.baseurl}}/img/posts/introducing-hiera-aws-sm/workflow.svg)
  
 The Puppet master, while compiling the catalog for the node, sees the
 reference to our secret data. Since it can't find the data for that reference anywhere in the Hiera hierarchy, it makes a request to AWS' Secrets Manager to see if the secret exists there.

@@ -52,7 +52,7 @@ As user interacts with the application UI, additional content can be loaded from
 
 The diagram below depicts the working mechanism.
 
-![Alt text](/img/posts/cordova-best-practices/cordovaarch.jpg)
+![Alt text]({{site.baseurl}}/img/posts/cordova-best-practices/cordovaarch.jpg)
 
 ## Benefits to mobile application developers
 
