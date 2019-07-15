@@ -103,7 +103,13 @@
 
 @media (min-width: 769px) and (max-width: 1199px) {
   .hero-tier {
-    max-height: 374px;
+    max-height: 325px;
+  }
+  .main-tier {
+    max-height: 572px;
+  }
+  .blog-tier {
+    max-height: 410px;
   }
 }
 
@@ -116,7 +122,13 @@
 @media (min-width: 1199px) {
   /* override for tiers */
   .hero-tier {
-    max-height: 505px;
+    max-height: 350px;
+  }
+  .main-tier {
+      max-height: 450px;
+  }
+  .blog-tier {
+    max-height: 440px;
   }
 }
 @media (max-width: 600px) {
