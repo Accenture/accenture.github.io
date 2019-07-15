@@ -10,7 +10,7 @@
 - slug: ampligraph
   title: AmpliGraph
   description: Python library for Representation Learning on Knowledge Graphs
-  logo: /img/project/Ampligraph_logo_transparent.png
+  logo: /img/project/ampligraph_logo_transparent.png
   github: https://github.com/Accenture/AmpliGraph
   website: https://docs.ampligraph.org/en/1.0.3/#
 
