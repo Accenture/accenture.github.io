@@ -58,3 +58,15 @@
 
   - slug: sfdx
     name: Salesforce DX
+    
+  - slug: selenium
+    name: Selenium
+    
+  - slug: cucumber
+    name: Cucumber
+    
+  - slug: testng
+    name: TestNG
+    
+  - slug: opensource
+    name: Open-source
