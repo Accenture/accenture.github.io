@@ -64,5 +64,5 @@ Let us know what you think! Find us on [Github](https://github.com/Accenture/ato
 ## _Looking for more details?_
 Contact any of contributing member for any queries or details. 
 
-> **ATOM** is an initiative from **ATC Newcastle Test Automation CoP**
+> **ATOM** is an initiative from **Advanced Technology Centre (ATC) - Newcastle Test Automation CoP**
 > Contact us by dropping mail at ATC_Newcastle_AATL@accenture.com 
