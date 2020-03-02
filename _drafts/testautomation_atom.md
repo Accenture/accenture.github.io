@@ -3,7 +3,6 @@ layout: post
 title:  "Accenture Open Source Test Automation Framework" 
 categories: testautomation selenium cucumber bdd java opensource
 author: 
-    - atc_ncl
     - anshul_jain
 comments: true
 ---
@@ -58,11 +57,4 @@ The ATOM's libraries can be used in combination depending on the project's autom
 ## _What’s next?_
 Give it a try, use it, share it, fork it and don’t forget to submit your pull requests.
 <br><br>
-Let us know what you think! Find us on [Github](https://github.com/Accenture/atom). 
-
-
-## _Looking for more details?_
-Contact any of contributing member for any queries or details. 
-
-> **ATOM** is an initiative from **Advanced Technology Centre (ATC) - Newcastle Test Automation CoP**
-> Contact us by dropping mail at ATC_Newcastle_AATL@accenture.com 
+Let us know what you think! Find us on [Github](https://github.com/Accenture/atom).
