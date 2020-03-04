@@ -28,7 +28,7 @@ The ATOM is a Java-based framework and has a built-in capability for web/mobile 
 <br><br>
 Since the ATOM is a group of multiple loosely coupled test libraries, your project can use all or some of the libraries according to its test automation requirements. The ATOM's libraries can be consumed by either including the ATOM's source code directly in your project, or by creating jars from the source code and importing them directly into your project.
 
-![Test Automation Framework](/img/posts/accenture-os-taf/TAFARch.png)
+![Test Automation Framework](/img/posts/accenture-os-taf/TAFArch.png)
 
 ## _How and where to use?_
 
