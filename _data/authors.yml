@@ -232,3 +232,10 @@
   photo: /img/author/azlam-abdulsalam.jpg
   linkedin: https://www.linkedin.com/in/azlam/
   github: https://github.com/azlamsalam
+  
+- slug: anshul_jain
+  name: Anshul Jain
+  bio: >
+    Anshul is a Test Engineering Associate Manager with particular interest in Test Automation and intelligent testing.
+  photo: /img/author/anshul-jain.jpg
+  linkedin: https://www.linkedin.com/in/anshuljain27
