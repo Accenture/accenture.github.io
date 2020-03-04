@@ -2,10 +2,11 @@
 layout: post
 title:  "Accenture Open Source Test Automation Framework" 
 categories: testautomation selenium cucumber bdd java opensource
-author: 
-    - anshul_jain
+author: anshul_jain
 comments: true
+date: '2020-03-04 00:00'
 ---
+
 <br>
 Looking to implement test automation in a project?
 <br><br>
