@@ -70,3 +70,12 @@
     
   - slug: opensource
     name: Open-source
+
+  - slug: replication
+    name: Peplication
+
+  - slug: persistence
+    name: Persistence
+    
+  - slug: instrumentation
+    name: Instrumentation
