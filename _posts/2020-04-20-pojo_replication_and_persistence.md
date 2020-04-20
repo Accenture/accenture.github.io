@@ -3,6 +3,7 @@ layout: post
 title:  "Transparent Replication and Persistence for POJO Graphs"
 categories: java replication persistence instrumentation
 author: hakan_eryargi
+date: '2020-04-20 00:00'
 ---
 # Transparent Replication and Persistence for POJO Graphs
 
@@ -25,19 +26,33 @@ _Chainvayler_ can be found [here](https://github.com/raftAtGit/Chainvayler).
 
 # Contents
 
-* [Motivation](#motivation)
-* [Introduction](#introduction)
-* [Bank sample](#bank-sample)
-* [How it works?](#how-it-works)
-* [Annotations](#annotations)
-* [Consistency](#consistency)
-* [Performance and Scalability](#performance-and-scalability)
-* [Determinism](#determinism)
-* [Limitations](#limitations)
-* [Comparision to](#comparision-to)
-    * [ORM frameworks](#orm-frameworks)
-    * [Hazelcast](#hazelcast)
-* [Conclusion](#conclusion)
+- [Transparent Replication and Persistence for POJO Graphs](#transparent-replication-and-persistence-for-pojo-graphs)
+- [Summary](#summary)
+- [Contents](#contents)
+- [Motivation](#motivation)
+- [Introduction](#introduction)
+- [Bank sample](#bank-sample)
+- [How it works?](#how-it-works)
+    - [Prevayler](#prevayler)
+    - [Postvayler](#postvayler)
+    - [Chainvayler](#chainvayler)
+    - [Constructors](#constructors)
+  - [Annotations](#annotations)
+    - [_@Chained_](#chained)
+    - [_@Modification_](#modification)
+    - [_@Synch_](#synch)
+    - [_@Include_](#include)
+  - [Consistency](#consistency)
+- [Performance and Scalability](#performance-and-scalability)
+- [Determinism](#determinism)
+- [Limitations](#limitations)
+    - [Memory](#memory)
+    - [Garbage collection](#garbage-collection)
+    - [Clean shutdown](#clean-shutdown)
+- [Comparision to](#comparision-to)
+    - [ORM frameworks](#orm-frameworks)
+    - [Hazelcast](#hazelcast)
+- [Conclusion](#conclusion)
 
 # [Motivation](#motivation)
 
@@ -47,7 +62,7 @@ ORM (Object-Relational Mapping) frameworks improved a lot in the last 10 years a
 
 However, the still remaining fact is, objects graphs don't naturally fit into relational databases. You need to sacrifice something and there is the overhead for sure.
 
-I would call the data model classes used in conjuction with ORM frameworks as __object oriented-ish__, since they are not trully object oriented. The very main aspects of object oriented designs, _inheritance_ and _polymorphism_, and even _encapsulation_ is either impossible or is a real pain with ORM frameworks.
+I would call the data model classes used in conjunction with ORM frameworks as __object oriented-ish__, since they are not truly object oriented. The very main aspects of object oriented designs, _inheritance_ and _polymorphism_, and even _encapsulation_ is either impossible or is a real pain with ORM frameworks.
 
 Wouldn't it be great if our objects are _automagically_ persisted and replicated? Do we really need that additional persistence layer? Do we really need that _@NamedQueries_ and so on?
 
@@ -121,12 +136,13 @@ This is simply a brilliant idea to persist POJOs. Actually, this is the exact sa
 
 However, the thing is _Prevayler_ is a bit too verbose. You need to write _Transaction_ classes for each operation that modifies your data. And it’s also a bit old fashioned considering today’s wonderful _@Annotated_ Java world.
 
-Here comes into scene [Postvayler](https://github.com/raftAtGit/Postvayler). It's the predecessor of _Chainvayler_, which was also a PoC project by myself for transperent POJO persistence. 
+Here comes into scene [Postvayler](https://github.com/raftAtGit/Postvayler). It's the predecessor of _Chainvayler_, which was also a PoC project by myself for transparent POJO persistence. 
 
 Postvayler injects bytecode into (instruments) __javac__ compiled `@Chained` classes such that every `@Modification` method in a `@Chained` class is modified to execute that method via _Prevayler_.
 
 For example, the `addBook(Book)` method in the introduction sample becomes something like (omitting some details for readability):
-```
+
+```java
 void addBook(Book book) {
   if (! there is Postvayler context) {
      // no persistence, just proceed to original method
@@ -152,7 +168,7 @@ private void __postvayler_addBook(Book book) {
 }
 ```
 
-As can been seen, if there is no _Postvayler_ context around, the object bahaves like the original POJO with an ignorable overhead.
+As can been seen, if there is no _Postvayler_ context around, the object behaves like the original POJO with an ignorable overhead.
 
 Constructors of `@Chained` classes are also instrumented to keep track of of them. They are pooled weekly so GC works as expected
 
@@ -168,7 +184,7 @@ Hazelcast's _IAtomicLong_ uses _Raft_ consensus algorithm behind the scenes and 
 _Chainvayler_ uses Hazelcast's [`IMap`](https://docs.hazelcast.org/docs/latest/javadoc/com/hazelcast/map/IMap.html) data structure to replicate transactions among JVM's. Possibly, this can be replaced with some other mechanism, for example with [Redis pub/sub](https://redis.io/topics/pubsub), should be benchmarked to see which one performs better.
 
 _Chainvayler_ also makes use of some ugly hacks to integrate with _Prevayler_. In particular, it uses _reflection_ to access _Prevayler_ [internals](https://github.com/raftAtGit/Chainvayler/blob/master/chainvayler/src/main/java/raft/chainvayler/impl/HazelcastPrevayler.java)
-as _Prevayler_ was never meant to be extened this way. Obviously, this is not optimal, but please just remember this is just a PoC project ;) Possibly the way to go here is, enhancing _Prevayler_ 
+as _Prevayler_ was never meant to be extended this way. Obviously, this is not optimal, but please just remember this is just a PoC project ;) Possibly the way to go here is, enhancing _Prevayler_ 
 code base to allow this kind of extension.
 
 __Note__, even if _persistence_ is disabled, still _Prevayler_ transactions are used behind the scenes. Only difference is, _Prevayler_ is configured not to save transactions to disk.
@@ -177,19 +193,23 @@ __Note__, even if _persistence_ is disabled, still _Prevayler_ transactions are 
 
 Possibly, instrumentation of constructors are the most complicated part of _Chainvayler_ and also _Postvayler_. So best to mention a bit.
 
-First, as mentioned before, except the _root_ object of the _chained_ object graph, creating instances of _chained_ classes are done in regular ways, either with the _new_ oprerator, or via factories, builders whatever.
+First, as mentioned before, except the _root_ object of the _chained_ object graph, creating instances of _chained_ classes are done in regular ways, either with the _new_ operator, or via factories, builders or any other mechanism.
 
 For example, here is a couple of code fragments from the [_Bank_](https://github.com/raftAtGit/Chainvayler/blob/master/bank-sample/src/main/java/raft/chainvayler/samples/bank/Main.java) sample to create objects:
-```
+
+```java
 Bank other = new Bank();
 ```
-```
+
+```java
 Customer customer = new Customer(<name>);
 ```
-```
+
+```java
 Customer customer = bank.createCustomer(<name>);
 ```
-They look quite POJO way, right?
+
+They look quite the POJO way, right?
 
 Actually many things are happening behind the scenes due to constructor instrumentation:
 * First, if there is no _Chainvayler_ context around, they act like a plain POJO. They do nothing special
@@ -250,7 +270,7 @@ In other words, provided all changes are deterministic, any `@Modification` meth
 
 As all objects are always in memory, assuming proper synchronization, reads should be lightning fast. Nothing can beat the performance of reading an object from memory. In most cases you can expect read times __< 1__ milliseconds even for very complex data structures. With todays modern hardware, iterating over a `Map` with one million entries barely takes a few milliseconds. Compare that to _full table scan_ over un-indexed columns in relational databases ;)
 
-Furthemore, reads are almost linearly scalable. Add more nodes to your cluster and your lightning fast reads will scale-out.
+Furthermore, reads are almost linearly scalable. Add more nodes to your cluster and your lightning fast reads will scale-out.
 
 However, as it's now, writes are not scalable. The overall write performance of the system decreases as more nodes are added. But hopefully/possibly there is room for improvement here. 
 
@@ -270,7 +290,7 @@ Note, for some reason I couldn't figure out yet, Java IO performance drops to ri
 
 As mentioned, all methods which modify the data in the _chained_ classes should be [__deterministic__](http://en.wikipedia.org/wiki/Deterministic_system). That is, given the same inputs, they should modify the data in the exact same way.
 
-The term __deterministic__ has interesting implications in _Java_. For example, iteration order of `HashSet` and `HashMap` is not deterministic. They depend on the hash values which may not be the same in different JVM sessions. So, if iteration order is siginificant, for example finding the first object in a `HashSet` which satisfies certain conditions and operate on that, instead `LinkedHashSet` and `LinkedHashMap` should be used which provide predictable iteration order.
+The term __deterministic__ has interesting implications in _Java_. For example, iteration order of `HashSet` and `HashMap` is not deterministic. They depend on the hash values which may not be the same in different JVM sessions. So, if iteration order is significant, for example finding the first object in a `HashSet` which satisfies certain conditions and operate on that, instead `LinkedHashSet` and `LinkedHashMap` should be used which provide predictable iteration order.
 
 In contrast, random operations are deterministic as long as you use the same seed.
 
@@ -345,7 +365,7 @@ ORM (Object-Relational Mapping) frameworks improved a lot in the last 10 years a
 
 However, the still remaining fact is, objects graphs don't naturally fit into relational databases. You need to sacrifice something and there is the overhead for sure.
 
-I would call the data model classes used in conjuction with ORM frameworks as __object oriented-ish__, since they are not trully object oriented. The very main aspects of object oriented designs, inheritance and polymorphism, and even encapsulation is either impossible or is a real pain with ORM frameworks.
+I would call the data model classes used in conjunction with ORM frameworks as __object oriented-ish__, since they are not truly object oriented. The very main aspects of object oriented designs, inheritance and polymorphism, and even encapsulation is either impossible or is a real pain with ORM frameworks.
 
 And they are also not transparent.
 
@@ -359,14 +379,14 @@ With _Chainvayler_ there is almost no limit for what data structures can be used
 
 Apparently this library is only a PoC and not production ready yet. However, it works and demonstrates transparent replication and/or persistence is possible. 
 
-Once it's made production ready, it can be used in different domains with several benefits:
+Once it's production ready, it can be used in different domains with several benefits:
+
 * Much simpler and natural object oriented code
-* Getting rid of databases, peristence layers and all the relevant limitations
+* Eliminate databases, persistence layers and all the relevant limitations
 * Lightning fast read performance
 * Any type of Java application which needs to persist data
 * If writes can be scaled-out, at least to some level, _Chainvayler_ is a very good fit for microservices applications
 * Even not, it can still be a good fit for many microservices applications if they are read-centric
-* ...
 
-So cheers and happy transparent persistence and replication to your POJOs :)
+Thanks for making it this far. Happy transparent persistence and replication to your POJOs!
  
