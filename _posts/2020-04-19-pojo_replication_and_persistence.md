@@ -3,7 +3,7 @@ layout: post
 title:  "Transparent Replication and Persistence for POJO Graphs"
 categories: java replication persistence instrumentation
 author: hakan_eryargi
-date: '2020-04-20 00:00'
+date: '2020-04-19 00:00'
 ---
 # Transparent Replication and Persistence for POJO Graphs
 
