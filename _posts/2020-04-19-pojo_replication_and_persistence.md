@@ -26,9 +26,6 @@ _Chainvayler_ can be found [here](https://github.com/raftAtGit/Chainvayler).
 
 # Contents
 
-- [Transparent Replication and Persistence for POJO Graphs](#transparent-replication-and-persistence-for-pojo-graphs)
-- [Summary](#summary)
-- [Contents](#contents)
 - [Motivation](#motivation)
 - [Introduction](#introduction)
 - [Bank sample](#bank-sample)
