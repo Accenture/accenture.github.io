@@ -20,17 +20,3 @@
   logo: /img/project/acn_placeholder_logo.svg
   github: https://github.com/Accenture/adop-docker-compose
   website: https://accenture.github.io/adop-docker-compose/
-
-  - slug: cactus
-  title: Hyperledger Cactus
-  description: A pluggable, enterprise-grade framework to transact on multiple distributed ledgers without another competing blockchain
-  logo: /img/project/HL_Cactus_Logo.png
-  github: https://github.com/hyperledger/cactus/
-  website: https://wiki.hyperledger.org/display/cactus
-
-- slug: blockchain
-  title: Blockchain Automation Framework
-  description: Automation framework to consistently deploy production-ready DLT platform on existing Kubernetes clusters
-  logo: /img/project/hyperledgerlabs_logo.png
-  github: https://github.com/hyperledger-labs/blockchain-automation-framework
-  website: https://blockchain-automation-framework.readthedocs.io/en/latest/index.html
