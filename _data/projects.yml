@@ -21,7 +21,7 @@
   github: https://github.com/Accenture/adop-docker-compose
   website: https://accenture.github.io/adop-docker-compose/
 
-  - slug: cactus
+- slug: cactus
   title: Hyperledger Cactus
   description: A pluggable, enterprise-grade framework to transact on multiple distributed ledgers without another competing blockchain
   logo: /img/project/HL_Cactus_Logo.png
