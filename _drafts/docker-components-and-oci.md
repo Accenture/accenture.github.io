@@ -10,7 +10,7 @@ comments: true
 
 _Note: “Docker: Its components and OCI” is the second part of a mini-series that covers fundamental concepts and core components of Docker and takes a brief look at further technologies in the container space._
 
-******
+****
 
 In its early days, Docker was a monolithic application responsible for creating and running containers, pulling images from registries, managing data, and so on. Pretty much everything that Docker does today was part of that monolith. Since [Docker version 1.11.0](https://www.docker.com/blog/docker-engine-1-11-runc/), the monolith has been decoupled into a set of independent components that follow well-defined standards. This decoupling and standardization process drove contributions by the open-source community, and new projects started to emerge in the container ecosystem.
 
