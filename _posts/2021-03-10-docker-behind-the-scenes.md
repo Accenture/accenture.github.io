@@ -4,6 +4,7 @@ title:  "Docker - Behind the Scenes"
 categories: docker containers java opensource
 author: matthias_leitner
 comments: true
+date: '2021-03-10 00:00'
 ---
 
 # Docker - Behind the Scenes
