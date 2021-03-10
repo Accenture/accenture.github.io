@@ -1,3 +1,4 @@
 .DS_Store
 blog/_site
 _site
+.jekyll-cache/

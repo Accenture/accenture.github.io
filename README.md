@@ -24,7 +24,16 @@ Second, install the Ruby gems needed by Jekyll
 gem install jekyll jekyll-paginate
 ```
 
-For OS X and Linux users, you'll probably need to run the previous command with `sudo`. For Windows users, make sure that ```gem``` is in your PATH before running it.
+For Windows users, make sure that ```gem``` is in your PATH before running it. For OS X and Linux users, you can run the previous command with `sudo` or install the gems locally with
+
+```bash
+gem install --user-install jekyll jekyll-paginate
+```
+
+If installed locally on OS X or Linux and not already done, you have to update your `PATH` to run gem executables directly. The path you have to add to your `PATH` variable depends on your Ruby version but looks something like
+```
+/Users/$(whoami)/.gem/ruby/2.6.0/bin
+```
 
 ## Writing content
 
