@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  "Docker - Its components and OCI"
+title:  "Docker - Its components and the OCI"
 categories: docker containers opensource
 author: matthias_leitner
 comments: true
+date: '2021-03-18 00:00'
 ---
 
 # Docker - runc, containerd, and the OCI
 
-_Note: “Docker: Its components and OCI” is the second part of a mini-series that covers fundamental concepts and core components of Docker and takes a brief look at further technologies in the container space._
+_Note: “Docker: Its components and the OCI” is the second part of a mini-series that covers fundamental concepts and core components of Docker and takes a brief look at further technologies in the container space._
 
 ****
 
