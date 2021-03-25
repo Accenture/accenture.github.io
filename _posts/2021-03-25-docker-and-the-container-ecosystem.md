@@ -4,6 +4,7 @@ title:  "Docker and the container ecosystem"
 categories: docker containers opensource
 author: matthias_leitner
 comments: true
+date: '2021-03-25 00:00'
 ---
 
 # The container ecosystem 
