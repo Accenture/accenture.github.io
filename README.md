@@ -24,6 +24,14 @@ Second, install the Ruby gems needed by Jekyll
 gem install jekyll jekyll-paginate
 ```
 
+If on MacOs Catalina (10.15) or higher, the required command is as follows:
+
+```bash
+xcrun gem install jekyll jekyll-paginate
+```
+
+You may to prefix need _sudo_ to run the command above.
+
 For Windows users, make sure that ```gem``` is in your PATH before running it. For OS X and Linux users, you can run the previous command with `sudo` or install the gems locally with
 
 ```bash
