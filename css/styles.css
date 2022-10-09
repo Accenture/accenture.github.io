@@ -185,3 +185,9 @@
     padding-right: 130px;
   }
 }
+
+.icn_github {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/icon/icn_github.svg);
+}
