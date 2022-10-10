@@ -11,7 +11,12 @@ comments: true
 
 Over the last couple of years we have been working on a solution to provide our DevOps engineers with a `playpit` for `learning`, `experimenting` and `innovating`. 
 
-What started initially as a couple of static packer scripts, has since become a powerful dynamic framework and so much more.
+What started initially as a couple of static packer scripts, has since become a `powerful dynamic framework` for rolling out entire `environment landscapes`.
+
+Most recently KX.AS.CODE was implemented at a major enterprise with the following goals (see [use case example](https://accenture.github.io/kx.as.code/Overview/Use-Case-Example/)):
+
+- Dynamic `on-demand provisioning/destruction of test environments` in the public cloud
+- End-to-end developer workstation to `enhance local quality assurance capabilities`
 
 I like to describe KX.AS.CODE as follows.
 
