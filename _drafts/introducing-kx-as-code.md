@@ -146,7 +146,8 @@ The application details screen shows more information about the application. It 
 In the future, this screen will also allow the user to enter values for input arguments.
 
 ![](/img/posts/introducing-kx-as-code/kx.as.code_portal_application_details.png)
-![](assets/img/posts/executeTasksDockerRegistry.png)
+
+![](/img/posts/introducing-kx-as-code/executeTasksAemDispatcher.png)
 
 ### KX.AS.CODE Portal - Application Groups
 
