@@ -21,16 +21,16 @@
   github: https://github.com/Accenture/adop-docker-compose
   website: https://accenture.github.io/adop-docker-compose/
 
-- slug: cactus
-  title: Hyperledger Cactus
-  description: A pluggable, enterprise-grade framework to transact on multiple distributed ledgers without another competing blockchain
-  logo: /img/project/HL_Cactus_Logo.png
-  github: https://github.com/hyperledger/cactus/
-  website: https://wiki.hyperledger.org/display/cactus
+- slug: cacti
+  title: Hyperledger Cacti
+  description: Hyperledger Cacti is a multi-faceted interoperability platform that provides a pluggable, enterprise-grade framework to transact on multiple distributed ledgers without another competing blockchain
+  logo: /img/project/hl_cacti_color_logo.png
+  github: https://github.com/hyperledger/cacti/
+  website: https://www.hyperledger.org/use/cacti
 
-- slug: blockchain
-  title: Blockchain Automation Framework
-  description: Automation framework to consistently deploy production-ready DLT platform on existing Kubernetes clusters
-  logo: /img/project/hyperledgerlabs_logo.png
-  github: https://github.com/hyperledger-labs/blockchain-automation-framework
-  website: https://blockchain-automation-framework.readthedocs.io/en/latest/index.html
+- slug: bevel
+  title: Hyperledger Bevel
+  description: Hyperledger Bevel is an accelerator that helps developers rapidly set-up and deploy secure, scalable and production ready DLT network(s) that also allows new organizations to be easily onboarded on the network. 
+  logo: /img/project/hl_bevel_color_logo.png
+  github: https://github.com/hyperledger/bevel
+  website: https://www.hyperledger.org/use/bevel
